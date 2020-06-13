@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #151515;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+#home .home-container {
+  height: 100vh;
+  padding: 4.2vh 5vw;
+}
+
+#home .home-container #navbar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr 1fr;
+      grid-template-columns: 1fr 5fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#home .home-container #navbar #arrow-line #arrow-svg {
+  fill: #ffffff;
+  height: 8;
+  width: 9vw;
+}
+
+#home .home-container #navbar #navbar-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#home .home-container #navbar #navbar-links ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 5vw;
+  width: 10vw;
+  margin: 0 1rem;
+}
+
+#home .home-container #navbar #navbar-links ul li .nav-link {
+  font-size: 1.8vw;
+  font-weight: 800;
+}
+
+#home .home-container #navbar #black-white-toggler {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#home .home-container #navbar #black-white-toggler img {
+  width: 4vw;
+}
+
+#home .home-container #home-content {
+  height: 85%;
+}
+
+#home .home-container #home-content #title-div {
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#home .home-container #home-content #title-div h1 {
+  text-transform: uppercase;
+  font-size: 7vw;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+#home .home-container #home-content #title-div h3 {
+  font-size: 2.5vw;
+  font-weight: 500;
+}
+/*# sourceMappingURL=style.css.map */

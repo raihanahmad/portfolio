@@ -1,0 +1,90 @@
+// Include Other Scss File
+@import "utilities";
+
+
+// Home
+#home {
+
+  .home-container {
+    height: 100vh;
+    padding: 4.2vh 5vw;
+
+    // Navbar
+    #navbar {
+      display: grid;
+      grid-template-columns: 1fr 5fr 1fr;
+      align-items: center;
+
+      // SVG Div
+      #arrow-line {
+        #arrow-svg {
+          fill: #ffffff;
+          height: 8;
+          width: 9vw;
+        }
+      }
+
+      // Navbar Links
+      #navbar-links {
+        ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+
+          li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 5vw;
+            width: 10vw;
+            // background: #ffffff;
+            margin: 0 1rem;
+
+            .nav-link {
+              font-size: 1.8vw;
+              // color: $dark-color;
+              font-weight: 800;
+            }
+          }
+        }
+      }
+
+      // Dark White Mode Toggler
+      #black-white-toggler {
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+          width: 4vw;
+
+        }
+      }
+    }
+
+
+    // Home Content
+    #home-content {
+      height: 85%;
+
+      #title-div {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: flex-end;
+
+        h1 {
+          text-transform: uppercase;
+          font-size: 7vw;
+          font-weight: 900;
+          line-height: 1.1;
+        }
+
+        h3 {
+          font-size: 2.5vw;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
