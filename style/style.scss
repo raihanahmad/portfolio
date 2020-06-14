@@ -45,6 +45,7 @@
               // color: $dark-color;
               font-weight: 800;
               letter-spacing: 0.2px;
+              transition: transform .1s linear;
             }
           }
         }
@@ -129,7 +130,7 @@
             align-items: center;
             justify-content: center;
             border: none;
-            // border: 4px solid $light-color;
+            border: 4px solid $light-color;
 
             h3 {
               position: absolute;
@@ -140,8 +141,7 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              transition: all .3s ease;
-              cursor: none;
+              transition: all .3s ease-in-out;
 
               &:last-child {
                 height: 101%;
