@@ -39,6 +39,7 @@
             width: 10vw;
             // background: #ffffff;
             margin: 0 1rem;
+            transition: all .3s ease;
 
             .nav-link {
               font-size: 1.8vw;
@@ -126,8 +127,11 @@
           }
 
           #contact-box {
+
             position: relative;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial,
+              Helvetica,
+              sans-serif;
             padding: 0.8vw;
             height: 4.4vw;
             width: 100%;

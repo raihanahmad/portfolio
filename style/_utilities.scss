@@ -54,5 +54,9 @@ img {
 .cursorGrowOnTitle {
   transform: scale(9) translate(50%, 50%);
   mix-blend-mode: difference;
+}
 
+.navHoverCursor {
+  transform: scale(4) translate(50%, 50%);
+  mix-blend-mode: difference;
 }

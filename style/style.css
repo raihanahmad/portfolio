@@ -61,6 +61,12 @@ img {
   mix-blend-mode: difference;
 }
 
+.navHoverCursor {
+  -webkit-transform: scale(4) translate(50%, 50%);
+          transform: scale(4) translate(50%, 50%);
+  mix-blend-mode: difference;
+}
+
 #home .home-container {
   height: 100vh;
   padding: 4.2vh 5vw;
@@ -108,6 +114,8 @@ img {
   height: 5vw;
   width: 10vw;
   margin: 0 1rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 #home .home-container #navbar #navbar-links ul li .nav-link {
@@ -208,7 +216,7 @@ img {
 
 #home .home-container #home-content #home-info #contact-content #contact-box {
   position: relative;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   padding: 0.8vw;
   height: 4.4vw;
   width: 100%;
