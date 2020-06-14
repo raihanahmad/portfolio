@@ -39,7 +39,7 @@ img {
   width: 100%;
 }
 
-#cursor {
+.cursor {
   pointer-events: none;
   position: absolute;
   border-radius: 50%;
@@ -49,6 +49,16 @@ img {
           transform: translate(-50%, -50%);
   -webkit-transform-origin: 100% 100%;
           transform-origin: 100% 100%;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.cursorGrowOnTitle {
+  -webkit-transform: scale(9) translate(50%, 50%);
+          transform: scale(9) translate(50%, 50%);
+  mix-blend-mode: difference;
 }
 
 #home .home-container {
@@ -144,14 +154,19 @@ img {
           justify-content: flex-end;
 }
 
-#home .home-container #home-content #name-title h1 {
+#home .home-container #home-content #name-title > div {
+  width: 60%;
+}
+
+#home .home-container #home-content #name-title > div h1 {
+  display: inline-block;
   text-transform: uppercase;
   font-size: 7vw;
   font-weight: 900;
   line-height: 1.1;
 }
 
-#home .home-container #home-content #name-title h3 {
+#home .home-container #home-content #name-title > div h3 {
   font-size: 2.5vw;
   font-weight: 500;
 }
