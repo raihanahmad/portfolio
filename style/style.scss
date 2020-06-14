@@ -7,7 +7,7 @@
 
   .home-container {
     height: 100vh;
-    padding: 4.2vh 5vw;
+    padding: 4.6vh 5vw;
 
     // Navbar
     #navbar {
@@ -32,21 +32,15 @@
           justify-content: flex-end;
 
           li {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 5vw;
-            width: 10vw;
-            // background: #ffffff;
             margin: 0 1rem;
+            margin-left: 6.7vw;
             transition: all .3s ease;
 
             .nav-link {
               font-size: 1.8vw;
-              // color: $dark-color;
               font-weight: 800;
               letter-spacing: 0.2px;
-              transition: transform .1s linear;
+              transition: transform .2s linear;
             }
           }
         }

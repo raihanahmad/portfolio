@@ -45,8 +45,8 @@ showcaseTitle.addEventListener('mouseover', function (e) {
     } = this,
 
     move = 25,
-      xMove = x / width * (move * 2) - move,
-      yMove = y / height * (move * 2) - move;
+      xMove = x / width * (move * 3) - move,
+      yMove = y / height * (move * 3) - move;
 
     navLink.style.transform = `translate(${xMove}px, ${yMove}px)`;
     mouseCursor.classList.add('navHoverCursor');

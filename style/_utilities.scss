@@ -44,19 +44,20 @@ img {
   pointer-events: none;
   position: absolute;
   border-radius: 50%;
-  padding: 1vw;
+  height: 2vw;
+  width: 2vw;
   background: $light-color;
   transform: translate(-50%, -50%);
-  transform-origin: 100% 100%;
+  // transform-origin: 100% 100%;
   transition: transform .3s ease-in-out;
+  mix-blend-mode: difference;
+
 }
 
 .cursorGrowOnTitle {
-  transform: scale(9) translate(50%, 50%);
-  mix-blend-mode: difference;
+  transform: scale(9);
 }
 
 .navHoverCursor {
-  transform: scale(4) translate(50%, 50%);
-  mix-blend-mode: difference;
+  transform: scale(4) translate(-10%, -10%);
 }

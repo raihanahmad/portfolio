@@ -43,33 +43,31 @@ img {
   pointer-events: none;
   position: absolute;
   border-radius: 50%;
-  padding: 1vw;
+  height: 2vw;
+  width: 2vw;
   background: #ffffff;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transform-origin: 100% 100%;
-          transform-origin: 100% 100%;
   -webkit-transition: -webkit-transform .3s ease-in-out;
   transition: -webkit-transform .3s ease-in-out;
   transition: transform .3s ease-in-out;
   transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  mix-blend-mode: difference;
 }
 
 .cursorGrowOnTitle {
-  -webkit-transform: scale(9) translate(50%, 50%);
-          transform: scale(9) translate(50%, 50%);
-  mix-blend-mode: difference;
+  -webkit-transform: scale(9);
+          transform: scale(9);
 }
 
 .navHoverCursor {
-  -webkit-transform: scale(4) translate(50%, 50%);
-          transform: scale(4) translate(50%, 50%);
-  mix-blend-mode: difference;
+  -webkit-transform: scale(4) translate(-10%, -10%);
+          transform: scale(4) translate(-10%, -10%);
 }
 
 #home .home-container {
   height: 100vh;
-  padding: 4.2vh 5vw;
+  padding: 4.6vh 5vw;
 }
 
 #home .home-container #navbar {
@@ -102,18 +100,8 @@ img {
 }
 
 #home .home-container #navbar #navbar-links ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 5vw;
-  width: 10vw;
   margin: 0 1rem;
+  margin-left: 6.7vw;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
@@ -122,10 +110,10 @@ img {
   font-size: 1.8vw;
   font-weight: 800;
   letter-spacing: 0.2px;
-  -webkit-transition: -webkit-transform .1s linear;
-  transition: -webkit-transform .1s linear;
-  transition: transform .1s linear;
-  transition: transform .1s linear, -webkit-transform .1s linear;
+  -webkit-transition: -webkit-transform .2s linear;
+  transition: -webkit-transform .2s linear;
+  transition: transform .2s linear;
+  transition: transform .2s linear, -webkit-transform .2s linear;
 }
 
 #home .home-container #navbar #black-white-toggler {
