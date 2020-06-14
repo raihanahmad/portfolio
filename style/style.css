@@ -163,11 +163,11 @@ img {
 }
 
 #home .home-container #home-content #home-info #contact-content #contact-box {
+  position: relative;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 2.5vw;
-  background: #ffffff;
-  color: #151515;
   padding: 0.8vw;
+  height: 4.4vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,6 +177,46 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: none;
+}
+
+#home .home-container #home-content #home-info #contact-content #contact-box h3 {
+  position: absolute;
   font-weight: 900;
+  font-size: 2.5vw;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: none;
+}
+
+#home .home-container #home-content #home-info #contact-content #contact-box h3:last-child {
+  height: 101%;
+  width: 101%;
+  z-index: 3;
+  background: #ffffff;
+  color: #151515;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+          clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+#home .home-container #home-content #home-info #contact-content #contact-box h3:last-child:hover {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+#home .home-container #home-content #home-info #contact-content #contact-box h3:first-child:hover ~ h3:last-child {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 /*# sourceMappingURL=style.css.map */
