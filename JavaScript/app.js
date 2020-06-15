@@ -11,8 +11,8 @@ document.body.appendChild(mouseCursor);
 
 // Cursor Move With Mouse
 window.addEventListener("mousemove", function (e) {
-  mouseCursor.style.top = `${e.clientY}px`;
-  mouseCursor.style.left = `${e.clientX}px`;
+  mouseCursor.style.top = `${e.pageY}px`;
+  mouseCursor.style.left = `${e.pageX}px`;
 });
 
 // Landing Page Title Hover and  Cursor Big
