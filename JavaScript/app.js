@@ -33,13 +33,18 @@ showcaseTitle.addEventListener("mouseover", function (e) {
   const navbarMagnetEffect = function (e) {
     const navLink = this.querySelector("#navbar-links .nav-link");
 
-    const { offsetX: x, offsetY: y } = e,
-      { offsetWidth: width, offsetHeight: height } = this,
-      move = 25,
-      xMove = (x / width) * (move * 3) - move,
-      yMove = (y / height) * (move * 3) - move;
+    const {
+      offsetX: x,
+      offsetY: y
+    } = e, {
+      offsetWidth: width,
+      offsetHeight: height
+    } = this,
+    move = 25,
+      xMove = (x / width) * (move * 2) - move,
+      yMove = (y / height) * (move * 2) - move;
 
-    navLink.style.transform = `translate(${xMove}px, ${yMove}px)`;
+    navLink.style.transform = `translate3d(${xMove}px, ${yMove}px, 0px)`;
     mouseCursor.classList.add("navHoverCursor");
 
     if (e.type === "mouseleave") {
@@ -50,11 +55,8 @@ showcaseTitle.addEventListener("mouseover", function (e) {
 
   navLi.forEach((b) => {
     b.addEventListener("mousemove", navbarMagnetEffect);
-    console.log(mouseCursor);
   });
   navLi.forEach((b) => {
     b.addEventListener("mouseleave", navbarMagnetEffect);
   });
 })();
-
-console.log(navbarMagnetEffect());

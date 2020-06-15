@@ -32,12 +32,13 @@
           justify-content: flex-end;
 
           li {
-            // margin: 0 1rem;
-            margin-left: 6.7vw;
+            margin-left: 4.7vw;
             transition: all .3s ease;
 
             .nav-link {
+              transform: translate3d(0px, 0px, 0px);
               font-size: 1.8vw;
+              padding: 1vw;
               font-weight: 800;
               letter-spacing: 0.2px;
               transition: transform .2s linear;
