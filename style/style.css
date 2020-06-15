@@ -43,8 +43,8 @@ img {
   pointer-events: none;
   position: absolute;
   border-radius: 50%;
-  height: 2vw;
-  width: 2vw;
+  height: 1.5vw;
+  width: 1.5vw;
   background: #ffffff;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -56,13 +56,13 @@ img {
 }
 
 .cursorGrowOnTitle {
-  -webkit-transform: scale(9);
-          transform: scale(9);
+  -webkit-transform: scale(13);
+          transform: scale(13);
 }
 
 .navHoverCursor {
-  -webkit-transform: scale(4) translate(-10%, -10%);
-          transform: scale(4) translate(-10%, -10%);
+  -webkit-transform: scale(5.3) translate(-10%, -10%);
+          transform: scale(5.3) translate(-10%, -10%);
 }
 
 #home .home-container {
@@ -100,7 +100,6 @@ img {
 }
 
 #home .home-container #navbar #navbar-links ul li {
-  margin: 0 1rem;
   margin-left: 6.7vw;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
