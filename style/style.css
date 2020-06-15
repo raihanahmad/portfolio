@@ -74,6 +74,38 @@ img {
           clip-path: polygon(24% 4%, 23% 94%, 92% 66%);
 }
 
+.cursorScaleZero {
+  -webkit-transform: scale(0.1) translate(-500%, -500%);
+          transform: scale(0.1) translate(-500%, -500%);
+  mix-blend-mode: unset;
+  -webkit-animation: cursordownscale .4s linear forwards;
+          animation: cursordownscale .4s linear forwards;
+}
+
+@-webkit-keyframes cursordownscale {
+  0% {
+    background: #ffffff;
+  }
+  95% {
+    background: #151515;
+  }
+  100% {
+    background: #151515;
+  }
+}
+
+@keyframes cursordownscale {
+  0% {
+    background: #ffffff;
+  }
+  95% {
+    background: #151515;
+  }
+  100% {
+    background: #151515;
+  }
+}
+
 #home .home-container {
   height: 100vh;
   padding: 4.6vh 5vw;
@@ -212,7 +244,7 @@ img {
   position: relative;
   top: .33vw;
   width: 6vw;
-  height: 2vw;
+  height: 1.5vw;
   font-weight: 900;
   -webkit-perspective: 1000px;
           perspective: 1000px;

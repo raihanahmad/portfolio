@@ -68,3 +68,25 @@ img {
   mix-blend-mode: unset;
   clip-path: polygon(24% 4%, 23% 94%, 92% 66%);
 }
+
+.cursorScaleZero {
+  transform: scale(0.1) translate(-500%, -500%);
+  mix-blend-mode: unset;
+  animation: cursordownscale .4s linear forwards;
+
+  @keyframes cursordownscale {
+    0% {
+      background: $light-color;
+
+    }
+
+    95% {
+      background: $dark-color;
+    }
+
+    100% {
+      background: $dark-color;
+
+    }
+  }
+}

@@ -67,11 +67,11 @@ showcaseTitle.addEventListener("mouseover", function (e) {
 // Cursor None On Hover
 cursorNoneElements.forEach(function (cursorNoneElement) {
   cursorNoneElement.addEventListener("mouseover", function (e) {
-    mouseCursor.style.display = 'none';
+    mouseCursor.classList.add("cursorScaleZero");
   });
 
   cursorNoneElement.addEventListener("mouseleave", function (e) {
-    mouseCursor.style.display = 'unset';
+    mouseCursor.classList.remove("cursorScaleZero");
   });
 });
 
