@@ -3,6 +3,7 @@ const showcaseTitle = document.querySelector("#name-title > div");
 const blackWhiteToggler = document.querySelector("#arrow-svg");
 const navLi = document.querySelectorAll("#navbar-links > ul > li");
 const cursorNoneElements = document.querySelectorAll('.cursorNone');
+const cursorTriangleElements = document.querySelectorAll('.cursorTriangle');
 
 // Create Mouse Cursor
 const mouseCursor = document.createElement("div");
@@ -71,6 +72,18 @@ cursorNoneElements.forEach(function (cursorNoneElement) {
 
   cursorNoneElement.addEventListener("mouseleave", function (e) {
     mouseCursor.style.display = 'unset';
+  });
+});
+
+// Cursor Convart Triangle On Hover
+cursorTriangleElements.forEach(function (cursorTriangleElement) {
+
+  cursorTriangleElement.addEventListener("mouseleave", function (e) {
+    mouseCursor.classList.remove("cursorToTriangle");
+  });
+
+  cursorTriangleElement.addEventListener("mouseover", function (e) {
+    mouseCursor.classList.add("cursorToTriangle");
   });
 });
 
