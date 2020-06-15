@@ -2,6 +2,7 @@
 const showcaseTitle = document.querySelector("#name-title > div");
 const blackWhiteToggler = document.querySelector("#arrow-svg");
 const navLi = document.querySelectorAll("#navbar-links > ul > li");
+const cursorNoneElements = document.querySelectorAll('.cursorNone');
 
 // Create Mouse Cursor
 const mouseCursor = document.createElement("div");
@@ -60,3 +61,19 @@ showcaseTitle.addEventListener("mouseover", function (e) {
     b.addEventListener("mouseleave", navbarMagnetEffect);
   });
 })();
+
+
+// Cursor None On Hover
+cursorNoneElements.forEach(function (cursorNoneElement) {
+  cursorNoneElement.addEventListener("mouseover", function (e) {
+    mouseCursor.style.display = 'none';
+  });
+
+  cursorNoneElement.addEventListener("mouseleave", function (e) {
+    mouseCursor.style.display = 'unset';
+  });
+});
+
+// cursorNone.addEventListener("mouseleave", function (e) {
+//   mouseCursor.classList.remove("cursorGrowOnTitle");
+// });

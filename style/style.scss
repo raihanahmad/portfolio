@@ -17,7 +17,15 @@
 
       // SVG Div
       #arrow-line {
+
         #arrow-svg {
+          transform-origin: left;
+          transition: transform .3s ease;
+
+          &:hover {
+            transform: scaleX(1.4);
+          }
+
           fill: #ffffff;
           height: 8;
           width: 9vw;
