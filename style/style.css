@@ -400,7 +400,7 @@ img {
 
 #projects-section #projects-section-title {
   text-align: left;
-  margin: 11vw 0 5vw 0;
+  margin: 6vw 0 6vw 0;
   background-color: #ffffff;
 }
 
@@ -465,24 +465,43 @@ img {
 }
 
 #projects-section .project .project-container .project-showcase img {
-  -webkit-filter: hue-rotate(3);
-          filter: hue-rotate(3);
+  -webkit-filter: grayscale(100%) blur(1px);
+          filter: grayscale(100%) blur(1px);
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+#projects-section .project .project-container .project-showcase img:hover {
+  -webkit-filter: grayscale(30%) blur(0);
+          filter: grayscale(30%) blur(0);
 }
 
 #projects-section .project .project-container .project-description {
   position: absolute;
-  right: 11%;
+  right: 13%;
   top: 38.9%;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   text-transform: uppercase;
-  opacity: .5;
 }
 
 #projects-section .project .project-container .project-description p {
+  color: #aaaaaa;
   text-align: left;
   font-size: 1.2vw;
   font-weight: normal;
+}
+
+#projects-section .project .project-container .project-description p a {
+  color: #aaaaaa;
+  border-bottom: 1px solid #aaaaaa;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+#projects-section .project .project-container .project-description p a:hover {
+  color: #eeeeee;
+  border-bottom: 1px solid #cccccc;
 }
 
 #projects-section .project .project-container .project-title {

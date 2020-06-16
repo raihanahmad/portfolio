@@ -243,7 +243,7 @@
   // Section Title
   #projects-section-title {
     text-align: left;
-    margin: 11vw 0 5vw 0;
+    margin: 6vw 0 6vw 0;
     background-color: $light-color;
 
 
@@ -288,27 +288,42 @@
         position: relative;
         right: 2vw;
 
-        // backdrop-filter: grayscale();
         img {
-          filter: hue-rotate(3);
-          // opacity: .6;
+          filter: grayscale(100%) blur(1px);
+          transition: all .4s ease;
 
+          &:hover {
+            filter: grayscale(30%) blur(0);
+          }
         }
+
+
       }
 
+      // Project Description
       .project-description {
         position: absolute;
-        right: 11%;
+        right: 13%;
         top: 38.9%;
         transform: rotate(90deg);
         text-transform: uppercase;
-        opacity: .5;
 
         p {
+          color: #aaaaaa;
           text-align: left;
           font-size: 1.2vw;
           font-weight: normal;
 
+          a {
+            color: #aaaaaa;
+            border-bottom: 1px solid #aaaaaa;
+            transition: all .3s ease;
+
+            &:hover {
+              color: #eeeeee;
+              border-bottom: 1px solid #cccccc;
+            }
+          }
         }
       }
 
