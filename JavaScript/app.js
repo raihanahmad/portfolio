@@ -2,8 +2,8 @@
 const showcaseTitle = document.querySelector("#name-title > div");
 const blackWhiteToggler = document.querySelector("#arrow-svg");
 const navLi = document.querySelectorAll("#navbar-links > ul > li");
-const cursorNoneElements = document.querySelectorAll('.cursorNone');
-const cursorTriangleElements = document.querySelectorAll('.cursorTriangle');
+const cursorNoneElements = document.querySelectorAll(".cursorNone");
+const cursorTriangleElements = document.querySelectorAll(".cursorTriangle");
 
 // Create Mouse Cursor
 const mouseCursor = document.createElement("div");
@@ -12,8 +12,8 @@ document.body.appendChild(mouseCursor);
 
 // Cursor Move With Mouse
 window.addEventListener("mousemove", function (e) {
-  mouseCursor.style.top = `${e.pageY}px`;
-  mouseCursor.style.left = `${e.pageX}px`;
+  mouseCursor.style.top = `${e.clientY}px`;
+  mouseCursor.style.left = `${e.clientX}px`;
 });
 
 // Landing Page Title Hover and  Cursor Big
@@ -35,14 +35,9 @@ showcaseTitle.addEventListener("mouseover", function (e) {
   const navbarMagnetEffect = function (e) {
     const navLink = this.querySelector("#navbar-links .nav-link");
 
-    const {
-      offsetX: x,
-      offsetY: y
-    } = e, {
-      offsetWidth: width,
-      offsetHeight: height
-    } = this,
-    move = 25,
+    const { offsetX: x, offsetY: y } = e,
+      { offsetWidth: width, offsetHeight: height } = this,
+      move = 25,
       xMove = (x / width) * (move * 2) - move,
       yMove = (y / height) * (move * 2) - move;
 
@@ -63,7 +58,6 @@ showcaseTitle.addEventListener("mouseover", function (e) {
   });
 })();
 
-
 // Cursor None On Hover
 cursorNoneElements.forEach(function (cursorNoneElement) {
   cursorNoneElement.addEventListener("mouseover", function (e) {
@@ -77,7 +71,6 @@ cursorNoneElements.forEach(function (cursorNoneElement) {
 
 // Cursor Convart Triangle On Hover
 cursorTriangleElements.forEach(function (cursorTriangleElement) {
-
   cursorTriangleElement.addEventListener("mouseleave", function (e) {
     mouseCursor.classList.remove("cursorToTriangle");
   });
@@ -86,7 +79,3 @@ cursorTriangleElements.forEach(function (cursorTriangleElement) {
     mouseCursor.classList.add("cursorToTriangle");
   });
 });
-
-// cursorNone.addEventListener("mouseleave", function (e) {
-//   mouseCursor.classList.remove("cursorGrowOnTitle");
-// });

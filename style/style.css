@@ -7,17 +7,17 @@
 }
 
 * ::-moz-selection {
-  color: #151515;
+  color: #222222;
   background: #ffffff;
 }
 
 * ::selection {
-  color: #151515;
+  color: #222222;
   background: #ffffff;
 }
 
 body {
-  background: #151515;
+  background: #222222;
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
   font-weight: 600;
@@ -41,7 +41,7 @@ img {
 
 .cursor {
   pointer-events: none;
-  position: absolute;
+  position: fixed;
   z-index: 9999;
   border-radius: 50%;
   height: 1.5vw;
@@ -87,10 +87,10 @@ img {
     background: #ffffff;
   }
   95% {
-    background: #151515;
+    background: #222222;
   }
   100% {
-    background: #151515;
+    background: #222222;
   }
 }
 
@@ -99,10 +99,10 @@ img {
     background: #ffffff;
   }
   95% {
-    background: #151515;
+    background: #222222;
   }
   100% {
-    background: #151515;
+    background: #222222;
   }
 }
 
@@ -383,7 +383,7 @@ img {
   width: 101%;
   z-index: 3;
   background: #ffffff;
-  color: #151515;
+  color: #222222;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
           clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
 }
