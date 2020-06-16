@@ -83,12 +83,12 @@
         justify-content: flex-end;
 
         &>div {
-          width: 60%;
+          width: 65%;
 
           h1 {
             display: inline-block;
             text-transform: uppercase;
-            font-size: 7vw;
+            font-size: 7.5vw;
             font-weight: 900;
             line-height: 1.1;
           }
@@ -234,5 +234,69 @@
         }
       }
     }
+  }
+}
+
+// Projects Section
+#projects-section {
+  .project {
+    max-height: 75vw;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 22vh;
+    padding-top: 8vw;
+    padding-bottom: 5vh;
+
+
+    .project-container {
+      z-index: 15;
+
+      // height: 100vh;
+      .project-showcase {
+        width: 70vw;
+        position: relative;
+
+        // backdrop-filter: grayscale();
+        img {
+          filter: hue-rotate(3);
+          // opacity: .6;
+
+        }
+      }
+
+      .project-title {
+        position: absolute;
+        top: 4vw;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: block;
+        text-align: center;
+
+        h1 {
+          font-size: 6.5vw;
+          font-weight: 900;
+          text-transform: uppercase;
+          -webkit-text-stroke: 1vw #fff;
+          -webkit-text-stroke-width: 2px;
+          -webkit-text-stroke-color: rgb(255, 255, 255);
+        }
+      }
+
+      .project-title-border {
+        z-index: 2;
+        color: black;
+        color: transparent;
+
+      }
+
+      .project-title-color {
+        z-index: -1;
+      }
+    }
+
   }
 }

@@ -7,17 +7,17 @@
 }
 
 * ::-moz-selection {
-  color: #222222;
+  color: #1B1B1B;
   background: #ffffff;
 }
 
 * ::selection {
-  color: #222222;
+  color: #1B1B1B;
   background: #ffffff;
 }
 
 body {
-  background: #222222;
+  background: #1B1B1B;
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
   font-weight: 600;
@@ -87,10 +87,10 @@ img {
     background: #ffffff;
   }
   95% {
-    background: #222222;
+    background: #1B1B1B;
   }
   100% {
-    background: #222222;
+    background: #1B1B1B;
   }
 }
 
@@ -99,10 +99,10 @@ img {
     background: #ffffff;
   }
   95% {
-    background: #222222;
+    background: #1B1B1B;
   }
   100% {
-    background: #222222;
+    background: #1B1B1B;
   }
 }
 
@@ -200,13 +200,13 @@ img {
 }
 
 #home .home-container #home-content #name-title > div {
-  width: 60%;
+  width: 65%;
 }
 
 #home .home-container #home-content #name-title > div h1 {
   display: inline-block;
   text-transform: uppercase;
-  font-size: 7vw;
+  font-size: 7.5vw;
   font-weight: 900;
   line-height: 1.1;
 }
@@ -383,7 +383,7 @@ img {
   width: 101%;
   z-index: 3;
   background: #ffffff;
-  color: #222222;
+  color: #1B1B1B;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
           clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
 }
@@ -396,5 +396,66 @@ img {
 #home .home-container #home-content #home-info #contact-content #contact-box h3:first-child:hover ~ h3:last-child {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+#projects-section .project {
+  max-height: 75vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 22vh;
+  padding-top: 8vw;
+  padding-bottom: 5vh;
+}
+
+#projects-section .project .project-container {
+  z-index: 15;
+}
+
+#projects-section .project .project-container .project-showcase {
+  width: 70vw;
+  position: relative;
+}
+
+#projects-section .project .project-container .project-showcase img {
+  -webkit-filter: hue-rotate(3);
+          filter: hue-rotate(3);
+}
+
+#projects-section .project .project-container .project-title {
+  position: absolute;
+  top: 4vw;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+#projects-section .project .project-container .project-title h1 {
+  font-size: 6.5vw;
+  font-weight: 900;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1vw #fff;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+}
+
+#projects-section .project .project-container .project-title-border {
+  z-index: 2;
+  color: black;
+  color: transparent;
+}
+
+#projects-section .project .project-container .project-title-color {
+  z-index: -1;
 }
 /*# sourceMappingURL=style.css.map */

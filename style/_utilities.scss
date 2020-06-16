@@ -1,6 +1,6 @@
 // VARIABLES
 $light-color: #ffffff;
-$dark-color: #222222;
+$dark-color: #1B1B1B;
 
 // CORE CSS RESET
 * {
@@ -52,7 +52,6 @@ img {
   // transform-origin: 100% 100%;
   transition: transform .3s ease-in-out;
   mix-blend-mode: difference;
-
 }
 
 .cursorGrowOnTitle {
