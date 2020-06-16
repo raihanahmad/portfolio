@@ -339,11 +339,28 @@
         z-index: -1;
       }
 
+      // Project Count
+      .project-count {
+        position: absolute;
+        right: -5%;
+        top: 50%;
+        opacity: 0.1;
+        transform: rotate(270deg);
+
+        h1 {
+          font-weight: 900;
+          color: transparent;
+          font-size: 20vw;
+          -webkit-text-stroke: 1px $light-color;
+        }
+      }
+
       // View Project Button
       .project-view-button {
         position: absolute;
         bottom: 10%;
         right: 26%;
+        z-index: 10;
 
         div {
           height: 10vw;
@@ -356,12 +373,13 @@
           transition: all .3s ease-in-out;
 
           p {
+            text-transform: uppercase;
             font-weight: normal;
             position: absolute;
             color: $light-color;
             font-size: 1.3vw;
-            letter-spacing: .45vw;
-            transition: all .4s ease;
+            letter-spacing: .3vw;
+            transition: all .3s ease;
             animation: rotatefull 6s linear infinite;
           }
 
@@ -381,8 +399,9 @@
 
             p {
               color: $dark-color;
-              font-size: 1.25vw;
+              font-size: 1.2vw;
               letter-spacing: -1px;
+              word-spacing: 2px;
             }
           }
         }
