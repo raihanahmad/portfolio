@@ -16,6 +16,21 @@
   background: #ffffff;
 }
 
+::-webkit-scrollbar {
+  width: 2px;
+  background: #1B1B1B;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #1B1B1B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 10px;
+}
+
 body {
   background: #1B1B1B;
   font-family: 'Roboto', sans-serif;
@@ -109,21 +124,6 @@ img {
   100% {
     background: #1B1B1B;
   }
-}
-
-::-webkit-scrollbar {
-  width: 2px;
-  background: #1B1B1B;
-}
-
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background: #1B1B1B;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #ffffff;
-  border-radius: 10px;
 }
 
 #home .home-container {
@@ -498,7 +498,7 @@ img {
 
 #projects-section .project .project-container .project-description {
   position: absolute;
-  right: 13%;
+  right: 15%;
   top: 38.9%;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
@@ -525,6 +525,7 @@ img {
 }
 
 #projects-section .project .project-container .project-title {
+  pointer-events: none;
   position: absolute;
   top: 3.2vw;
   left: 0;
@@ -562,7 +563,7 @@ img {
 #projects-section .project .project-container .project-count h1 {
   font-weight: 900;
   color: transparent;
-  font-size: 20vw;
+  font-size: 21vw;
   -webkit-text-stroke: 1px #ffffff;
 }
 

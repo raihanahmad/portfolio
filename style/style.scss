@@ -303,7 +303,7 @@
       // Project Description
       .project-description {
         position: absolute;
-        right: 13%;
+        right: 15%;
         top: 38.9%;
         transform: rotate(90deg);
         text-transform: uppercase;
@@ -328,6 +328,7 @@
       }
 
       .project-title {
+        pointer-events: none;
         position: absolute;
         top: 3.2vw;
         left: 0;
@@ -365,7 +366,7 @@
         h1 {
           font-weight: 900;
           color: transparent;
-          font-size: 20vw;
+          font-size: 21vw;
           -webkit-text-stroke: 1px $light-color;
         }
       }

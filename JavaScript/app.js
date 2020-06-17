@@ -93,10 +93,6 @@ cursorTriangleElements.forEach(function (cursorTriangleElement) {
 //   console.log(son);
 // }
 
-
-const hoome = document.querySelector('#home');
-console.log(hoome);
-
-hoome.addEventListener('scroll', (e) => {
+window.addEventListener('scroll', (e) => {
   console.log(window.scrollY);
 })

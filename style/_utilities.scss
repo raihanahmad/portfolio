@@ -15,6 +15,23 @@ $dark-color: #1B1B1B;
   }
 }
 
+// SCROLLBAR
+::-webkit-scrollbar {
+  width: 2px;
+  background: $dark-color;
+
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: $dark-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $light-color;
+  border-radius: 10px;
+}
+
 body {
   background: $dark-color;
   // font-family: 'Raleway', sans-serif;
@@ -93,22 +110,4 @@ img {
 
     }
   }
-}
-
-
-// SCROLL BAR
-::-webkit-scrollbar {
-  width: 2px;
-  background: $dark-color;
-
-}
-
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background: $dark-color;
-}
-
-::-webkit-scrollbar-thumb {
-  background: $light-color;
-  border-radius: 10px;
 }
