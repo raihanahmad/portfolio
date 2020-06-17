@@ -33,6 +33,11 @@ a {
   display: inline-block;
   color: $light-color;
   text-decoration: none;
+  outline: none;
+}
+
+button {
+  outline: none;
 }
 
 img {
@@ -88,4 +93,22 @@ img {
 
     }
   }
+}
+
+
+// SCROLL BAR
+::-webkit-scrollbar {
+  width: 2px;
+  background: $dark-color;
+
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: $dark-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $light-color;
+  border-radius: 10px;
 }

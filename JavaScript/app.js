@@ -35,9 +35,14 @@ showcaseTitle.addEventListener("mouseover", function (e) {
   const navbarMagnetEffect = function (e) {
     const navLink = this.querySelector("#navbar-links .nav-link");
 
-    const { offsetX: x, offsetY: y } = e,
-      { offsetWidth: width, offsetHeight: height } = this,
-      move = 25,
+    const {
+      offsetX: x,
+      offsetY: y
+    } = e, {
+      offsetWidth: width,
+      offsetHeight: height
+    } = this,
+    move = 25,
       xMove = (x / width) * (move * 2) - move,
       yMove = (y / height) * (move * 2) - move;
 
@@ -79,3 +84,19 @@ cursorTriangleElements.forEach(function (cursorTriangleElement) {
     mouseCursor.classList.add("cursorToTriangle");
   });
 });
+
+
+// const test = document.body.scrollHeight - window.innerHeight;
+
+// window.onscroll = function () {
+//   let son = (window.pageYOffset / test) * 100;
+//   console.log(son);
+// }
+
+
+const hoome = document.querySelector('#home');
+console.log(hoome);
+
+hoome.addEventListener('scroll', (e) => {
+  console.log(window.scrollY);
+})
