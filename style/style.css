@@ -17,7 +17,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 3px;
   background: #1B1B1B;
 }
 
@@ -124,6 +124,17 @@ img {
   100% {
     background: #1B1B1B;
   }
+}
+
+.defaultCursor {
+  mix-blend-mode: difference;
+  border-radius: 50%;
+  height: 1.5vw;
+  width: 1.5vw;
+  -webkit-transform: scale(1) translate(-50%, -50%);
+          transform: scale(1) translate(-50%, -50%);
+  -webkit-clip-path: unset;
+          clip-path: unset;
 }
 
 #home .home-container {
