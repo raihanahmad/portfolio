@@ -89,10 +89,14 @@ cursorTriangleElements.forEach(function (cursorTriangleElement) {
 
 window.addEventListener("scroll", (e) => {
   if (window.scroll) {
-    mouseCursor.classList.add("defaultCursor");
+    // mouseCursor.classList.add("defaultCursor");
+    mouseCursor.classList.remove("cursorScaleZero");
+    mouseCursor.classList.remove("cursorToTriangle");
+    mouseCursor.classList.remove("cursorGrowOnTitle");
+    mouseCursor.classList.remove("navHoverCursor");
   }
 });
 
-window.addEventListener("mousemove", (e) => {
-  mouseCursor.classList.remove("defaultCursor");
-});
+// window.addEventListener("mousemove", (e) => {
+//   mouseCursor.classList.remove("defaultCursor");
+// });
