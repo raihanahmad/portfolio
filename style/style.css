@@ -87,8 +87,8 @@ img {
 }
 
 .cursorToTriangle {
-  -webkit-transform: scale(2.5) translate(-5%, -5%);
-          transform: scale(2.5) translate(-5%, -5%);
+  -webkit-transform: scale(2.5) translate(-10%, -10%);
+          transform: scale(2.5) translate(-10%, -10%);
   mix-blend-mode: unset;
   -webkit-clip-path: polygon(24% 4%, 23% 94%, 92% 66%);
           clip-path: polygon(24% 4%, 23% 94%, 92% 66%);
@@ -135,6 +135,52 @@ img {
           transform: scale(1) translate(-50%, -50%);
   -webkit-clip-path: unset;
           clip-path: unset;
+}
+
+@-webkit-keyframes hoverPopUp {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  25% {
+    -webkit-transform: translateY(-0.3rem);
+            transform: translateY(-0.3rem);
+    opacity: 0;
+  }
+  30% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes hoverPopUp {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  25% {
+    -webkit-transform: translateY(-0.3rem);
+            transform: translateY(-0.3rem);
+    opacity: 0;
+  }
+  30% {
+    -webkit-transform: translateY(0.5rem);
+            transform: translateY(0.5rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 #home .home-container {
@@ -647,6 +693,60 @@ img {
   font-size: 1.2vw;
   letter-spacing: -1px;
   word-spacing: 2px;
+}
+
+#projects-section .project .project-container .video-view-button {
+  position: absolute;
+  top: 15%;
+  right: 5%;
+  z-index: 10;
+  height: 10vw;
+  width: 10vw;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  border: 3px solid #444444;
+  -webkit-transition: all .8s linear;
+  transition: all .8s linear;
+}
+
+#projects-section .project .project-container .video-view-button div {
+  overflow: hidden;
+}
+
+#projects-section .project .project-container .video-view-button div p {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 1.4vw;
+  text-align: center;
+  font-weight: 900;
+}
+
+#projects-section .project .project-container .video-view-button:hover {
+  border: 3px solid #868686;
+}
+
+#projects-section .project .project-container .video-view-button:hover div:first-child p {
+  -webkit-animation: hoverPopUp 1s ease;
+          animation: hoverPopUp 1s ease;
+}
+
+#projects-section .project .project-container .video-view-button:hover div:last-child p {
+  -webkit-animation: hoverPopUp 1s ease .2s;
+          animation: hoverPopUp 1s ease .2s;
 }
 
 #projects-section #todotoday .project-container .project-title-border {

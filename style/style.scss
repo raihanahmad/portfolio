@@ -422,6 +422,52 @@
           }
         }
       }
+
+      // View Video Button
+      .video-view-button {
+        position: absolute;
+        top: 15%;
+        right: 5%;
+        z-index: 10;
+        height: 10vw;
+        width: 10vw;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transform: rotate(-20deg);
+        border: 3px solid #444444;
+        transition: all .8s linear;
+
+        div {
+          overflow: hidden;
+
+          p {
+            text-transform: uppercase;
+            color: $light-color;
+            font-size: 1.4vw;
+            text-align: center;
+            font-weight: 900;
+          }
+        }
+
+        &:hover {
+          border: 3px solid #868686;
+
+          div:first-child {
+            p {
+              animation: hoverPopUp 1s ease;
+            }
+          }
+
+          div:last-child {
+            p {
+              animation: hoverPopUp 1s ease .2s;
+            }
+          }
+        }
+      }
     }
   }
 
