@@ -239,6 +239,8 @@
 
 // Projects Section
 #projects-section {
+  transition: transform 0.7s;
+  will-change: transform;
 
   // Section Title
   #projects-section-title {

@@ -475,6 +475,14 @@ img {
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
+#projects-section {
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+  will-change: transform;
+}
+
 #projects-section #projects-section-title {
   text-align: left;
   margin: 6vw 0 6vw 0;

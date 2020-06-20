@@ -35,9 +35,14 @@ showcaseTitle.addEventListener("mouseover", function (e) {
   const navbarMagnetEffect = function (e) {
     const navLink = this.querySelector("#navbar-links .nav-link");
 
-    const { offsetX: x, offsetY: y } = e,
-      { offsetWidth: width, offsetHeight: height } = this,
-      move = 25,
+    const {
+      offsetX: x,
+      offsetY: y
+    } = e, {
+      offsetWidth: width,
+      offsetHeight: height
+    } = this,
+    move = 25,
       xMove = (x / width) * (move * 2) - move,
       yMove = (y / height) * (move * 2) - move;
 
@@ -100,3 +105,23 @@ window.addEventListener("scroll", (e) => {
 // window.addEventListener("mousemove", (e) => {
 //   mouseCursor.classList.remove("defaultCursor");
 // });
+
+
+
+// Projects Section Distort Effect
+const projectsSection = document.querySelector('#projects-section');
+let currentPos = window.pageYOffset;
+
+const distortEffect = function () {
+  const newPos = window.pageYOffset;
+  const diff = newPos - currentPos;
+  const speed = diff * 0.2;
+
+  projectsSection.style.transform = `skewY(${speed}deg)`;
+  currentPos = newPos;
+  requestAnimationFrame(distortEffect);
+}
+
+distortEffect();
+
+console.log(projectsSection);
