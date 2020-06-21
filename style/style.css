@@ -77,8 +77,8 @@ img {
 }
 
 .cursorGrowOnTitle {
-  -webkit-transform: scale(13);
-          transform: scale(13);
+  -webkit-transform: scale(14);
+          transform: scale(14);
 }
 
 .navHoverCursor {
@@ -196,6 +196,19 @@ img {
 #home .home-container {
   height: 100vh;
   padding: 4.6vh 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #home .home-container #navbar {
@@ -265,12 +278,7 @@ img {
   width: 4vw;
 }
 
-#home .home-container #home-content {
-  height: 85%;
-}
-
-#home .home-container #home-content #name-title {
-  height: 55%;
+#home .home-container #name-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -286,11 +294,11 @@ img {
           justify-content: flex-end;
 }
 
-#home .home-container #home-content #name-title > div {
+#home .home-container #name-title > div {
   width: 65%;
 }
 
-#home .home-container #home-content #name-title > div h1 {
+#home .home-container #name-title > div h1 {
   display: inline-block;
   text-transform: uppercase;
   font-size: 7.5vw;
@@ -298,13 +306,13 @@ img {
   line-height: 1.1;
 }
 
-#home .home-container #home-content #name-title > div h3 {
+#home .home-container #name-title > div h3 {
   font-size: 2.5vw;
   font-weight: 500;
 }
 
-#home .home-container #home-content #home-info {
-  height: 45%;
+#home .home-container #home-info {
+  padding-bottom: 1vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -316,17 +324,17 @@ img {
           justify-content: space-between;
 }
 
-#home .home-container #home-content #home-info #progresses-description {
+#home .home-container #home-info #progresses-description {
   font-size: 1.2vw;
   text-transform: capitalize;
   opacity: 0.8;
 }
 
-#home .home-container #home-content #home-info #progresses-description > p:first-child {
+#home .home-container #home-info #progresses-description > p:first-child {
   display: inline-block;
 }
 
-#home .home-container #home-content #home-info #progresses-description #progresses-animation {
+#home .home-container #home-info #progresses-description #progresses-animation {
   display: inline-block !important;
   position: relative;
   top: .33vw;
@@ -337,7 +345,7 @@ img {
           perspective: 1000px;
 }
 
-#home .home-container #home-content #home-info #progresses-description #progresses-animation > span {
+#home .home-container #home-info #progresses-description #progresses-animation > span {
   bottom: 0;
   position: absolute;
   -webkit-transition: all .4s ease;
@@ -345,17 +353,17 @@ img {
   opacity: 0;
 }
 
-#home .home-container #home-content #home-info #progresses-description #progresses-animation > span:first-child {
+#home .home-container #home-info #progresses-description #progresses-animation > span:first-child {
   -webkit-animation: rotateTextOne 12s linear infinite;
           animation: rotateTextOne 12s linear infinite;
 }
 
-#home .home-container #home-content #home-info #progresses-description #progresses-animation > span:nth-child(2) {
+#home .home-container #home-info #progresses-description #progresses-animation > span:nth-child(2) {
   -webkit-animation: rotateTextOne 12s linear infinite 4s;
           animation: rotateTextOne 12s linear infinite 4s;
 }
 
-#home .home-container #home-content #home-info #progresses-description #progresses-animation > span:last-child {
+#home .home-container #home-info #progresses-description #progresses-animation > span:last-child {
   -webkit-animation: rotateTextOne 12s linear infinite 8s;
           animation: rotateTextOne 12s linear infinite 8s;
 }
@@ -416,18 +424,18 @@ img {
   }
 }
 
-#home .home-container #home-content #home-info #contact-content {
+#home .home-container #home-info #contact-content {
   text-transform: uppercase;
   line-height: 1;
 }
 
-#home .home-container #home-content #home-info #contact-content p {
+#home .home-container #home-info #contact-content p {
   font-size: 1.5vw;
   letter-spacing: -1px;
   margin-bottom: 0.6rem;
 }
 
-#home .home-container #home-content #home-info #contact-content #contact-box {
+#home .home-container #home-info #contact-content #contact-box {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   padding: 0.8vw;
@@ -446,7 +454,7 @@ img {
   border: 4px solid #ffffff;
 }
 
-#home .home-container #home-content #home-info #contact-content #contact-box h3 {
+#home .home-container #home-info #contact-content #contact-box h3 {
   position: absolute;
   font-weight: 900;
   font-size: 2.5vw;
@@ -465,7 +473,7 @@ img {
   transition: all .3s ease-in-out;
 }
 
-#home .home-container #home-content #home-info #contact-content #contact-box h3:last-child {
+#home .home-container #home-info #contact-content #contact-box h3:last-child {
   height: 101%;
   width: 101%;
   z-index: 3;
@@ -475,12 +483,12 @@ img {
           clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
 }
 
-#home .home-container #home-content #home-info #contact-content #contact-box h3:last-child:hover {
+#home .home-container #home-info #contact-content #contact-box h3:last-child:hover {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-#home .home-container #home-content #home-info #contact-content #contact-box h3:first-child:hover ~ h3:last-child {
+#home .home-container #home-info #contact-content #contact-box h3:first-child:hover ~ h3:last-child {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }

@@ -18,6 +18,10 @@
   .home-container {
     height: 100vh;
     padding: 4.6vh 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: unset;
+    justify-content: space-between;
 
     // Navbar
     #navbar {
@@ -79,166 +83,159 @@
       }
     }
 
+    // Name and Title
+    #name-title {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: flex-end;
 
-    // Home Content
-    #home-content {
-      height: 85%;
+      &>div {
+        width: 65%;
 
-      // Name and Title
-      #name-title {
-        height: 55%;
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        justify-content: flex-end;
+        h1 {
+          display: inline-block;
+          text-transform: uppercase;
+          font-size: 7.5vw;
+          font-weight: 900;
+          line-height: 1.1;
+        }
 
-        &>div {
-          width: 65%;
+        h3 {
+          font-size: 2.5vw;
+          font-weight: 500;
+        }
+      }
+    }
 
-          h1 {
-            display: inline-block;
-            text-transform: uppercase;
-            font-size: 7.5vw;
-            font-weight: 900;
-            line-height: 1.1;
+    // Home Info
+    #home-info {
+      padding-bottom: 1vw;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      // Progresses And Description
+      #progresses-description {
+        font-size: 1.2vw;
+        text-transform: capitalize;
+        opacity: 0.8;
+
+        &>p:first-child {
+          display: inline-block;
+        }
+
+        #progresses-animation {
+          display: inline-block !important;
+          position: relative;
+          top: .33vw;
+          width: 6vw;
+          height: 1.5vw;
+          font-weight: 900;
+          perspective: 1000px;
+          // padding-left: .15vw;
+        }
+
+        #progresses-animation>span {
+          bottom: 0;
+          position: absolute;
+          transition: all .4s ease;
+          opacity: 0;
+        }
+
+        #progresses-animation>span:first-child {
+          animation: rotateTextOne 12s linear infinite;
+        }
+
+        #progresses-animation>span:nth-child(2) {
+          animation: rotateTextOne 12s linear infinite 4s;
+        }
+
+        #progresses-animation>span:last-child {
+          animation: rotateTextOne 12s linear infinite 8s;
+        }
+
+        @keyframes rotateTextOne {
+          0% {
+            transform: rotateX(240deg);
+            opacity: 0;
           }
 
-          h3 {
-            font-size: 2.5vw;
-            font-weight: 500;
+          3% {
+            transform: rotateX(360deg);
+            opacity: 1;
+          }
+
+          27% {
+            transform: rotateX(360deg);
+            opacity: 1;
+          }
+
+          30% {
+            transform: rotateX(240deg);
+            opacity: 0;
+          }
+
+          100% {
+            transform: rotateX(240deg);
+            opacity: 0;
           }
         }
       }
 
-      // Home Info
-      #home-info {
-        height: 45%;
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
+      // Contact Section
+      #contact-content {
+        text-transform: uppercase;
+        line-height: 1;
 
-        // Progresses And Description
-        #progresses-description {
-          font-size: 1.2vw;
-          text-transform: capitalize;
-          opacity: 0.8;
 
-          &>p:first-child {
-            display: inline-block;
-          }
-
-          #progresses-animation {
-            display: inline-block !important;
-            position: relative;
-            top: .33vw;
-            width: 6vw;
-            height: 1.5vw;
-            font-weight: 900;
-            perspective: 1000px;
-            // padding-left: .15vw;
-          }
-
-          #progresses-animation>span {
-            bottom: 0;
-            position: absolute;
-            transition: all .4s ease;
-            opacity: 0;
-          }
-
-          #progresses-animation>span:first-child {
-            animation: rotateTextOne 12s linear infinite;
-          }
-
-          #progresses-animation>span:nth-child(2) {
-            animation: rotateTextOne 12s linear infinite 4s;
-          }
-
-          #progresses-animation>span:last-child {
-            animation: rotateTextOne 12s linear infinite 8s;
-          }
-
-          @keyframes rotateTextOne {
-            0% {
-              transform: rotateX(240deg);
-              opacity: 0;
-            }
-
-            3% {
-              transform: rotateX(360deg);
-              opacity: 1;
-            }
-
-            27% {
-              transform: rotateX(360deg);
-              opacity: 1;
-            }
-
-            30% {
-              transform: rotateX(240deg);
-              opacity: 0;
-            }
-
-            100% {
-              transform: rotateX(240deg);
-              opacity: 0;
-            }
-          }
+        p {
+          font-size: 1.5vw;
+          letter-spacing: -1px;
+          margin-bottom: 0.6rem;
         }
 
-        // Contact Section
-        #contact-content {
-          text-transform: uppercase;
-          line-height: 1;
+        #contact-box {
 
+          position: relative;
+          font-family: Arial,
+            Helvetica,
+            sans-serif;
+          padding: 0.8vw;
+          height: 4.4vw;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          border: 4px solid $light-color;
 
-          p {
-            font-size: 1.5vw;
-            letter-spacing: -1px;
-            margin-bottom: 0.6rem;
-          }
-
-          #contact-box {
-
-            position: relative;
-            font-family: Arial,
-              Helvetica,
-              sans-serif;
-            padding: 0.8vw;
-            height: 4.4vw;
+          h3 {
+            position: absolute;
+            font-weight: 900;
+            font-size: 2.5vw;
+            height: 100%;
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: none;
-            border: 4px solid $light-color;
+            transition: all .3s ease-in-out;
 
-            h3 {
-              position: absolute;
-              font-weight: 900;
-              font-size: 2.5vw;
-              height: 100%;
-              width: 100%;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              transition: all .3s ease-in-out;
+            &:last-child {
+              height: 101%;
+              width: 101%;
+              z-index: 3;
+              background: $light-color;
+              color: $dark-color;
+              clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
 
-              &:last-child {
-                height: 101%;
-                width: 101%;
-                z-index: 3;
-                background: $light-color;
-                color: $dark-color;
-                clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
-
-                &:hover {
-                  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-                }
+              &:hover {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
               }
+            }
 
-              &:first-child:hover~h3:last-child {
-                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-              }
+            &:first-child:hover~h3:last-child {
+              clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             }
           }
         }
