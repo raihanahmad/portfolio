@@ -289,16 +289,33 @@
     padding-top: 8vw;
     padding-bottom: 5vh;
 
-    .project-container {
-      z-index: 15;
+    .project-showcase {
+      position: relative;
+      padding: 10px;
+      perspective: 1000px;
+      right: 2vw;
 
-      .project-showcase {
+      .project-bg {
+        transform: perspective(1000px);
         width: 70vw;
         position: relative;
-        right: 2vw;
+        // background-color: blue;
+        height: 80vh;
+        transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        transform-style: preserve-3d;
 
-        img {
-          filter: grayscale(100%) blur(1px);
+        &:hover {
+          transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 75%;
+          width: 75%;
+          transform: translateZ(130px) translateX(17%) translateY(17%);
+          // filter: grayscale(100%) blur(1px);
           transition: all .4s ease;
 
           &:hover {
@@ -308,172 +325,172 @@
 
 
       }
+    }
 
-      // Project Description
-      .project-description {
-        position: absolute;
-        right: 15%;
-        top: 38.9%;
-        transform: rotate(90deg);
-        text-transform: uppercase;
+    // Project Description
+    .project-description {
+      position: absolute;
+      right: 15%;
+      top: 38.9%;
+      transform: rotate(90deg);
+      text-transform: uppercase;
 
-        p {
+      p {
+        color: #aaaaaa;
+        text-align: left;
+        font-size: 1.2vw;
+        font-weight: normal;
+
+        a {
           color: #aaaaaa;
-          text-align: left;
-          font-size: 1.2vw;
-          font-weight: normal;
-
-          a {
-            color: #aaaaaa;
-            border-bottom: 1px solid #aaaaaa;
-            transition: all .3s ease;
-
-            &:hover {
-              color: #eeeeee;
-              border-bottom: 1px solid #cccccc;
-            }
-          }
-        }
-      }
-
-      .project-title {
-        pointer-events: none;
-        position: absolute;
-        top: 3.2vw;
-        left: 0;
-        height: 20%;
-        width: 85%;
-        display: block;
-        text-align: center;
-
-        h1 {
-          font-size: 8vw;
-          font-weight: 900;
-          text-transform: uppercase;
-        }
-      }
-
-      .project-title-border {
-        -webkit-text-stroke: 2px #fff;
-        z-index: 2;
-        color: transparent;
-
-      }
-
-      .project-title-color {
-        z-index: -1;
-      }
-
-      // Project Count
-      .project-count {
-        position: absolute;
-        right: -5%;
-        top: 50%;
-        opacity: 0.1;
-        transform: rotate(270deg);
-
-        h1 {
-          font-weight: 900;
-          color: transparent;
-          font-size: 21vw;
-          -webkit-text-stroke: 1px $light-color;
-        }
-      }
-
-      // View Project Button
-      .project-view-button {
-        position: absolute;
-        bottom: 10%;
-        right: 26%;
-        z-index: 10;
-
-        div {
-          height: 10vw;
-          width: 10vw;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border: 3px solid $light-color;
-          transition: all .3s ease-in-out;
-
-          p {
-            text-transform: uppercase;
-            font-weight: normal;
-            position: absolute;
-            color: $light-color;
-            font-size: 1.3vw;
-            letter-spacing: .3vw;
-            transition: all .3s ease;
-            animation: rotatefull 6s linear infinite;
-          }
-
-          @keyframes rotatefull {
-            0% {
-              transform: rotate(0deg);
-            }
-
-            100% {
-              transform: rotate(360deg);
-            }
-          }
-
+          border-bottom: 1px solid #aaaaaa;
+          transition: all .3s ease;
 
           &:hover {
-            background: $light-color;
-
-            p {
-              color: $dark-color;
-              font-size: 1.2vw;
-              letter-spacing: -1px;
-              word-spacing: 2px;
-            }
+            color: #eeeeee;
+            border-bottom: 1px solid #cccccc;
           }
         }
       }
+    }
 
-      // View Video Button
-      .video-view-button {
-        position: absolute;
-        top: 15%;
-        right: 5%;
-        z-index: 10;
+    .project-title {
+      pointer-events: none;
+      position: absolute;
+      top: 3.8vw;
+      left: 0;
+      height: 20%;
+      width: 85%;
+      display: block;
+      text-align: center;
+
+      h1 {
+        font-size: 8vw;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+    }
+
+    .project-title-border {
+      -webkit-text-stroke: 2px #fff;
+      z-index: 2;
+      color: transparent;
+
+    }
+
+    .project-title-color {
+      z-index: -1;
+    }
+
+    // Project Count
+    .project-count {
+      position: absolute;
+      right: -5%;
+      top: 50%;
+      opacity: 0.1;
+      transform: rotate(270deg);
+
+      h1 {
+        font-weight: 900;
+        color: transparent;
+        font-size: 21vw;
+        -webkit-text-stroke: 1px $light-color;
+      }
+    }
+
+    // View Project Button
+    .project-view-button {
+      position: absolute;
+      bottom: 10%;
+      right: 26%;
+      z-index: 10;
+
+      div {
         height: 10vw;
         width: 10vw;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
-        transform: rotate(-20deg);
-        border: 3px solid #444444;
-        transition: all .8s linear;
+        border: 3px solid $light-color;
+        transition: all .3s ease-in-out;
 
-        div {
-          overflow: hidden;
+        p {
+          text-transform: uppercase;
+          font-weight: normal;
+          position: absolute;
+          color: $light-color;
+          font-size: 1.3vw;
+          letter-spacing: .3vw;
+          transition: all .3s ease;
+          animation: rotatefull 6s linear infinite;
+        }
 
-          p {
-            text-transform: uppercase;
-            color: $light-color;
-            font-size: 1.4vw;
-            text-align: center;
-            font-weight: 900;
+        @keyframes rotatefull {
+          0% {
+            transform: rotate(0deg);
+          }
+
+          100% {
+            transform: rotate(360deg);
           }
         }
 
+
         &:hover {
-          border: 3px solid #868686;
+          background: $light-color;
 
-          div:first-child {
-            p {
-              animation: hoverPopUp 1s ease;
-            }
+          p {
+            color: $dark-color;
+            font-size: 1.2vw;
+            letter-spacing: -1px;
+            word-spacing: 2px;
           }
+        }
+      }
+    }
 
-          div:last-child {
-            p {
-              animation: hoverPopUp 1s ease .2s;
-            }
+    // View Video Button
+    .video-view-button {
+      position: absolute;
+      top: 15%;
+      right: 5%;
+      z-index: 10;
+      height: 10vw;
+      width: 10vw;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transform: rotate(-20deg);
+      border: 3px solid #444444;
+      transition: all .8s linear;
+
+      div {
+        overflow: hidden;
+
+        p {
+          text-transform: uppercase;
+          color: $light-color;
+          font-size: 1.4vw;
+          text-align: center;
+          font-weight: 900;
+        }
+      }
+
+      &:hover {
+        border: 3px solid #868686;
+
+        div:first-child {
+          p {
+            animation: hoverPopUp 1s ease;
+          }
+        }
+
+        div:last-child {
+          p {
+            animation: hoverPopUp 1s ease .2s;
           }
         }
       }
@@ -481,11 +498,8 @@
   }
 
   #todotoday {
-    .project-container {
-      .project-title-border {
-        -webkit-text-stroke: 3px $dark-color;
-      }
+    .project-title-border {
+      -webkit-text-stroke: 3px $dark-color;
     }
   }
-
 }
