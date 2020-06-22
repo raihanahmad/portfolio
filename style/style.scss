@@ -296,12 +296,13 @@
       right: 2vw;
 
       .project-bg {
+        border-radius: 5px;
         transform: perspective(1000px);
         width: 70vw;
         position: relative;
         // background-color: blue;
         height: 80vh;
-        transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        // transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
         transform-style: preserve-3d;
 
         &:hover {
@@ -309,17 +310,18 @@
         }
 
         .img {
+          // display: none;
           position: absolute;
           top: 0;
           left: 0;
           height: 75%;
           width: 75%;
-          transform: translateZ(130px) translateX(17%) translateY(17%);
+          transform: translateZ(130px) translateX(15.5%) translateY(15.5%);
           // filter: grayscale(100%) blur(1px);
           transition: all .4s ease;
 
           &:hover {
-            filter: grayscale(30%) blur(0);
+            // filter: grayscale(30%) blur(0);
           }
         }
 
