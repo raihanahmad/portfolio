@@ -259,6 +259,45 @@
     width: 100%;
     z-index: 30;
 
+    // Close x Mark
+    #close-contact {
+      position: absolute;
+      top: 10%;
+      right: 6%;
+      height: 3vw;
+      width: 3vw;
+
+      #close-x {
+        position: relative;
+        top: 1.3vw;
+        height: 3px;
+        width: 2.5vw;
+        background: $light-color;
+        transform: rotate(45deg);
+        transition: transform .3s ease-in-out;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          height: 3px;
+          width: 2.5vw;
+          background: $light-color;
+          transform: rotate(-90deg);
+          transition: transform .3s ease-in-out;
+        }
+      }
+
+      &:hover #close-x {
+        transform: rotate(45deg) scaleX(1.3);
+      }
+
+      &:hover #close-x::before {
+        transform: rotate(-90deg) scaleX(1.3);
+      }
+    }
+
     // Email
     #contact-email-box {
       position: absolute;
@@ -313,7 +352,7 @@
         letter-spacing: 1px;
         font-weight: normal;
         text-transform: uppercase;
-        margin-bottom: .5vw;
+        margin-bottom: .7vw;
       }
 
       #social-contact {

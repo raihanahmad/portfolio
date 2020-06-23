@@ -513,6 +513,54 @@ img {
   z-index: 30;
 }
 
+#home #contact-section #close-contact {
+  position: absolute;
+  top: 10%;
+  right: 6%;
+  height: 3vw;
+  width: 3vw;
+}
+
+#home #contact-section #close-contact #close-x {
+  position: relative;
+  top: 1.3vw;
+  height: 3px;
+  width: 2.5vw;
+  background: #ffffff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+#home #contact-section #close-contact #close-x::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 3px;
+  width: 2.5vw;
+  background: #ffffff;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+#home #contact-section #close-contact:hover #close-x {
+  -webkit-transform: rotate(45deg) scaleX(1.3);
+          transform: rotate(45deg) scaleX(1.3);
+}
+
+#home #contact-section #close-contact:hover #close-x::before {
+  -webkit-transform: rotate(-90deg) scaleX(1.3);
+          transform: rotate(-90deg) scaleX(1.3);
+}
+
 #home #contact-section #contact-email-box {
   position: absolute;
   top: 35%;
@@ -569,7 +617,7 @@ img {
   letter-spacing: 1px;
   font-weight: normal;
   text-transform: uppercase;
-  margin-bottom: .5vw;
+  margin-bottom: .7vw;
 }
 
 #home #contact-section #social-contact-section #social-contact {

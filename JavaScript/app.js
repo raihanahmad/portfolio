@@ -152,3 +152,5 @@ function smoothScroll() {
 }
 
 smoothScroll();
+
+// Show Contact Section
