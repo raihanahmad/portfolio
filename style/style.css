@@ -196,8 +196,13 @@ img {
   overflow: hidden;
 }
 
-#home .home-container {
+#home {
+  position: relative;
   height: 100vh;
+}
+
+#home .home-container {
+  height: 100%;
   padding: 4.6vh 5vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -494,6 +499,45 @@ img {
 #home .home-container #home-info #contact-content #contact-box h3:first-child:hover ~ h3:last-child {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+#home #contact-section {
+  overflow: hidden;
+  font-family: 'Raleway', sans-serif;
+  background: #ffffff;
+  color: #1B1B1B;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 30;
+}
+
+#home #contact-section a {
+  color: #1B1B1B;
+}
+
+#home #contact-section #contact-email-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#home #contact-section #contact-email-box p {
+  font-size: 1.8vw;
+  margin-bottom: 1vw;
+  font-weight: normal;
+  letter-spacing: -1px;
+  word-spacing: 2px;
+}
+
+#home #contact-section #contact-email-box #email-link span {
+  font-size: 5vw;
+  font-weight: 700;
 }
 
 #projects-section {
