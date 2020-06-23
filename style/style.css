@@ -555,6 +555,19 @@ img {
           transform: scale(1, 1);
 }
 
+#home #contact-section #social-contact {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+#home #contact-section #social-contact a {
+  color: #ffffff;
+}
+
 #projects-section {
   -webkit-transition: -webkit-transform 0.7s;
   transition: -webkit-transform 0.7s;

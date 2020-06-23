@@ -259,6 +259,7 @@
     width: 100%;
     z-index: 30;
 
+    // Email
     #contact-email-box {
       position: absolute;
       top: 40%;
@@ -296,6 +297,19 @@
 
           }
         }
+      }
+    }
+
+    // Social
+    #social-contact {
+      position: absolute;
+      bottom: 20%;
+      left: 50%;
+      text-align: center;
+      transform: translate(-50%);
+
+      a {
+        color: $light-color;
       }
     }
   }
