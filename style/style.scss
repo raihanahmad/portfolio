@@ -251,18 +251,13 @@
     overflow: hidden;
     font-family: 'Raleway', sans-serif;
     // display: none;
-    background: $light-color;
-    color: $dark-color;
+    background: $dark-color;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     z-index: 30;
-
-    a {
-      color: $dark-color;
-    }
 
     #contact-email-box {
       position: absolute;
@@ -274,17 +269,32 @@
 
       p {
         font-size: 1.8vw;
-        // text-transform: uppercase;
-        margin-bottom: 1vw;
+        margin-bottom: 0.8vw;
         font-weight: normal;
-        letter-spacing: -1px;
-        word-spacing: 2px;
       }
 
       #email-link {
         span {
-          font-size: 5vw;
+          font-size: 5.5vw;
           font-weight: 700;
+
+          &::before {
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            bottom: 0;
+            background: $light-color;
+            left: 0;
+            right: 0;
+            transform: scale(0, 1);
+            transition: transform .3s ease-in-out;
+          }
+
+          &:hover::before {
+            transform: scale(1, 1);
+
+          }
         }
       }
     }
