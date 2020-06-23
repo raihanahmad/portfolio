@@ -69,10 +69,11 @@ img {
   background: #ffffff;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-  transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  border: 1px solid #ffffff;
+  -webkit-transition: background .4s linear, -webkit-transform .3s ease-in-out;
+  transition: background .4s linear, -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, background .4s linear;
+  transition: transform .3s ease-in-out, background .4s linear, -webkit-transform .3s ease-in-out;
   mix-blend-mode: difference;
 }
 
@@ -127,12 +128,14 @@ img {
 }
 
 .defaultCursor {
-  mix-blend-mode: difference;
+  mix-blend-mode: unset;
   border-radius: 50%;
   height: 1.5vw;
   width: 1.5vw;
-  -webkit-transform: scale(1) translate(-50%, -50%);
-          transform: scale(1) translate(-50%, -50%);
+  border: 1px solid #ffffff;
+  background-color: unset;
+  -webkit-transform: scale(3) translate(-20%, -20%);
+          transform: scale(3) translate(-20%, -20%);
   -webkit-clip-path: unset;
           clip-path: unset;
 }
@@ -189,7 +192,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 800%;
+  height: 800vh;
   overflow: hidden;
 }
 
@@ -563,6 +566,17 @@ img {
   -webkit-perspective: 1000px;
           perspective: 1000px;
   right: 2vw;
+  -webkit-filter: grayscale(100%) blur(1px);
+          filter: grayscale(100%) blur(1px);
+  -webkit-transition: -webkit-filter 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: -webkit-filter 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: filter 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: filter 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), -webkit-filter 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+#projects-section .project .project-showcase:hover {
+  -webkit-filter: grayscale(30%) blur(0);
+          filter: grayscale(30%) blur(0);
 }
 
 #projects-section .project .project-showcase .project-bg {

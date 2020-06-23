@@ -4,6 +4,7 @@ const blackWhiteToggler = document.querySelector("#arrow-svg");
 const navLi = document.querySelectorAll("#navbar-links > ul > li");
 const cursorNoneElements = document.querySelectorAll(".cursorNone");
 const cursorTriangleElements = document.querySelectorAll(".cursorTriangle");
+const cursorDefaultElements = document.querySelectorAll(".cursorDefault");
 
 // Create Mouse Cursor
 const mouseCursor = document.createElement("div");
@@ -85,6 +86,17 @@ cursorTriangleElements.forEach(function (cursorTriangleElement) {
   });
 });
 
+// Cursor Default On Hover
+cursorDefaultElements.forEach(function (cursorDefaultElement) {
+  cursorDefaultElement.addEventListener("mouseleave", function (e) {
+    mouseCursor.classList.remove("defaultCursor");
+  });
+
+  cursorDefaultElement.addEventListener("mouseover", function (e) {
+    mouseCursor.classList.add("defaultCursor");
+  });
+});
+
 // const test = document.body.scrollHeight - window.innerHeight;
 
 // window.onscroll = function () {
@@ -99,14 +111,9 @@ window.addEventListener("scroll", (e) => {
     mouseCursor.classList.remove("cursorToTriangle");
     mouseCursor.classList.remove("cursorGrowOnTitle");
     mouseCursor.classList.remove("navHoverCursor");
+    mouseCursor.classList.remove("defaultCursor");
   }
 });
-
-// window.addEventListener("mousemove", (e) => {
-//   mouseCursor.classList.remove("defaultCursor");
-// });
-
-
 
 // Projects Section Distort Effect
 const projectsSection = document.querySelector('#projects-section');

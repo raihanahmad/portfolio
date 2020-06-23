@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 800%;
+  height: 800vh;
   overflow: hidden;
 }
 
@@ -294,6 +294,13 @@
       padding: 10px;
       perspective: 1000px;
       right: 2vw;
+      filter: grayscale(100%) blur(1px);
+      transition: filter 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+      &:hover {
+        filter: grayscale(30%) blur(0);
+      }
+
 
       .project-bg {
         border-radius: 5px;
@@ -317,15 +324,8 @@
           height: 75%;
           width: 75%;
           transform: translateZ(130px) translateX(15.5%) translateY(15.5%);
-          // filter: grayscale(100%) blur(1px);
           transition: all .4s ease;
-
-          &:hover {
-            // filter: grayscale(30%) blur(0);
-          }
         }
-
-
       }
     }
 
