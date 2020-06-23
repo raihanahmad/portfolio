@@ -269,8 +269,8 @@
 
 
       p {
-        font-size: 1.8vw;
-        margin-bottom: 0.8vw;
+        font-size: 2vw;
+        margin-bottom: 1vw;
         font-weight: normal;
       }
 
@@ -303,13 +303,71 @@
     // Social
     #social-contact {
       position: absolute;
-      bottom: 20%;
+      bottom: 15%;
       left: 50%;
       text-align: center;
       transform: translate(-50%);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
 
-      a {
+      .social-link {
+        display: inline-block;
+        width: 2.5vw;
+        height: 2.5vw;
+        border-radius: 30%;
         color: $light-color;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        i {
+          font-size: 1vw;
+          transition: 0.2s linear;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 120%;
+          height: 120%;
+          background: $light-color;
+          transform: rotate(45deg);
+          left: -110%;
+          top: 90%;
+        }
+
+        &:hover i {
+          transform: scale(1.3);
+          color: $dark-color;
+        }
+
+        &:hover::before {
+          animation: aaa 0.7s 1;
+          top: -10%;
+          left: -10%;
+        }
+      }
+
+      @keyframes aaa {
+        0% {
+          left: -110%;
+          top: 90%;
+        }
+
+        50% {
+          left: 10%;
+          top: -30%;
+        }
+
+        100% {
+          top: -10%;
+          left: -10%;
+        }
       }
     }
   }
