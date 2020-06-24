@@ -191,7 +191,6 @@
         text-transform: uppercase;
         line-height: 1;
 
-
         p {
           font-size: 1.5vw;
           letter-spacing: -1px;
@@ -199,7 +198,6 @@
         }
 
         #contact-box {
-
           position: relative;
           font-family: Arial,
             Helvetica,
@@ -250,7 +248,7 @@
   #contact-section {
     overflow: hidden;
     font-family: 'Raleway', sans-serif;
-    // display: none;
+    display: none;
     background: $dark-color;
     position: absolute;
     top: 0;
@@ -258,6 +256,17 @@
     height: 100%;
     width: 100%;
     z-index: 30;
+    animation: aaaa 1s linear;
+
+    @keyframes aaaa {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
 
     // Close x Mark
     #close-contact {
@@ -279,7 +288,7 @@
         &::before {
           content: "";
           position: absolute;
-          top: 50%;
+          top: -50%;
           left: 0;
           height: 3px;
           width: 2.5vw;

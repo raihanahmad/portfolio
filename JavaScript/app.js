@@ -154,3 +154,14 @@ function smoothScroll() {
 smoothScroll();
 
 // Show Contact Section
+const contactBtn = document.querySelector('#contact-box');
+const contactSection = document.querySelector('#contact-section');
+const closeContactBtn = document.querySelector('#close-contact')
+
+contactBtn.addEventListener('click', () => {
+  contactSection.style.display = "unset";
+});
+
+closeContactBtn.addEventListener('click', (e) => {
+  contactSection.style.display = "none";
+});
