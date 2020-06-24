@@ -186,6 +186,42 @@ img {
   }
 }
 
+@-webkit-keyframes opacityIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes opacityOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes opacityOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .smooth-scroll-wrapper {
   position: fixed;
   z-index: 2;
@@ -503,38 +539,30 @@ img {
 
 #home #contact-section {
   overflow: hidden;
-  font-family: 'Raleway', sans-serif;
   display: none;
-  background: #1B1B1B;
+  opacity: 0;
+  background: #ffffff;
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   z-index: 30;
-  -webkit-animation: aaaa 1s linear;
-          animation: aaaa 1s linear;
 }
 
-@-webkit-keyframes aaaa {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+#home #contact-section #contact-section-wrap {
+  display: none;
+  overflow: hidden;
+  background: #1B1B1B;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
 }
 
-@keyframes aaaa {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-#home #contact-section #close-contact {
+#home #contact-section #contact-section-wrap #close-contact {
   position: absolute;
   top: 10%;
   right: 6%;
@@ -542,7 +570,7 @@ img {
   width: 3vw;
 }
 
-#home #contact-section #close-contact #close-x {
+#home #contact-section #contact-section-wrap #close-contact #close-x {
   position: relative;
   top: 1.3vw;
   height: 3px;
@@ -556,7 +584,7 @@ img {
   transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
-#home #contact-section #close-contact #close-x::before {
+#home #contact-section #contact-section-wrap #close-contact #close-x::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -572,17 +600,17 @@ img {
   transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
-#home #contact-section #close-contact:hover #close-x {
+#home #contact-section #contact-section-wrap #close-contact:hover #close-x {
   -webkit-transform: rotate(45deg) scaleX(1.3);
           transform: rotate(45deg) scaleX(1.3);
 }
 
-#home #contact-section #close-contact:hover #close-x::before {
+#home #contact-section #contact-section-wrap #close-contact:hover #close-x::before {
   -webkit-transform: rotate(-90deg) scaleX(1.3);
           transform: rotate(-90deg) scaleX(1.3);
 }
 
-#home #contact-section #contact-email-box {
+#home #contact-section #contact-section-wrap #contact-email-box {
   position: absolute;
   top: 35%;
   left: 50%;
@@ -591,18 +619,18 @@ img {
           transform: translateX(-50%);
 }
 
-#home #contact-section #contact-email-box p {
+#home #contact-section #contact-section-wrap #contact-email-box p {
   font-size: 1.8vw;
   margin-bottom: 1vw;
   font-weight: normal;
 }
 
-#home #contact-section #contact-email-box #email-link span {
+#home #contact-section #contact-section-wrap #contact-email-box #email-link span {
   font-size: 5.5vw;
   font-weight: 700;
 }
 
-#home #contact-section #contact-email-box #email-link span::before {
+#home #contact-section #contact-section-wrap #contact-email-box #email-link span::before {
   content: '';
   position: absolute;
   height: 3px;
@@ -619,12 +647,12 @@ img {
   transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
-#home #contact-section #contact-email-box #email-link span:hover::before {
+#home #contact-section #contact-section-wrap #contact-email-box #email-link span:hover::before {
   -webkit-transform: scale(1, 1);
           transform: scale(1, 1);
 }
 
-#home #contact-section #social-contact-section {
+#home #contact-section #contact-section-wrap #social-contact-section {
   position: absolute;
   bottom: 10%;
   left: 50%;
@@ -633,7 +661,7 @@ img {
   text-align: center;
 }
 
-#home #contact-section #social-contact-section p {
+#home #contact-section #contact-section-wrap #social-contact-section p {
   font-size: .8rem;
   letter-spacing: 1px;
   font-weight: normal;
@@ -641,7 +669,7 @@ img {
   margin-bottom: .7vw;
 }
 
-#home #contact-section #social-contact-section #social-contact {
+#home #contact-section #contact-section-wrap #social-contact-section #social-contact {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -658,7 +686,7 @@ img {
           justify-content: center;
 }
 
-#home #contact-section #social-contact-section #social-contact .social-link {
+#home #contact-section #contact-section-wrap #social-contact-section #social-contact .social-link {
   display: inline-block;
   width: 3vw;
   height: 3vw;
@@ -678,13 +706,13 @@ img {
   text-align: center;
 }
 
-#home #contact-section #social-contact-section #social-contact .social-link i {
+#home #contact-section #contact-section-wrap #social-contact-section #social-contact .social-link i {
   font-size: 1.3vw;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
 
-#home #contact-section #social-contact-section #social-contact .social-link::before {
+#home #contact-section #contact-section-wrap #social-contact-section #social-contact .social-link::before {
   content: "";
   position: absolute;
   width: 120%;
@@ -696,13 +724,13 @@ img {
   top: 90%;
 }
 
-#home #contact-section #social-contact-section #social-contact .social-link:hover i {
+#home #contact-section #contact-section-wrap #social-contact-section #social-contact .social-link:hover i {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
   color: #1B1B1B;
 }
 
-#home #contact-section #social-contact-section #social-contact .social-link:hover::before {
+#home #contact-section #contact-section-wrap #social-contact-section #social-contact .social-link:hover::before {
   -webkit-animation: sakarIn 0.7s 1;
           animation: sakarIn 0.7s 1;
   top: -10%;

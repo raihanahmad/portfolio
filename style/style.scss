@@ -247,185 +247,187 @@
   // Contact Section Email & Social
   #contact-section {
     overflow: hidden;
-    font-family: 'Raleway', sans-serif;
     display: none;
-    background: $dark-color;
+    opacity: 0;
+    background: $light-color;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     z-index: 30;
-    animation: aaaa 1s linear;
 
-    @keyframes aaaa {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-
-    // Close x Mark
-    #close-contact {
+    #contact-section-wrap {
+      display: none;
+      overflow: hidden;
+      background: $dark-color;
       position: absolute;
-      top: 10%;
-      right: 6%;
-      height: 3vw;
-      width: 3vw;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      font-family: 'Raleway', sans-serif;
+      // animation: opacityIn 1s linear forwards;
 
-      #close-x {
-        position: relative;
-        top: 1.3vw;
-        height: 3px;
-        width: 2.5vw;
-        background: $light-color;
-        transform: rotate(45deg);
-        transition: transform .3s ease-in-out;
+      // Close x Mark
+      #close-contact {
+        position: absolute;
+        top: 10%;
+        right: 6%;
+        height: 3vw;
+        width: 3vw;
 
-        &::before {
-          content: "";
-          position: absolute;
-          top: -50%;
-          left: 0;
+        #close-x {
+          position: relative;
+          top: 1.3vw;
           height: 3px;
           width: 2.5vw;
           background: $light-color;
-          transform: rotate(-90deg);
+          transform: rotate(45deg);
           transition: transform .3s ease-in-out;
-        }
-      }
-
-      &:hover #close-x {
-        transform: rotate(45deg) scaleX(1.3);
-      }
-
-      &:hover #close-x::before {
-        transform: rotate(-90deg) scaleX(1.3);
-      }
-    }
-
-    // Email
-    #contact-email-box {
-      position: absolute;
-      top: 35%;
-      left: 50%;
-      text-align: center;
-      transform: translateX(-50%);
-
-
-      p {
-        font-size: 1.8vw;
-        margin-bottom: 1vw;
-        font-weight: normal;
-      }
-
-      #email-link {
-        span {
-          font-size: 5.5vw;
-          font-weight: 700;
-
-          &::before {
-            content: '';
-            position: absolute;
-            height: 3px;
-            width: 100%;
-            bottom: 0;
-            background: $light-color;
-            left: 0;
-            right: 0;
-            transform: scale(0, 1);
-            transition: transform .3s ease-in-out;
-          }
-
-          &:hover::before {
-            transform: scale(1, 1);
-
-          }
-        }
-      }
-    }
-
-    // Social
-    #social-contact-section {
-      position: absolute;
-      bottom: 10%;
-      left: 50%;
-      transform: translate(-50%);
-      text-align: center;
-
-      p {
-        font-size: .8rem;
-        letter-spacing: 1px;
-        font-weight: normal;
-        text-transform: uppercase;
-        margin-bottom: .7vw;
-      }
-
-      #social-contact {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-
-        .social-link {
-          display: inline-block;
-          width: 3vw;
-          height: 3vw;
-          border-radius: 30%;
-          color: $light-color;
-          overflow: hidden;
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-
-          i {
-            font-size: 1.3vw;
-            transition: 0.2s linear;
-          }
 
           &::before {
             content: "";
             position: absolute;
-            width: 120%;
-            height: 120%;
+            top: -50%;
+            left: 0;
+            height: 3px;
+            width: 2.5vw;
             background: $light-color;
-            transform: rotate(45deg);
-            left: -110%;
-            top: 90%;
-          }
-
-          &:hover i {
-            transform: scale(1.3);
-            color: $dark-color;
-          }
-
-          &:hover::before {
-            animation: sakarIn 0.7s 1;
-            top: -10%;
-            left: -10%;
+            transform: rotate(-90deg);
+            transition: transform .3s ease-in-out;
           }
         }
 
-        @keyframes sakarIn {
-          0% {
-            left: -110%;
-            top: 90%;
+        &:hover #close-x {
+          transform: rotate(45deg) scaleX(1.3);
+        }
+
+        &:hover #close-x::before {
+          transform: rotate(-90deg) scaleX(1.3);
+        }
+      }
+
+      // Email
+      #contact-email-box {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        text-align: center;
+        transform: translateX(-50%);
+
+
+        p {
+          font-size: 1.8vw;
+          margin-bottom: 1vw;
+          font-weight: normal;
+        }
+
+        #email-link {
+          span {
+            font-size: 5.5vw;
+            font-weight: 700;
+
+            &::before {
+              content: '';
+              position: absolute;
+              height: 3px;
+              width: 100%;
+              bottom: 0;
+              background: $light-color;
+              left: 0;
+              right: 0;
+              transform: scale(0, 1);
+              transition: transform .3s ease-in-out;
+            }
+
+            &:hover::before {
+              transform: scale(1, 1);
+
+            }
+          }
+        }
+      }
+
+      // Social
+      #social-contact-section {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%);
+        text-align: center;
+
+        p {
+          font-size: .8rem;
+          letter-spacing: 1px;
+          font-weight: normal;
+          text-transform: uppercase;
+          margin-bottom: .7vw;
+        }
+
+        #social-contact {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+
+          .social-link {
+            display: inline-block;
+            width: 3vw;
+            height: 3vw;
+            border-radius: 30%;
+            color: $light-color;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            i {
+              font-size: 1.3vw;
+              transition: 0.2s linear;
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              width: 120%;
+              height: 120%;
+              background: $light-color;
+              transform: rotate(45deg);
+              left: -110%;
+              top: 90%;
+            }
+
+            &:hover i {
+              transform: scale(1.3);
+              color: $dark-color;
+            }
+
+            &:hover::before {
+              animation: sakarIn 0.7s 1;
+              top: -10%;
+              left: -10%;
+            }
           }
 
-          50% {
-            left: 10%;
-            top: -30%;
-          }
+          @keyframes sakarIn {
+            0% {
+              left: -110%;
+              top: 90%;
+            }
 
-          100% {
-            top: -10%;
-            left: -10%;
+            50% {
+              left: 10%;
+              top: -30%;
+            }
+
+            100% {
+              top: -10%;
+              left: -10%;
+            }
           }
         }
       }

@@ -156,12 +156,30 @@ smoothScroll();
 // Show Contact Section
 const contactBtn = document.querySelector('#contact-box');
 const contactSection = document.querySelector('#contact-section');
-const closeContactBtn = document.querySelector('#close-contact')
+const contactSectionWrap = document.querySelector('#contact-section-wrap');
+const closeContactBtn = document.querySelector('#close-contact');
 
 contactBtn.addEventListener('click', () => {
+  body.style.overflowY = "hidden";
   contactSection.style.display = "unset";
+  contactSection.style.animation = "opacityIn 0.5s linear forwards";
+
+  setTimeout(() => {
+    contactSectionWrap.style.display = "unset";
+    contactSectionWrap.style.animation = "opacityIn 1s linear forwards";
+  }, 700);
 });
 
-closeContactBtn.addEventListener('click', (e) => {
-  contactSection.style.display = "none";
+closeContactBtn.addEventListener('click', () => {
+  contactSectionWrap.style.animation = "opacityOut 1s linear forwards";
+  setTimeout(() => {
+    contactSectionWrap.style.display = "none";
+    contactSection.style.animation = "opacityOut 0.5s linear";
+  }, 1000);
+
+  setTimeout(() => {
+    contactSection.style.display = "none";
+    body.style.overflowY = "unset";
+  }, 1500);
+
 });
