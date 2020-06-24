@@ -101,12 +101,12 @@ cursorDefaultElements.forEach(function (cursorDefaultElement) {
 
 window.addEventListener("scroll", (e) => {
   if (window.scroll) {
-    // mouseCursor.classList.add("defaultCursor");
     mouseCursor.classList.remove("cursorScaleZero");
     mouseCursor.classList.remove("cursorToTriangle");
     mouseCursor.classList.remove("cursorGrowOnTitle");
     mouseCursor.classList.remove("navHoverCursor");
     mouseCursor.classList.remove("defaultCursor");
+    contactBtn.classList.remove("contact-box");
   }
 });
 
@@ -153,8 +153,11 @@ const contactSection = document.querySelector("#contact-section");
 const contactSectionWrap = document.querySelector("#contact-section-wrap");
 const contactContentWrap = document.querySelector("#contact-content-wrap");
 const closeContactBtn = document.querySelector("#close-contact");
+const contactBtnClass = document.querySelector(".contact-box");
 
-contactBtn.addEventListener("click", () => {
+console.log(contactBtn);
+
+contactBtnClass.addEventListener("click", () => {
   body.style.overflowY = "hidden";
   contactSection.style.display = "unset";
   contactSection.style.animation = "opacityIn 0.5s linear forwards";
@@ -165,6 +168,29 @@ contactBtn.addEventListener("click", () => {
     contactContentWrap.style.animation =
       "opacity-translate-In .8s cubic-bezier(0.19, 0.25, 0.25, 0.95) forwards .3s";
   }, 700);
+});
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 1) {
+    contactBtn.addEventListener("click", () => {
+      contactSection.style.display = "none";
+      body.style.overflowY = "unset";
+      contactSectionWrap.style.display = "none";
+    });
+  } else {
+    contactBtn.addEventListener("click", () => {
+      body.style.overflowY = "hidden";
+      contactSection.style.display = "unset";
+      contactSection.style.animation = "opacityIn 0.5s linear forwards";
+
+      setTimeout(() => {
+        contactSectionWrap.style.display = "unset";
+        contactSectionWrap.style.animation = "opacityIn 1s linear forwards";
+        contactContentWrap.style.animation =
+          "opacity-translate-In .8s cubic-bezier(0.19, 0.25, 0.25, 0.95) forwards .3s";
+      }, 700);
+    });
+  }
 });
 
 closeContactBtn.addEventListener("click", () => {
