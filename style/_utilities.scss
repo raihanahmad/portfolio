@@ -166,3 +166,27 @@ img {
     opacity: 0;
   }
 }
+
+@keyframes opacity-translate-In {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 4vw, 0) skew(0deg, -5deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0vw, 0) skew(0deg, 0deg);
+  }
+}
+
+@keyframes opacity-translate-Out {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0vw, 0) skew(0deg, 0deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 4vw, 0) skew(0deg, -5deg);
+  }
+}

@@ -151,6 +151,7 @@ smoothScroll();
 const contactBtn = document.querySelector("#contact-box");
 const contactSection = document.querySelector("#contact-section");
 const contactSectionWrap = document.querySelector("#contact-section-wrap");
+const contactContentWrap = document.querySelector("#contact-content-wrap");
 const closeContactBtn = document.querySelector("#close-contact");
 
 contactBtn.addEventListener("click", () => {
@@ -161,10 +162,15 @@ contactBtn.addEventListener("click", () => {
   setTimeout(() => {
     contactSectionWrap.style.display = "unset";
     contactSectionWrap.style.animation = "opacityIn 1s linear forwards";
+    contactContentWrap.style.animation =
+      "opacity-translate-In .8s cubic-bezier(0.19, 0.25, 0.25, 0.95) forwards .3s";
   }, 700);
 });
 
 closeContactBtn.addEventListener("click", () => {
+  contactContentWrap.style.animation =
+    "opacity-translate-Out 2s cubic-bezier(0.19, 0.25, 0.25, 0.95) forwards";
+
   contactSectionWrap.style.animation = "opacityOut .5s linear forwards";
   setTimeout(() => {
     contactSectionWrap.style.display = "none";
@@ -174,5 +180,5 @@ closeContactBtn.addEventListener("click", () => {
   setTimeout(() => {
     contactSection.style.display = "none";
     body.style.overflowY = "unset";
-  }, 1500);
+  }, 1700);
 });
