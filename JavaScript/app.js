@@ -36,14 +36,9 @@ showcaseTitle.addEventListener("mouseover", function (e) {
   const navbarMagnetEffect = function (e) {
     const navLink = this.querySelector("#navbar-links .nav-link");
 
-    const {
-      offsetX: x,
-      offsetY: y
-    } = e, {
-      offsetWidth: width,
-      offsetHeight: height
-    } = this,
-    move = 25,
+    const { offsetX: x, offsetY: y } = e,
+      { offsetWidth: width, offsetHeight: height } = this,
+      move = 25,
       xMove = (x / width) * (move * 2) - move,
       yMove = (y / height) * (move * 2) - move;
 
@@ -116,7 +111,7 @@ window.addEventListener("scroll", (e) => {
 });
 
 // Projects Section Distort Effect
-const projectsSection = document.querySelector('#projects-section');
+const projectsSection = document.querySelector("#projects-section");
 let currentPos = window.pageYOffset;
 
 const distortEffect = function () {
@@ -127,10 +122,9 @@ const distortEffect = function () {
   projectsSection.style.transform = `skewY(${speed}deg)`;
   currentPos = newPos;
   requestAnimationFrame(distortEffect);
-}
+};
 
 distortEffect();
-
 
 // For Smoot Scroolling
 const body = document.body,
@@ -154,12 +148,12 @@ function smoothScroll() {
 smoothScroll();
 
 // Show Contact Section
-const contactBtn = document.querySelector('#contact-box');
-const contactSection = document.querySelector('#contact-section');
-const contactSectionWrap = document.querySelector('#contact-section-wrap');
-const closeContactBtn = document.querySelector('#close-contact');
+const contactBtn = document.querySelector("#contact-box");
+const contactSection = document.querySelector("#contact-section");
+const contactSectionWrap = document.querySelector("#contact-section-wrap");
+const closeContactBtn = document.querySelector("#close-contact");
 
-contactBtn.addEventListener('click', () => {
+contactBtn.addEventListener("click", () => {
   body.style.overflowY = "hidden";
   contactSection.style.display = "unset";
   contactSection.style.animation = "opacityIn 0.5s linear forwards";
@@ -170,16 +164,15 @@ contactBtn.addEventListener('click', () => {
   }, 700);
 });
 
-closeContactBtn.addEventListener('click', () => {
-  contactSectionWrap.style.animation = "opacityOut 1s linear forwards";
+closeContactBtn.addEventListener("click", () => {
+  contactSectionWrap.style.animation = "opacityOut .5s linear forwards";
   setTimeout(() => {
     contactSectionWrap.style.display = "none";
-    contactSection.style.animation = "opacityOut 0.5s linear";
-  }, 1000);
+    contactSection.style.animation = "opacityOut 1s linear";
+  }, 700);
 
   setTimeout(() => {
     contactSection.style.display = "none";
     body.style.overflowY = "unset";
   }, 1500);
-
 });
