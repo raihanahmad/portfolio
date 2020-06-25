@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 800vh;
+  height: 900vh;
   overflow: hidden;
 }
 
@@ -199,9 +199,6 @@
 
         #contact-box {
           position: relative;
-          font-family: Arial,
-            Helvetica,
-            sans-serif;
           padding: 0.8vw;
           height: 4.4vw;
           width: 100%;
@@ -276,7 +273,6 @@
         height: 100%;
         width: 100%;
         transform: translate3d(0, 4vw, 0) skew(0deg, -5deg);
-        // animation: opacity-translate-In .8s cubic-bezier(0.19, 0.25, 0.25, 0.95) forwards .6s;
 
         // Close x Mark
         #close-contact {
@@ -452,27 +448,44 @@
 
   // Section Title
   #projects-section-title {
-    text-align: left;
-    margin: 6vw 0 6vw 0;
-    background-color: $light-color;
-
+    margin: 8vw auto;
+    text-align: center;
 
     h1 {
-      font-size: 4vw;
+      // transform: scale(0);
+      font-size: 8vw;
       text-transform: uppercase;
       font-weight: 900;
-      display: inline-block;
-      color: $dark-color;
-      animation: slepingAround 10s linear infinite;
+      transform-origin: 50% 150% 0px;
+    }
 
-      @keyframes slepingAround {
-        0% {
-          transform: translateX(-40vw);
-        }
+    // &:hover h1:first-child {
+    //   animation: poppop 1s ease forwards;
+    // }
 
-        100% {
-          transform: translateX(100vw);
-        }
+    // &:hover h1:last-child {
+    //   animation: poppop 1s ease forwards .14s;
+    // }
+
+    @keyframes poppop {
+      0% {
+        transform: scale(0);
+      }
+
+      30% {
+        transform: scale(1.2);
+      }
+
+      60% {
+        transform: scale(.9);
+      }
+
+      85% {
+        transform: scale(1.02);
+      }
+
+      100% {
+        transform: scale(1);
       }
     }
   }
@@ -554,7 +567,7 @@
 
           &:hover {
             color: #eeeeee;
-            border-bottom: 1px solid #cccccc;
+            border-bottom: 1px solid #aaaaaa;
           }
         }
       }
@@ -707,6 +720,32 @@
   #todotoday {
     .project-title-border {
       -webkit-text-stroke: 3px $dark-color;
+    }
+  }
+}
+
+
+// About Section
+#about {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #about-container {
+    padding: 5vh 10vw;
+    text-align: center;
+    overflow: hidden;
+
+    #about-title {
+      font-size: 7.5vw;
+      font-weight: 800;
+      margin-bottom: 2vw;
+    }
+
+    #about-me-p {
+      font-size: 2vw;
+      font-weight: 300;
     }
   }
 }
