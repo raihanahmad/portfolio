@@ -5,6 +5,7 @@ const navLi = document.querySelectorAll("#navbar-links > ul > li");
 const cursorNoneElements = document.querySelectorAll(".cursorNone");
 const cursorTriangleElements = document.querySelectorAll(".cursorTriangle");
 const cursorDefaultElements = document.querySelectorAll(".cursorDefault");
+const projectViewButtonElements = document.querySelectorAll(".project-view-button");
 
 // Create Mouse Cursor
 const mouseCursor = document.createElement("div");
@@ -36,9 +37,14 @@ showcaseTitle.addEventListener("mouseover", function (e) {
   const navbarMagnetEffect = function (e) {
     const navLink = this.querySelector("#navbar-links .nav-link");
 
-    const { offsetX: x, offsetY: y } = e,
-      { offsetWidth: width, offsetHeight: height } = this,
-      move = 25,
+    const {
+      offsetX: x,
+      offsetY: y
+    } = e, {
+      offsetWidth: width,
+      offsetHeight: height
+    } = this,
+    move = 25,
       xMove = (x / width) * (move * 2) - move,
       yMove = (y / height) * (move * 2) - move;
 
@@ -67,6 +73,20 @@ cursorNoneElements.forEach(function (cursorNoneElement) {
 
   cursorNoneElement.addEventListener("mouseleave", function (e) {
     mouseCursor.classList.remove("cursorScaleZero");
+  });
+});
+
+
+// Cursor Hover On Project View Btn & Project Color Bake
+projectViewButtonElements.forEach(function (projectViewButtonElement, index) {
+  const projectShocaseElement = document.querySelector(`.project:nth-child(${index+2})`).children[0];
+
+  projectViewButtonElement.addEventListener("mouseenter", function () {
+    projectShocaseElement.classList.add("hover-project-showcase");
+  });
+
+  projectViewButtonElement.addEventListener("mouseleave", function () {
+    projectShocaseElement.classList.remove("hover-project-showcase");
   });
 });
 

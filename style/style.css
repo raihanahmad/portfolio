@@ -91,8 +91,8 @@ img {
   -webkit-transform: scale(2.5) translate(-10%, -10%);
           transform: scale(2.5) translate(-10%, -10%);
   mix-blend-mode: unset;
-  -webkit-clip-path: polygon(25% 0%, 25% 95%, 85% 65%);
-          clip-path: polygon(25% 0%, 25% 95%, 85% 65%);
+  -webkit-clip-path: polygon(25% 0%, 25% 100%, 100% 65%);
+          clip-path: polygon(25% 0%, 25% 100%, 100% 65%);
 }
 
 .cursorScaleZero {
@@ -941,6 +941,11 @@ img {
   transition: all .4s ease;
 }
 
+#projects-section .project .hover-project-showcase {
+  -webkit-filter: grayscale(30%) blur(0);
+          filter: grayscale(30%) blur(0);
+}
+
 #projects-section .project .project-description {
   position: absolute;
   right: 15%;
@@ -1017,6 +1022,7 @@ img {
   bottom: 10%;
   right: 26%;
   z-index: 10;
+  border-radius: 50%;
 }
 
 #projects-section .project .project-view-button div {

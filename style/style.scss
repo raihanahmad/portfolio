@@ -502,7 +502,6 @@
         filter: grayscale(30%) blur(0);
       }
 
-
       .project-bg {
         border-radius: 5px;
         transform: perspective(1000px);
@@ -528,6 +527,10 @@
           transition: all .4s ease;
         }
       }
+    }
+
+    .hover-project-showcase {
+      filter: grayscale(30%) blur(0);
     }
 
     // Project Description
@@ -607,6 +610,7 @@
       bottom: 10%;
       right: 26%;
       z-index: 10;
+      border-radius: 50%;
 
       div {
         height: 10vw;
