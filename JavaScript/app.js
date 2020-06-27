@@ -1,4 +1,5 @@
 // Target UI Element
+const body = document.body;
 const showcaseTitle = document.querySelector("#name-title > div");
 const blackWhiteToggler = document.querySelector("#arrow-svg");
 const navLi = document.querySelectorAll("#navbar-links > ul > li");
@@ -146,8 +147,7 @@ window.addEventListener("scroll", (e) => {
 // distortEffect();
 
 // // For Smoot Scroolling
-// const body = document.body,
-//   scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
+// const scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
 //   height = scrollWrap.getBoundingClientRect().height - 1,
 //   speed = 0.1;
 
@@ -174,6 +174,7 @@ const contactContentWrap = document.querySelector("#contact-content-wrap");
 const closeContactBtn = document.querySelector("#close-contact");
 
 contactBtn.addEventListener("click", () => {
+  console.log('click');
   body.style.overflowY = "hidden";
   contactSection.style.display = "unset";
   contactSection.style.top = `${window.pageYOffset}px`;
