@@ -129,42 +129,42 @@ window.addEventListener("scroll", (e) => {
   }
 });
 
-// Projects Section Distort Effect
-const projectsSection = document.querySelector("#projects-section");
-let currentPos = window.pageYOffset;
+// // Projects Section Distort Effect
+// const projectsSection = document.querySelector("#projects-section");
+// let currentPos = window.pageYOffset;
 
-const distortEffect = function () {
-  const newPos = window.pageYOffset;
-  const diff = newPos - currentPos;
-  const speed = diff * 0.1;
+// const distortEffect = function () {
+//   const newPos = window.pageYOffset;
+//   const diff = newPos - currentPos;
+//   const speed = diff * 0.1;
 
-  projectsSection.style.transform = `skewY(${speed}deg)`;
-  currentPos = newPos;
-  requestAnimationFrame(distortEffect);
-};
+//   projectsSection.style.transform = `skewY(${speed}deg)`;
+//   currentPos = newPos;
+//   requestAnimationFrame(distortEffect);
+// };
 
-distortEffect();
+// distortEffect();
 
-// For Smoot Scroolling
-const body = document.body,
-  scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
-  height = scrollWrap.getBoundingClientRect().height - 1,
-  speed = 0.1;
+// // For Smoot Scroolling
+// const body = document.body,
+//   scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
+//   height = scrollWrap.getBoundingClientRect().height - 1,
+//   speed = 0.1;
 
-var offset = 0;
+// var offset = 0;
 
-body.style.height = Math.floor(height) + "px";
+// body.style.height = Math.floor(height) + "px";
 
-function smoothScroll() {
-  offset += (window.pageYOffset - offset) * speed;
+// function smoothScroll() {
+//   offset += (window.pageYOffset - offset) * speed;
 
-  var scroll = "translateY(-" + offset + "px) translateZ(0)";
-  scrollWrap.style.transform = scroll;
+//   var scroll = "translateY(-" + offset + "px) translateZ(0)";
+//   scrollWrap.style.transform = scroll;
 
-  callScroll = requestAnimationFrame(smoothScroll);
-}
+//   callScroll = requestAnimationFrame(smoothScroll);
+// }
 
-smoothScroll();
+// smoothScroll();
 
 // Show Contact Section
 const contactBtn = document.querySelector("#contact-box");

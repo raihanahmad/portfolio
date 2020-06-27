@@ -7,23 +7,23 @@
 }
 
 * ::-moz-selection {
-  color: #1B1B1B;
+  color: #232323;
   background: #ffffff;
 }
 
 * ::selection {
-  color: #1B1B1B;
+  color: #232323;
   background: #ffffff;
 }
 
 ::-webkit-scrollbar {
   width: 2px;
-  background: #1B1B1B;
+  background: #232323;
 }
 
 ::-webkit-scrollbar-track {
   border-radius: 10px;
-  background: #1B1B1B;
+  background: #232323;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -32,7 +32,7 @@
 }
 
 body {
-  background: #1B1B1B;
+  background: #232323;
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
   font-weight: 600;
@@ -108,10 +108,10 @@ img {
     background: #ffffff;
   }
   95% {
-    background: #1B1B1B;
+    background: #232323;
   }
   100% {
-    background: #1B1B1B;
+    background: #232323;
   }
 }
 
@@ -120,10 +120,10 @@ img {
     background: #ffffff;
   }
   95% {
-    background: #1B1B1B;
+    background: #232323;
   }
   100% {
-    background: #1B1B1B;
+    background: #232323;
   }
 }
 
@@ -378,7 +378,7 @@ img {
 #social-contact .social-link:hover i {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
-  color: #1B1B1B;
+  color: #232323;
 }
 
 #social-contact .social-link:hover::before {
@@ -416,16 +416,6 @@ img {
     top: -10%;
     left: -10%;
   }
-}
-
-.smooth-scroll-wrapper {
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 950vh;
-  overflow: hidden;
 }
 
 #home {
@@ -717,7 +707,7 @@ img {
   width: 101%;
   z-index: 3;
   background: #ffffff;
-  color: #1B1B1B;
+  color: #232323;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
           clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
 }
@@ -749,7 +739,7 @@ img {
   font-family: 'Raleway', sans-serif;
   opacity: 0;
   display: none;
-  background: #1B1B1B;
+  background: #232323;
   position: absolute;
   top: 0;
   left: 0;
@@ -1103,7 +1093,7 @@ img {
 }
 
 #projects-section .project .project-view-button div:hover p {
-  color: #1B1B1B;
+  color: #232323;
   font-size: 1.2vw;
   letter-spacing: -1px;
   word-spacing: 2px;
@@ -1164,7 +1154,7 @@ img {
 }
 
 #projects-section #todotoday .project-title-border {
-  -webkit-text-stroke: 3px #1B1B1B;
+  -webkit-text-stroke: 3px #232323;
 }
 
 #about {
@@ -1188,8 +1178,8 @@ img {
 
 #about #about-container #about-title {
   font-size: 7.5vw;
-  font-weight: 800;
-  margin-bottom: 2vw;
+  font-weight: 500;
+  margin-bottom: 1.5vw;
   -webkit-transform-origin: 50% 110% 0px;
           transform-origin: 50% 110% 0px;
 }
@@ -1197,6 +1187,8 @@ img {
 #about #about-container #about-me-p {
   font-size: 2vw;
   font-weight: 300;
+  line-height: 1.3;
+  opacity: 0.8;
 }
 
 #main-footer #footer-container {
@@ -1221,6 +1213,6 @@ img {
   font-size: 1vw;
   font-weight: normal;
   letter-spacing: 0px;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 /*# sourceMappingURL=style.css.map */
