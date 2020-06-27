@@ -683,9 +683,13 @@
 
     p {
       font-size: 1vw;
-      font-weight: normal;
+      font-weight: 300;
       letter-spacing: 0px;
-      opacity: 0.4;
+      opacity: 0.3;
+    }
+
+    #social-contact {
+      opacity: 0.8;
     }
   }
 }

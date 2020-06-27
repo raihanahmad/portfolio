@@ -1211,8 +1211,12 @@ img {
 
 #main-footer #footer-container p {
   font-size: 1vw;
-  font-weight: normal;
+  font-weight: 300;
   letter-spacing: 0px;
-  opacity: 0.4;
+  opacity: 0.3;
+}
+
+#main-footer #footer-container #social-contact {
+  opacity: 0.8;
 }
 /*# sourceMappingURL=style.css.map */
