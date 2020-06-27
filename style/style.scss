@@ -13,6 +13,9 @@
 #home {
   position: relative;
   height: 100vh;
+  transform-style: preserve-3d;
+  transform: perspective(800px);
+
 
   // Home main content section
   .home-container {
@@ -379,7 +382,7 @@
 
   // Section Title
   #projects-section-title {
-    margin: 8vw auto;
+    margin: 2vw auto 8vw;
     text-align: center;
 
     h1 {

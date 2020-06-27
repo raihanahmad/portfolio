@@ -429,6 +429,10 @@ img {
 #home {
   position: relative;
   height: 100vh;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: perspective(800px);
+          transform: perspective(800px);
 }
 
 #home .home-container {
@@ -882,7 +886,7 @@ img {
 }
 
 #projects-section #projects-section-title {
-  margin: 8vw auto;
+  margin: 2vw auto 8vw;
   text-align: center;
 }
 

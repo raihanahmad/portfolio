@@ -1,5 +1,6 @@
 // Target UI Element
 const body = document.body;
+const homeSection = document.querySelector('#home');
 const showcaseTitle = document.querySelector("#name-title > div");
 const blackWhiteToggler = document.querySelector("#arrow-svg");
 const navLi = document.querySelectorAll("#navbar-links > ul > li");
@@ -173,7 +174,6 @@ const contactContentWrap = document.querySelector("#contact-content-wrap");
 const closeContactBtn = document.querySelector("#close-contact");
 
 contactBtn.addEventListener("click", () => {
-  console.log('click');
   body.style.overflowY = "hidden";
   contactSection.style.display = "unset";
   contactSection.style.top = `${window.pageYOffset}px`;
@@ -201,4 +201,13 @@ closeContactBtn.addEventListener("click", () => {
     contactSection.style.display = "none";
     body.style.overflowY = "unset";
   }, 1700);
+});
+
+
+// Home scrolling section animation
+window.addEventListener('scroll', function () {
+  let currScrollPos = window.pageYOffset;
+  homeSection.style.opacity = -currScrollPos / 200 + 1.2;
+  homeSection.style.transform = `translate3d(0, ${-currScrollPos / 5}px, 0) skew(0deg, ${currScrollPos / 50}deg)`;
+  console.log(-currScrollPos / 10)
 });
