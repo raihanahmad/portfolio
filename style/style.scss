@@ -1,16 +1,13 @@
 // Include Other Scss File
 @import "utilities";
 
-// // For Smoot Scroolling
-// .smooth-scroll-wrapper {
-//   position: fixed;
-//   z-index: 2;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 910vh;
-//   overflow: hidden;
-// }
+.smooth-scroll-wrapper {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
 
 // Home
 #home {
@@ -639,13 +636,10 @@
 
 // About Section
 #about {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100%;
 
   #about-container {
-    padding: 5vh 10vw;
+    padding: 5vh 10vw 12vw;
     text-align: center;
     overflow: hidden;
 

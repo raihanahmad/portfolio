@@ -418,6 +418,14 @@ img {
   }
 }
 
+.smooth-scroll-wrapper {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
 #home {
   position: relative;
   height: 100vh;
@@ -1158,20 +1166,11 @@ img {
 }
 
 #about {
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  height: 100%;
 }
 
 #about #about-container {
-  padding: 5vh 10vw;
+  padding: 5vh 10vw 12vw;
   text-align: center;
   overflow: hidden;
 }

@@ -146,25 +146,24 @@ window.addEventListener("scroll", (e) => {
 
 // distortEffect();
 
-// // For Smoot Scroolling
-// const scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
-//   height = scrollWrap.getBoundingClientRect().height - 1,
-//   speed = 0.1;
+// For Smoot Scroolling
+const scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
+  height = scrollWrap.getBoundingClientRect().height - 1,
+  speed = 0.15;
 
-// var offset = 0;
+var offset = 0;
 
-// body.style.height = Math.floor(height) + "px";
+body.style.height = Math.floor(height) + "px";
 
-// function smoothScroll() {
-//   offset += (window.pageYOffset - offset) * speed;
+function smoothScroll() {
+  offset += (window.pageYOffset - offset) * speed;
 
-//   var scroll = "translateY(-" + offset + "px) translateZ(0)";
-//   scrollWrap.style.transform = scroll;
+  var scroll = "translateY(-" + offset + "px) translateZ(0)";
+  scrollWrap.style.transform = scroll;
 
-//   callScroll = requestAnimationFrame(smoothScroll);
-// }
-
-// smoothScroll();
+  callScroll = requestAnimationFrame(smoothScroll);
+}
+smoothScroll();
 
 // Show Contact Section
 const contactBtn = document.querySelector("#contact-box");
