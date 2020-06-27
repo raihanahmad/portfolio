@@ -14,7 +14,7 @@
   position: relative;
   height: 100vh;
   transform-style: preserve-3d;
-  transform: perspective(800px);
+  transform: perspective(1000px);
 
 
   // Home main content section
@@ -240,135 +240,135 @@
       }
     }
   }
+}
 
-  // Contact Section Email & Social
-  #contact-section {
-    overflow: hidden;
-    display: none;
+// Contact Section Email & Social
+#contact-section {
+  overflow: hidden;
+  display: none;
+  opacity: 0;
+  background: $light-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 30;
+
+  #contact-section-wrap {
+    font-family: 'Raleway', sans-serif;
     opacity: 0;
-    background: $light-color;
+    display: none;
+    background: $dark-color;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: 30;
 
-    #contact-section-wrap {
-      font-family: 'Raleway', sans-serif;
+    #contact-content-wrap {
       opacity: 0;
-      display: none;
-      background: $dark-color;
       position: absolute;
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
+      transform: translate3d(0, 4vw, 0) skew(0deg, -5deg);
 
-      #contact-content-wrap {
-        opacity: 0;
+      // Close x Mark
+      #close-contact {
         position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        transform: translate3d(0, 4vw, 0) skew(0deg, -5deg);
+        top: 10%;
+        right: 6%;
+        height: 3vw;
+        width: 3vw;
 
-        // Close x Mark
-        #close-contact {
-          position: absolute;
-          top: 10%;
-          right: 6%;
-          height: 3vw;
-          width: 3vw;
+        #close-x {
+          position: relative;
+          top: 1.3vw;
+          height: 3px;
+          width: 2.5vw;
+          background: $light-color;
+          transform: rotate(45deg);
+          transition: transform .3s ease-in-out;
 
-          #close-x {
-            position: relative;
-            top: 1.3vw;
+          &::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: 0;
             height: 3px;
             width: 2.5vw;
             background: $light-color;
-            transform: rotate(45deg);
+            transform: rotate(-90deg);
             transition: transform .3s ease-in-out;
+          }
+        }
+
+        &:hover #close-x {
+          transform: rotate(45deg) scaleX(1.3);
+        }
+
+        &:hover #close-x::before {
+          transform: rotate(-90deg) scaleX(1.3);
+        }
+      }
+
+      // Email
+      #contact-email-box {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        text-align: center;
+        transform: translateX(-50%);
+
+
+        p {
+          font-size: 1.8vw;
+          margin-bottom: 1vw;
+          font-weight: normal;
+        }
+
+        #email-link {
+          span {
+            font-size: 5.5vw;
+            font-weight: 700;
 
             &::before {
-              content: "";
+              content: '';
               position: absolute;
-              top: -50%;
-              left: 0;
               height: 3px;
-              width: 2.5vw;
+              width: 100%;
+              bottom: 0;
               background: $light-color;
-              transform: rotate(-90deg);
+              left: 0;
+              right: 0;
+              transform: scale(0, 1);
               transition: transform .3s ease-in-out;
             }
-          }
 
-          &:hover #close-x {
-            transform: rotate(45deg) scaleX(1.3);
-          }
+            &:hover::before {
+              transform: scale(1, 1);
 
-          &:hover #close-x::before {
-            transform: rotate(-90deg) scaleX(1.3);
-          }
-        }
-
-        // Email
-        #contact-email-box {
-          position: absolute;
-          top: 35%;
-          left: 50%;
-          text-align: center;
-          transform: translateX(-50%);
-
-
-          p {
-            font-size: 1.8vw;
-            margin-bottom: 1vw;
-            font-weight: normal;
-          }
-
-          #email-link {
-            span {
-              font-size: 5.5vw;
-              font-weight: 700;
-
-              &::before {
-                content: '';
-                position: absolute;
-                height: 3px;
-                width: 100%;
-                bottom: 0;
-                background: $light-color;
-                left: 0;
-                right: 0;
-                transform: scale(0, 1);
-                transition: transform .3s ease-in-out;
-              }
-
-              &:hover::before {
-                transform: scale(1, 1);
-
-              }
             }
           }
         }
+      }
 
-        // Social
-        #social-contact-section {
-          position: absolute;
-          bottom: 10%;
-          left: 50%;
-          transform: translate(-50%);
-          text-align: center;
+      // Social
+      #social-contact-section {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%);
+        text-align: center;
 
-          p {
-            font-size: .8rem;
-            letter-spacing: 1px;
-            font-weight: normal;
-            text-transform: uppercase;
-            margin-bottom: .7vw;
-          }
+        p {
+          font-size: .8rem;
+          letter-spacing: 1px;
+          font-weight: normal;
+          text-transform: uppercase;
+          margin-bottom: .7vw;
         }
       }
     }
@@ -382,8 +382,9 @@
 
   // Section Title
   #projects-section-title {
-    margin: 2vw auto 8vw;
+    margin: 1vw auto 8vw;
     text-align: center;
+    height: 20vw;
 
     h1 {
       // transform: scale(0);

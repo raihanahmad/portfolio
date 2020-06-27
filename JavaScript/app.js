@@ -207,7 +207,7 @@ closeContactBtn.addEventListener("click", () => {
 // Home scrolling section animation
 window.addEventListener('scroll', function () {
   let currScrollPos = window.pageYOffset;
-  homeSection.style.opacity = -currScrollPos / 200 + 1.2;
-  homeSection.style.transform = `translate3d(0, ${-currScrollPos / 5}px, 0) skew(0deg, ${currScrollPos / 50}deg)`;
-  console.log(-currScrollPos / 10)
+  homeSection.style.opacity = -currScrollPos / 200 + 1.7;
+  homeSection.style.transform = `translate3d(0, ${-currScrollPos / 5}px, 0) skew(0deg, ${currScrollPos / 60}deg)`;
+  console.log(-currScrollPos / 200 + 4)
 });
