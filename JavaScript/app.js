@@ -1,13 +1,15 @@
 // Target UI Element
 const body = document.body;
-const homeSection = document.querySelector('#home');
+const homeSection = document.querySelector("#home");
 const showcaseTitle = document.querySelector("#name-title > div");
 const blackWhiteToggler = document.querySelector("#arrow-svg");
 const navLi = document.querySelectorAll("#navbar-links > ul > li");
 const cursorNoneElements = document.querySelectorAll(".cursorNone");
 const cursorTriangleElements = document.querySelectorAll(".cursorTriangle");
 const cursorDefaultElements = document.querySelectorAll(".cursorDefault");
-const projectViewButtonElements = document.querySelectorAll(".project-view-button");
+const projectViewButtonElements = document.querySelectorAll(
+  ".project-view-button"
+);
 
 // Create Mouse Cursor
 const mouseCursor = document.createElement("div");
@@ -39,14 +41,9 @@ showcaseTitle.addEventListener("mouseover", function (e) {
   const navbarMagnetEffect = function (e) {
     const navLink = this.querySelector("#navbar-links .nav-link");
 
-    const {
-      offsetX: x,
-      offsetY: y
-    } = e, {
-      offsetWidth: width,
-      offsetHeight: height
-    } = this,
-    move = 25,
+    const { offsetX: x, offsetY: y } = e,
+      { offsetWidth: width, offsetHeight: height } = this,
+      move = 25,
       xMove = (x / width) * (move * 2) - move,
       yMove = (y / height) * (move * 2) - move;
 
@@ -78,10 +75,11 @@ cursorNoneElements.forEach(function (cursorNoneElement) {
   });
 });
 
-
 // Cursor Hover On Project View Btn & Project Color Bake
 projectViewButtonElements.forEach(function (projectViewButtonElement, index) {
-  const projectShocaseElement = document.querySelector(`.project:nth-child(${index+2})`).children[0];
+  const projectShocaseElement = document.querySelector(
+    `.project:nth-child(${index + 2})`
+  ).children[0];
 
   projectViewButtonElement.addEventListener("mouseenter", function () {
     projectShocaseElement.classList.add("hover-project-showcase");
@@ -203,11 +201,41 @@ closeContactBtn.addEventListener("click", () => {
   }, 1700);
 });
 
-
 // Home scrolling section animation
-window.addEventListener('scroll', function () {
+window.addEventListener("scroll", function () {
   let currScrollPos = window.pageYOffset;
   homeSection.style.opacity = -currScrollPos / 200 + 1.7;
-  homeSection.style.transform = `translate3d(0, ${-currScrollPos / 5}px, 0) skew(0deg, ${currScrollPos / 60}deg)`;
-  console.log(-currScrollPos / 200 + 4)
+  homeSection.style.transform = `translate3d(0, ${
+    -currScrollPos / 5
+  }px, 0) skew(0deg, ${currScrollPos / 60}deg)`;
 });
+
+// Scrolling and show animations
+function isVisible(element) {
+  let elementBox = element.getBoundingClientRect();
+  let distanceFromTopShow = -350;
+  let distanceFromTopHidden = 10;
+  let mainDistance = elementBox.top - window.innerHeight;
+
+  if (mainDistance < distanceFromTopShow) {
+    return true;
+  }
+  if (mainDistance > distanceFromTopHidden) {
+    return false;
+  }
+}
+
+function scanDocument() {
+  let sectionList = document.querySelectorAll(".popo");
+  let section = document.querySelector("#projects-section-title");
+  sectionList.forEach(function (sectionL) {
+    if (isVisible(section) === true) {
+      sectionL.classList.remove("hidden");
+    }
+    if (isVisible(section) === false) {
+      sectionL.classList.add("hidden");
+    }
+  });
+}
+
+document.addEventListener("scroll", scanDocument);

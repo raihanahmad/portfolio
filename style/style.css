@@ -886,17 +886,33 @@ img {
 }
 
 #projects-section #projects-section-title {
-  margin: 1vw auto 8vw;
+  margin: 4vw auto 8vw;
   text-align: center;
   height: 20vw;
 }
 
+#projects-section #projects-section-title .hidden {
+  display: none;
+}
+
 #projects-section #projects-section-title h1 {
+  -webkit-transform: scale(0);
+          transform: scale(0);
   font-size: 8vw;
   text-transform: uppercase;
   font-weight: 900;
   -webkit-transform-origin: 50% 150% 0px;
           transform-origin: 50% 150% 0px;
+}
+
+#projects-section #projects-section-title h1:first-child {
+  -webkit-animation: poppop 1s ease forwards;
+          animation: poppop 1s ease forwards;
+}
+
+#projects-section #projects-section-title h1:last-child {
+  -webkit-animation: poppop 1s ease forwards .15s;
+          animation: poppop 1s ease forwards .15s;
 }
 
 #projects-section .project {

@@ -382,25 +382,29 @@
 
   // Section Title
   #projects-section-title {
-    margin: 1vw auto 8vw;
+    margin: 4vw auto 8vw;
     text-align: center;
     height: 20vw;
 
+    .hidden {
+      display: none;
+    }
+
     h1 {
-      // transform: scale(0);
+      transform: scale(0);
       font-size: 8vw;
       text-transform: uppercase;
       font-weight: 900;
       transform-origin: 50% 150% 0px;
+
+      &:first-child {
+        animation: poppop 1s ease forwards;
+      }
+
+      &:last-child {
+        animation: poppop 1s ease forwards .15s;
+      }
     }
-
-    // &:hover h1:first-child {
-    //   animation: poppop 1s ease forwards;
-    // }
-
-    // &:hover h1:last-child {
-    //   animation: poppop 1s ease forwards .14s;
-    // }
   }
 
   // Project Section
