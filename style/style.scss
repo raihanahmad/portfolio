@@ -386,6 +386,14 @@
     text-align: center;
     height: 20vw;
 
+    .popo {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
     .hidden {
       display: none;
     }
@@ -396,6 +404,7 @@
       text-transform: uppercase;
       font-weight: 900;
       transform-origin: 50% 150% 0px;
+      display: inline-block;
 
       &:first-child {
         animation: poppop 1s ease forwards;

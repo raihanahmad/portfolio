@@ -891,6 +891,23 @@ img {
   height: 20vw;
 }
 
+#projects-section #projects-section-title .popo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
 #projects-section #projects-section-title .hidden {
   display: none;
 }
@@ -903,6 +920,7 @@ img {
   font-weight: 900;
   -webkit-transform-origin: 50% 150% 0px;
           transform-origin: 50% 150% 0px;
+  display: inline-block;
 }
 
 #projects-section #projects-section-title h1:first-child {

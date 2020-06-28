@@ -1,7 +1,7 @@
 // Target UI Element
 const body = document.body;
 const homeSection = document.querySelector("#home");
-const showcaseTitle = document.querySelector("#name-title > div");
+const cursorBigElements = document.querySelectorAll(".cursor-Big");
 const blackWhiteToggler = document.querySelector("#arrow-svg");
 const navLi = document.querySelectorAll("#navbar-links > ul > li");
 const cursorNoneElements = document.querySelectorAll(".cursorNone");
@@ -10,6 +10,8 @@ const cursorDefaultElements = document.querySelectorAll(".cursorDefault");
 const projectViewButtonElements = document.querySelectorAll(
   ".project-view-button"
 );
+
+console.log(cursorBigElements);
 
 // Create Mouse Cursor
 const mouseCursor = document.createElement("div");
@@ -22,13 +24,15 @@ window.addEventListener("mousemove", function (e) {
   mouseCursor.style.left = `${e.clientX}px`;
 });
 
-// Landing Page Title Hover and  Cursor Big
-showcaseTitle.addEventListener("mouseleave", function (e) {
-  mouseCursor.classList.remove("cursorGrowOnTitle");
-});
+// Title Hover and Cursor Big
+cursorBigElements.forEach(function (cursorBigElement) {
+  cursorBigElement.addEventListener("mouseleave", function (e) {
+    mouseCursor.classList.remove("cursorGrowOnTitle");
+  });
 
-showcaseTitle.addEventListener("mouseover", function (e) {
-  mouseCursor.classList.add("cursorGrowOnTitle");
+  cursorBigElement.addEventListener("mouseenter", function (e) {
+    mouseCursor.classList.add("cursorGrowOnTitle");
+  });
 });
 
 // // Black And White Mode Controler
@@ -75,7 +79,7 @@ cursorNoneElements.forEach(function (cursorNoneElement) {
   });
 });
 
-// Cursor Hover On Project View Btn & Project Color Bake
+// Cursor Hover On Project View Btn & Project Color return
 projectViewButtonElements.forEach(function (projectViewButtonElement, index) {
   const projectShocaseElement = document.querySelector(
     `.project:nth-child(${index + 2})`
@@ -111,13 +115,6 @@ cursorDefaultElements.forEach(function (cursorDefaultElement) {
     mouseCursor.classList.add("defaultCursor");
   });
 });
-
-// const test = document.body.scrollHeight - window.innerHeight;
-
-// window.onscroll = function () {
-//   let son = (window.pageYOffset / test) * 100;
-//   console.log(son);
-// }
 
 window.addEventListener("scroll", (e) => {
   if (window.scroll) {
