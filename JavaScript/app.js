@@ -1,6 +1,7 @@
 // Target UI Element
 const body = document.body;
 const homeSection = document.querySelector("#home");
+const projectSection = document.querySelector("#projects-section");
 const cursorBigElements = document.querySelectorAll(".cursor-Big");
 const blackWhiteToggler = document.querySelector("#arrow-svg");
 const navLi = document.querySelectorAll("#navbar-links > ul > li");
@@ -10,8 +11,6 @@ const cursorDefaultElements = document.querySelectorAll(".cursorDefault");
 const projectViewButtonElements = document.querySelectorAll(
   ".project-view-button"
 );
-
-console.log(cursorBigElements);
 
 // Create Mouse Cursor
 const mouseCursor = document.createElement("div");
@@ -45,9 +44,14 @@ cursorBigElements.forEach(function (cursorBigElement) {
   const navbarMagnetEffect = function (e) {
     const navLink = this.querySelector("#navbar-links .nav-link");
 
-    const { offsetX: x, offsetY: y } = e,
-      { offsetWidth: width, offsetHeight: height } = this,
-      move = 25,
+    const {
+      offsetX: x,
+      offsetY: y
+    } = e, {
+      offsetWidth: width,
+      offsetHeight: height
+    } = this,
+    move = 25,
       xMove = (x / width) * (move * 2) - move,
       yMove = (y / height) * (move * 2) - move;
 
@@ -198,7 +202,7 @@ closeContactBtn.addEventListener("click", () => {
   }, 1700);
 });
 
-// Home scrolling section animation
+// Home section scrolling animation
 window.addEventListener("scroll", function () {
   let currScrollPos = window.pageYOffset;
   homeSection.style.opacity = -currScrollPos / 200 + 1.7;
@@ -236,3 +240,11 @@ function scanDocument() {
 }
 
 document.addEventListener("scroll", scanDocument);
+
+// Project section scrolling animation
+window.addEventListener("scroll", function () {
+  let elementBox = projectSection.getBoundingClientRect();
+  let mainDistance = elementBox.bottom - window.innerHeight;
+  console.log(-mainDistance / 2);
+  projectSection.style.opacity = mainDistance / 400 + 1;
+});
