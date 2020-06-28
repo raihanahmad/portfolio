@@ -33,9 +33,9 @@
 
 body {
   background: #232323;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -1px;
   overflow-x: hidden;
 }
@@ -504,7 +504,7 @@ img {
           transform: translate3d(0px, 0px, 0px);
   font-size: 1.8vw;
   padding: 1vw;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.2px;
   -webkit-transition: -webkit-transform .2s linear;
   transition: -webkit-transform .2s linear;
@@ -544,7 +544,7 @@ img {
   display: inline-block;
   text-transform: uppercase;
   font-size: 7.5vw;
-  font-weight: 900;
+  font-weight: 800;
   line-height: 1.1;
 }
 
@@ -582,7 +582,6 @@ img {
   top: .33vw;
   width: 6vw;
   height: 1.5vw;
-  font-weight: 900;
   -webkit-perspective: 1000px;
           perspective: 1000px;
 }
@@ -675,6 +674,7 @@ img {
   font-size: 1.5vw;
   letter-spacing: -1px;
   margin-bottom: 0.6rem;
+  font-weight: 600;
 }
 
 #home .home-container #home-info #contact-content #contact-box {
@@ -697,7 +697,7 @@ img {
 
 #home .home-container #home-info #contact-content #contact-box h3 {
   position: absolute;
-  font-weight: 900;
+  font-weight: 800;
   font-size: 2.5vw;
   height: 100%;
   width: 100%;
@@ -748,7 +748,6 @@ img {
 }
 
 #contact-section #contact-section-wrap {
-  font-family: 'Raleway', sans-serif;
   opacity: 0;
   display: none;
   background: #232323;
@@ -872,7 +871,7 @@ img {
 #contact-section #contact-section-wrap #contact-content-wrap #social-contact-section p {
   font-size: .8rem;
   letter-spacing: 1px;
-  font-weight: normal;
+  font-weight: 300;
   text-transform: uppercase;
   margin-bottom: .7vw;
 }
@@ -915,9 +914,9 @@ img {
 #projects-section #projects-section-title h1 {
   -webkit-transform: scale(0);
           transform: scale(0);
-  font-size: 8vw;
+  font-size: 7.5vw;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 800;
   -webkit-transform-origin: 50% 150% 0px;
           transform-origin: 50% 150% 0px;
   display: inline-block;
@@ -1005,8 +1004,8 @@ img {
 
 #projects-section .project .project-description {
   position: absolute;
-  right: 15%;
-  top: 38.9%;
+  right: 14.8%;
+  top: 40%;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   text-transform: uppercase;
@@ -1060,7 +1059,7 @@ img {
 
 #projects-section .project .project-count {
   position: absolute;
-  right: -5%;
+  right: -4%;
   top: 50%;
   opacity: 0.1;
   -webkit-transform: rotate(270deg);
@@ -1070,7 +1069,7 @@ img {
 #projects-section .project .project-count h1 {
   font-weight: 900;
   color: transparent;
-  font-size: 21vw;
+  font-size: 22vw;
   -webkit-text-stroke: 1px #ffffff;
 }
 
@@ -1106,7 +1105,7 @@ img {
   position: absolute;
   color: #ffffff;
   font-size: 1.3vw;
-  letter-spacing: .3vw;
+  letter-spacing: .25vw;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   -webkit-animation: rotatefull 6s linear infinite;
@@ -1183,7 +1182,7 @@ img {
   color: #ffffff;
   font-size: 1.4vw;
   text-align: center;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 #projects-section .project .video-view-button:hover {
@@ -1209,15 +1208,15 @@ img {
 }
 
 #about #about-container {
-  padding: 5vh 10vw 12vw;
-  text-align: center;
+  padding: 5vh 18vw 12vw 15vw;
+  text-align: left;
   overflow: hidden;
 }
 
 #about #about-container #about-title {
   font-size: 7.5vw;
-  font-weight: 500;
-  margin-bottom: 1.5vw;
+  font-weight: 600;
+  margin-bottom: 5vw;
   -webkit-transform-origin: 50% 110% 0px;
           transform-origin: 50% 110% 0px;
 }
@@ -1227,6 +1226,12 @@ img {
   font-weight: 300;
   line-height: 1.3;
   opacity: 0.8;
+}
+
+#about #about-container #about-me-p span {
+  line-height: .5;
+  font-size: 4vw;
+  font-weight: normal;
 }
 
 #main-footer #footer-container {
