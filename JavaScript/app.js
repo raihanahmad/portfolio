@@ -44,14 +44,9 @@ cursorBigElements.forEach(function (cursorBigElement) {
   const navbarMagnetEffect = function (e) {
     const navLink = this.querySelector("#navbar-links .nav-link");
 
-    const {
-      offsetX: x,
-      offsetY: y
-    } = e, {
-      offsetWidth: width,
-      offsetHeight: height
-    } = this,
-    move = 25,
+    const { offsetX: x, offsetY: y } = e,
+      { offsetWidth: width, offsetHeight: height } = this,
+      move = 25,
       xMove = (x / width) * (move * 2) - move,
       yMove = (y / height) * (move * 2) - move;
 
@@ -214,7 +209,7 @@ window.addEventListener("scroll", function () {
 // Scrolling and show animations
 function isVisible(element) {
   let elementBox = element.getBoundingClientRect();
-  let distanceFromTopShow = -350;
+  let distanceFromTopShow = -310;
   let distanceFromTopHidden = 10;
   let mainDistance = elementBox.top - window.innerHeight;
 
@@ -245,6 +240,11 @@ document.addEventListener("scroll", scanDocument);
 window.addEventListener("scroll", function () {
   let elementBox = projectSection.getBoundingClientRect();
   let mainDistance = elementBox.bottom - window.innerHeight;
-  console.log(-mainDistance / 2);
-  projectSection.style.opacity = mainDistance / 400 + 1;
+  console.log(mainDistance / 400 + 1.3);
+  projectSection.style.opacity = mainDistance / 400 + 1.2;
+  if (-mainDistance / 4 >= 0) {
+    projectSection.style.transform = `translate3d(0, ${mainDistance / 4}px, 0)`;
+  } else {
+    projectSection.style.transform = `translate3d(0, 0px, 0)`;
+  }
 });
