@@ -7,6 +7,7 @@
   top: 0;
   left: 0;
   overflow: hidden;
+  width: 100vw;
 }
 
 // Home
@@ -654,10 +655,10 @@
 
 // About Section
 #about {
-  height: 100%;
+  height: 55vw;
 
   #about-container {
-    padding: 1vh 18vw 12vw 15vw;
+    padding: 1vw 18vw 1vw 15vw;
     text-align: left;
     overflow: hidden;
 
@@ -672,11 +673,8 @@
     #about-me-div {
       opacity: 0.8;
 
-      span {
-        display: none;
-      }
-
       p {
+        // display: none;
         font-size: 2vw;
         font-weight: 300;
         line-height: 1.3;
@@ -740,7 +738,6 @@
 // Footer Section
 #main-footer {
   #footer-container {
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;

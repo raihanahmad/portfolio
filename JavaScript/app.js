@@ -247,32 +247,14 @@ function aboutMeTitle() {
 }
 
 // About section paragraphs
-function aboutMeParagraphSpanShow(aboutMeParagraphAllSpan) {
-  aboutMeParagraphAllSpan.forEach(function (aboutMeParagraphSpan) {
-    setTimeout(() => {
-      aboutMeParagraphSpan.style.display = "inline";
-    }, 500);
-    // console.log(aboutMeParagraphSpan);
-  });
-}
-function aboutMeParagraphSpanHidden(aboutMeParagraphAllSpan) {
-  aboutMeParagraphAllSpan.forEach(function (aboutMeParagraphSpan) {
-    setTimeout(function () {
-      aboutMeParagraphSpan.style.display = "none";
-    }, 500);
-    // console.log(aboutMeParagraphSpan);
-  });
-}
 
 const aboutMeParagraphs = document.querySelectorAll("#about-me-div > p");
 function aboutParagraph() {
   aboutMeParagraphs.forEach(function (aboutMeParagraph) {
     if (isVisible(aboutMeParagraph, -130) === true) {
-      console.log(aboutMeParagraph.children);
-      aboutMeParagraphSpanShow(aboutMeParagraph.childNodes);
+      // console.log(aboutMeParagraph.children);
     }
     if (isVisible(aboutMeParagraph) === false) {
-      aboutMeParagraphSpanHidden(aboutMeParagraph.childNodes);
     }
   });
 }
