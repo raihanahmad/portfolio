@@ -1257,6 +1257,10 @@ img {
   opacity: 0.8;
 }
 
+#about #about-container #about-me-div span {
+  display: none;
+}
+
 #about #about-container #about-me-div p {
   font-size: 2vw;
   font-weight: 300;

@@ -672,6 +672,10 @@
     #about-me-div {
       opacity: 0.8;
 
+      span {
+        display: none;
+      }
+
       p {
         font-size: 2vw;
         font-weight: 300;
