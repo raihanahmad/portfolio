@@ -346,6 +346,24 @@ img {
   }
 }
 
+@-webkit-keyframes paragraphType {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes paragraphType {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 #social-contact {
   position: relative;
   display: -webkit-box;
@@ -1259,9 +1277,14 @@ img {
 }
 
 #about #about-container #about-me-div p {
+  display: none;
   font-size: 2vw;
   font-weight: 300;
   line-height: 1.3;
+}
+
+#about #about-container #about-me-div p span {
+  opacity: 0;
 }
 
 #about #about-container #about-me-div p:first-child span:first-child {
@@ -1272,13 +1295,17 @@ img {
 
 #about #about-container #about-me-div .read-more {
   margin-top: 1vw;
+  display: none;
+}
+
+#about #about-container #about-me-div .read-more .read-more-item {
+  opacity: 0;
 }
 
 #about #about-container #about-me-div .read-more .icon-line {
   display: inline-block;
   vertical-align: middle;
   position: relative;
-  top: 2px;
   width: 4.6875vw;
   height: 1px;
   background: #ffffff;
@@ -1293,7 +1320,6 @@ img {
   transition: all .2s ease;
   font-size: 1.2vw;
   font-weight: 300;
-  top: 7px;
 }
 
 #about #about-container #about-me-div .read-more .read-more-btn:hover::before {

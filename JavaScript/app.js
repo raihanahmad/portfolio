@@ -44,9 +44,14 @@ cursorBigElements.forEach(function (cursorBigElement) {
   const navbarMagnetEffect = function (e) {
     const navLink = this.querySelector("#navbar-links .nav-link");
 
-    const { offsetX: x, offsetY: y } = e,
-      { offsetWidth: width, offsetHeight: height } = this,
-      move = 25,
+    const {
+      offsetX: x,
+      offsetY: y
+    } = e, {
+      offsetWidth: width,
+      offsetHeight: height
+    } = this,
+    move = 25,
       xMove = (x / width) * (move * 2) - move,
       yMove = (y / height) * (move * 2) - move;
 
@@ -235,33 +240,46 @@ function projectTitleAnimation() {
   });
 }
 
-// About Section Title
+// About Section
 const aboutTitle = document.querySelector("#about-title");
-function aboutMeTitle() {
+const aboutMeParagraphs = document.querySelectorAll("#about-me-div > p");
+const readMoreDiv = document.querySelector('.read-more');
+
+document.querySelectorAll(".about-p-one span").forEach(function (spanText, index) {
+  spanText.style.animation = `paragraphType 0.001s ease ${index * 100 + 500}ms forwards`;
+});
+
+document.querySelectorAll(".about-p-two span").forEach(function (spanText, index) {
+  spanText.style.animation = `paragraphType 0.001s ease ${index * 100 + 5200}ms forwards`;
+});
+
+document.querySelectorAll(".about-p-three span").forEach(function (spanText, index) {
+  spanText.style.animation = `paragraphType 0.001s ease ${index * 100 + 7600}ms forwards`;
+});
+
+document.querySelectorAll(".read-more .read-more-item").forEach(function (item, index) {
+  item.style.animation = `paragraphType 0.001s ease ${index * 300 + 12000}ms forwards`;
+});
+
+function aboutMeSection() {
   if (isVisible(aboutTitle, -180) === true) {
     aboutTitle.style.animation = `poppop 1s ease forwards`;
+    readMoreDiv.style.display = 'block';
+    aboutMeParagraphs.forEach(function (aboutMeParagraph) {
+      aboutMeParagraph.style.display = 'block';
+    });
   }
   if (isVisible(aboutTitle) === false) {
     aboutTitle.style.animation = `unset`;
+    readMoreDiv.style.display = 'none';
+    aboutMeParagraphs.forEach(function (aboutMeParagraph) {
+      aboutMeParagraph.style.display = 'none';
+    });
   }
 }
 
-// About section paragraphs
-
-const aboutMeParagraphs = document.querySelectorAll("#about-me-div > p");
-function aboutParagraph() {
-  aboutMeParagraphs.forEach(function (aboutMeParagraph) {
-    if (isVisible(aboutMeParagraph, -130) === true) {
-      // console.log(aboutMeParagraph.children);
-    }
-    if (isVisible(aboutMeParagraph) === false) {
-    }
-  });
-}
-
-document.addEventListener("scroll", aboutMeTitle);
+document.addEventListener("scroll", aboutMeSection);
 document.addEventListener("scroll", projectTitleAnimation);
-document.addEventListener("scroll", aboutParagraph);
 
 // Project section scrolling animation
 window.addEventListener("scroll", function () {

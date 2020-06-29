@@ -674,10 +674,14 @@
       opacity: 0.8;
 
       p {
-        // display: none;
+        display: none;
         font-size: 2vw;
         font-weight: 300;
         line-height: 1.3;
+
+        span {
+          opacity: 0;
+        }
       }
 
       p:first-child span:first-child {
@@ -688,12 +692,17 @@
 
       .read-more {
         margin-top: 1vw;
+        display: none;
+
+        .read-more-item {
+          opacity: 0;
+        }
 
         .icon-line {
           display: inline-block;
           vertical-align: middle;
           position: relative;
-          top: 2px;
+          // top: 2px;
           width: 4.6875vw;
           height: 1px;
           background: $light-color;
@@ -707,7 +716,7 @@
           transition: all .2s ease;
           font-size: 1.2vw;
           font-weight: 300;
-          top: 7px;
+          // top: 7px;
 
           &:hover::before {
             top: 0;
