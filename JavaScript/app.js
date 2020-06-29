@@ -221,6 +221,7 @@ function isVisible(element, distanceFromTopShow) {
   }
 }
 
+// Project section title
 function projectTitleAnimation() {
   let sectionList = document.querySelectorAll(".popo");
   let section = document.querySelector("#projects-section-title");
@@ -234,8 +235,9 @@ function projectTitleAnimation() {
   });
 }
 
-function scanDocument() {
-  const aboutTitle = document.querySelector("#about-title");
+// About Section Title
+const aboutTitle = document.querySelector("#about-title");
+function aboutMeTitle() {
   if (isVisible(aboutTitle, -180) === true) {
     aboutTitle.style.animation = `poppop 1s ease forwards`;
   }
@@ -244,14 +246,28 @@ function scanDocument() {
   }
 }
 
-document.addEventListener("scroll", scanDocument);
+// About section paragraphs
+const aboutMeParagraphs = document.querySelectorAll("#about-me-div > p");
+function aboutParagraph() {
+  aboutMeParagraphs.forEach(function (aboutMeParagraph) {
+    if (isVisible(aboutMeParagraph, -130) === true) {
+      console.log(aboutMeParagraph.children);
+    }
+    if (isVisible(aboutMeParagraph) === false) {
+    }
+  });
+  console.log(aboutMeParagraphs);
+}
+
+document.addEventListener("scroll", aboutMeTitle);
 document.addEventListener("scroll", projectTitleAnimation);
+document.addEventListener("scroll", aboutParagraph);
 
 // Project section scrolling animation
 window.addEventListener("scroll", function () {
   let elementBox = projectSection.getBoundingClientRect();
   let mainDistance = elementBox.bottom - window.innerHeight;
-  console.log(mainDistance / 400 + 1.3);
+  // console.log(mainDistance / 400 + 1.3);
   projectSection.style.opacity = mainDistance / 400 + 1.2;
   if (-mainDistance / 4 >= 0) {
     projectSection.style.transform = `translate3d(0, ${mainDistance / 4}px, 0)`;
