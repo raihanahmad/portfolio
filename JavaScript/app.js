@@ -207,9 +207,9 @@ window.addEventListener("scroll", function () {
 });
 
 // Scrolling and show animations
-function isVisible(element) {
+function isVisible(element, distanceFromTopShow) {
   let elementBox = element.getBoundingClientRect();
-  let distanceFromTopShow = -310;
+  // let distanceFromTopShow = -310;
   let distanceFromTopHidden = 10;
   let mainDistance = elementBox.top - window.innerHeight;
 
@@ -221,11 +221,11 @@ function isVisible(element) {
   }
 }
 
-function scanDocument() {
+function projectTitleAnimation() {
   let sectionList = document.querySelectorAll(".popo");
   let section = document.querySelector("#projects-section-title");
   sectionList.forEach(function (sectionL) {
-    if (isVisible(section) === true) {
+    if (isVisible(section, -310) === true) {
       sectionL.classList.remove("hidden");
     }
     if (isVisible(section) === false) {
@@ -234,7 +234,18 @@ function scanDocument() {
   });
 }
 
+function scanDocument() {
+  const aboutTitle = document.querySelector("#about-title");
+  if (isVisible(aboutTitle, -180) === true) {
+    aboutTitle.style.animation = `poppop 1s ease forwards`;
+  }
+  if (isVisible(aboutTitle) === false) {
+    aboutTitle.style.animation = `unset`;
+  }
+}
+
 document.addEventListener("scroll", scanDocument);
+document.addEventListener("scroll", projectTitleAnimation);
 
 // Project section scrolling animation
 window.addEventListener("scroll", function () {

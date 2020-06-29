@@ -213,6 +213,19 @@ img {
   }
 }
 
+@keyframes hoverrotateup {
+  0% {
+    opacity: 0;
+    transform: translateY(3vw) rotateX(-80deg);
+
+  }
+
+  100% {
+    transform: translateY(0) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
 //  Social
 #social-contact {
   position: relative;

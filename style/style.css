@@ -320,6 +320,32 @@ img {
   }
 }
 
+@-webkit-keyframes hoverrotateup {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(3vw) rotateX(-80deg);
+            transform: translateY(3vw) rotateX(-80deg);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotateX(0deg);
+            transform: translateY(0) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes hoverrotateup {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(3vw) rotateX(-80deg);
+            transform: translateY(3vw) rotateX(-80deg);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotateX(0deg);
+            transform: translateY(0) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
 #social-contact {
   position: relative;
   display: -webkit-box;
@@ -1203,6 +1229,10 @@ img {
   -webkit-text-stroke: 3px #232323;
 }
 
+#projects-section #supercar {
+  margin-bottom: 5vw;
+}
+
 #about {
   height: 100%;
 }
@@ -1217,8 +1247,10 @@ img {
   font-size: 7.5vw;
   font-weight: 600;
   margin-bottom: 5.5vw;
-  -webkit-transform-origin: 50% 110% 0px;
-          transform-origin: 50% 110% 0px;
+  -webkit-transform-origin: 25% 110% 0px;
+          transform-origin: 25% 110% 0px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 #about #about-container #about-me-div {

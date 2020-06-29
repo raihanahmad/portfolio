@@ -645,6 +645,10 @@
       -webkit-text-stroke: 3px $dark-color;
     }
   }
+
+  #supercar {
+    margin-bottom: 5vw;
+  }
 }
 
 
@@ -661,13 +665,9 @@
       font-size: 7.5vw;
       font-weight: 600;
       margin-bottom: 5.5vw;
-      transform-origin: 50% 110% 0px;
-      // transform: scale(0);
+      transform-origin: 25% 110% 0px;
+      transform: scale(0);
     }
-
-    // &:hover #about-title {
-    //   animation: poppop 1s ease forwards;
-    // }
 
     #about-me-div {
       font-size: 2vw;
