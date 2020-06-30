@@ -655,7 +655,7 @@
 
 // About Section
 #about {
-  height: 55vw;
+  height: 68vw;
 
   #about-container {
     padding: 1vw 18vw 1vw 15vw;
@@ -684,7 +684,7 @@
         }
       }
 
-      p:first-child span:first-child {
+      p:first-child .big-font {
         line-height: .5;
         font-size: 4vw;
         font-weight: normal;
@@ -702,7 +702,7 @@
           display: inline-block;
           vertical-align: middle;
           position: relative;
-          // top: 2px;
+          top: -0.35vw;
           width: 4.6875vw;
           height: 1px;
           background: $light-color;
@@ -716,7 +716,6 @@
           transition: all .2s ease;
           font-size: 1.2vw;
           font-weight: 300;
-          // top: 7px;
 
           &:hover::before {
             top: 0;

@@ -1253,7 +1253,7 @@ img {
 }
 
 #about {
-  height: 55vw;
+  height: 68vw;
 }
 
 #about #about-container {
@@ -1287,7 +1287,7 @@ img {
   opacity: 0;
 }
 
-#about #about-container #about-me-div p:first-child span:first-child {
+#about #about-container #about-me-div p:first-child .big-font {
   line-height: .5;
   font-size: 4vw;
   font-weight: normal;
@@ -1306,6 +1306,7 @@ img {
   display: inline-block;
   vertical-align: middle;
   position: relative;
+  top: -0.35vw;
   width: 4.6875vw;
   height: 1px;
   background: #ffffff;
