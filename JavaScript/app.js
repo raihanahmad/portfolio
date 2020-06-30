@@ -250,15 +250,15 @@ document.querySelectorAll(".about-p-one span").forEach(function (spanText, index
 });
 
 document.querySelectorAll(".about-p-two span").forEach(function (spanText, index) {
-  spanText.style.animation = `paragraphType 0.001s ease ${index * 100 + 5200}ms forwards`;
+  spanText.style.animation = `paragraphType 0.001s ease ${index * 100 + 5500}ms forwards`;
 });
 
 document.querySelectorAll(".about-p-three span").forEach(function (spanText, index) {
-  spanText.style.animation = `paragraphType 0.001s ease ${index * 100 + 7600}ms forwards`;
+  spanText.style.animation = `paragraphType 0.001s ease ${index * 100 + 8200}ms forwards`;
 });
 
 document.querySelectorAll(".read-more .read-more-item").forEach(function (item, index) {
-  item.style.animation = `paragraphType 0.001s ease ${index * 300 + 12000}ms forwards`;
+  item.style.animation = `paragraphType 0.001s ease ${index * 300 + 14000}ms forwards`;
 });
 
 function aboutMeSection() {
