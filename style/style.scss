@@ -745,6 +745,7 @@
 
 // Footer Section
 #main-footer {
+  height: 7vw;
   perspective: 1000px;
 
   #footer-container {
@@ -754,9 +755,10 @@
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    padding: 6vh 5vw;
+    padding: 1vw 5vw;
     opacity: 0;
     transform: translateY(3vw) rotateX(-80deg);
+    animation: rotateup 1s forwards;
 
     p {
       font-size: 1vw;

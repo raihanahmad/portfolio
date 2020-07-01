@@ -1346,6 +1346,7 @@ img {
 }
 
 #main-footer {
+  height: 7vw;
   -webkit-perspective: 1000px;
           perspective: 1000px;
 }
@@ -1367,10 +1368,12 @@ img {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  padding: 6vh 5vw;
+  padding: 1vw 5vw;
   opacity: 0;
   -webkit-transform: translateY(3vw) rotateX(-80deg);
           transform: translateY(3vw) rotateX(-80deg);
+  -webkit-animation: rotateup 1s forwards;
+          animation: rotateup 1s forwards;
 }
 
 #main-footer #footer-container p {

@@ -279,15 +279,16 @@ function aboutMeSection() {
 }
 
 // Footer section
-const footerSection = document.querySelector('#footer-container');
+const footerContainer = document.querySelector('#footer-container');
 
 function footerSectionShowing() {
-  if (isVisible(footerSection, 100) === true) {
-    footerSection.style.animation = `rotateup 0.5s linear forwards`;
+  let elementBox = body.getBoundingClientRect();
+  if ((elementBox.bottom - window.innerHeight + window.pageYOffset - 10) < window.pageYOffset) {
+    footerContainer.style.display = `flex`;
     console.log('yep');
   }
-  if (isVisible(footerSection) === false) {
-    footerSection.style.animation = `unset`;
+  if ((elementBox.bottom - window.innerHeight + window.pageYOffset - 200) > window.pageYOffset) {
+    footerContainer.style.display = `none`;
   }
 }
 
