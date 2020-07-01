@@ -308,3 +308,13 @@ window.addEventListener("scroll", function () {
     projectSection.style.transform = `translate3d(0, 0px, 0)`;
   }
 });
+
+// Full Website Loading
+const loader = document.querySelector('#website-loading');
+const fullPage = document.querySelector('.smooth-scroll-wrapper');
+
+window.addEventListener('load', function () {
+  loader.style.display = 'none';
+  fullPage.style.visibility = 'visible';
+  body.style.overflowY = "unset"
+});
