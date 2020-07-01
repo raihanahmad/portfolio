@@ -655,7 +655,7 @@
 
 // About Section
 #about {
-  height: 68vw;
+  height: 65vw;
 
   #about-container {
     padding: 1vw 18vw 1vw 15vw;
@@ -745,13 +745,18 @@
 
 // Footer Section
 #main-footer {
+  perspective: 1000px;
+
   #footer-container {
+    transform-style: preserve-3d;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    padding: 4.5vh 5vw;
+    padding: 6vh 5vw;
+    opacity: 0;
+    transform: translateY(3vw) rotateX(-80deg);
 
     p {
       font-size: 1vw;

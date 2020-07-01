@@ -258,11 +258,11 @@ document.querySelectorAll(".about-p-three span").forEach(function (spanText, ind
 });
 
 document.querySelectorAll(".read-more .read-more-item").forEach(function (item, index) {
-  item.style.animation = `paragraphType 0.001s ease ${index * 300 + 14000}ms forwards`;
+  item.style.animation = `paragraphType 0.001s ease ${index * 300 + 13500}ms forwards`;
 });
 
 function aboutMeSection() {
-  if (isVisible(aboutTitle, -180) === true) {
+  if (isVisible(aboutTitle, -220) === true) {
     aboutTitle.style.animation = `poppop 1s ease forwards`;
     readMoreDiv.style.display = 'block';
     aboutMeParagraphs.forEach(function (aboutMeParagraph) {
@@ -278,6 +278,20 @@ function aboutMeSection() {
   }
 }
 
+// Footer section
+const footerSection = document.querySelector('#footer-container');
+
+function footerSectionShowing() {
+  if (isVisible(footerSection, 100) === true) {
+    footerSection.style.animation = `rotateup 0.5s linear forwards`;
+    console.log('yep');
+  }
+  if (isVisible(footerSection) === false) {
+    footerSection.style.animation = `unset`;
+  }
+}
+
+document.addEventListener("scroll", footerSectionShowing);
 document.addEventListener("scroll", aboutMeSection);
 document.addEventListener("scroll", projectTitleAnimation);
 

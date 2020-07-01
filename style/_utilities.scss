@@ -213,11 +213,10 @@ img {
   }
 }
 
-@keyframes hoverrotateup {
+@keyframes rotateup {
   0% {
     opacity: 0;
     transform: translateY(3vw) rotateX(-80deg);
-
   }
 
   100% {
