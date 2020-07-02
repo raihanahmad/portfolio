@@ -365,6 +365,32 @@ img {
   }
 }
 
+@-webkit-keyframes scaleOpacityUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaleOpacityUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 #social-contact {
   position: relative;
   display: -webkit-box;
@@ -488,6 +514,56 @@ img {
   background: #232323;
   position: relative;
   overflow: hidden;
+  -webkit-animation: scaleOpacityUp 0.5s ease 1s;
+          animation: scaleOpacityUp 0.5s ease 1s;
+}
+
+@-webkit-keyframes opacityDisplayNone {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    display: -webkit-box;
+    display: flex;
+  }
+  95% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    display: -webkit-box;
+    display: flex;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    display: none;
+  }
+}
+
+@keyframes opacityDisplayNone {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  95% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    display: none;
+  }
 }
 
 #website-loading div img {
@@ -501,6 +577,8 @@ img {
           transform-style: preserve-3d;
   -webkit-transform: perspective(1000px);
           transform: perspective(1000px);
+  -webkit-animation: scaleOpacityUp 1s ease 1;
+          animation: scaleOpacityUp 1s ease 1;
 }
 
 #home .home-container {

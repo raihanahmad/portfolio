@@ -1,6 +1,7 @@
 // Include Other Scss File
 @import "utilities";
 
+// Smooth scroll wrapper (full page)
 .smooth-scroll-wrapper {
   position: fixed;
   z-index: 2;
@@ -21,6 +22,28 @@
   background: $dark-color;
   position: relative;
   overflow: hidden;
+  animation: scaleOpacityUp 0.5s ease 1s;
+
+  // animation: opacityDisplayNone 0.5s ease forwards;
+  @keyframes opacityDisplayNone {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+      display: flex;
+    }
+
+    95% {
+      opacity: 0;
+      transform: scale(0.9);
+      display: flex;
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(0.9);
+      display: none;
+    }
+  }
 
   div {
     img {
@@ -35,6 +58,7 @@
   height: 100vh;
   transform-style: preserve-3d;
   transform: perspective(1000px);
+  animation: scaleOpacityUp 1s ease 1;
 
 
   // Home main content section

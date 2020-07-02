@@ -314,7 +314,7 @@ const loader = document.querySelector('#website-loading');
 const fullPage = document.querySelector('.smooth-scroll-wrapper');
 
 window.addEventListener('load', function () {
-  loader.style.display = 'none';
+  loader.style.animation = 'opacityDisplayNone 0.5s ease forwards';
   fullPage.style.visibility = 'visible';
   body.style.overflowY = "unset"
 });
