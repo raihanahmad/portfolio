@@ -514,8 +514,6 @@ img {
   background: #232323;
   position: relative;
   overflow: hidden;
-  -webkit-animation: scaleOpacityUp 0.5s ease 1s;
-          animation: scaleOpacityUp 0.5s ease 1s;
 }
 
 @-webkit-keyframes opacityDisplayNone {
@@ -577,8 +575,8 @@ img {
           transform-style: preserve-3d;
   -webkit-transform: perspective(1000px);
           transform: perspective(1000px);
-  -webkit-animation: scaleOpacityUp 1s ease 1;
-          animation: scaleOpacityUp 1s ease 1;
+  -webkit-animation: scaleOpacityUp 1.5s ease 1;
+          animation: scaleOpacityUp 1.5s ease 1;
 }
 
 #home .home-container {
