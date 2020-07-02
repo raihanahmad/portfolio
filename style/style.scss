@@ -1028,7 +1028,7 @@
         right: unset;
         top: unset;
         left: 6%;
-        bottom: -8%;
+        bottom: -2%;
         transform: unset;
 
         p {
@@ -1041,7 +1041,7 @@
       }
 
       .project-title {
-        top: 4vw;
+        top: 2.5vw;
         left: 0;
         width: 90%;
 
@@ -1069,7 +1069,7 @@
 
       // View Project Button
       .project-view-button {
-        bottom: -5%;
+        bottom: -2%;
         right: 5%;
 
         div {
@@ -1092,7 +1092,7 @@
 
       // View Video Button
       .video-view-button {
-        top: -10%;
+        top: -13%;
         right: 5%;
         height: 16vw;
         width: 16vw;
@@ -1151,7 +1151,96 @@
         }
       }
 
-      margin-bottom: 5vw;
+      margin-bottom: 10vw;
     }
+  }
+
+
+  // About Section
+  #about {
+    height: 120vh;
+
+    #about-container {
+      padding: 1vw 13vw 1vw 10vw;
+
+      #about-title {
+        font-size: 11vw;
+        margin-bottom: 7vw;
+      }
+
+      #about-me-div {
+
+        p {
+          font-size: 4vw;
+        }
+
+        p:first-child .big-font {
+          font-size: 7vw;
+        }
+
+        .read-more {
+          margin-top: 1vw;
+          display: none;
+
+          .read-more-item {
+            opacity: 0;
+          }
+
+          .icon-line {
+            width: 8vw;
+          }
+
+          .read-more-btn {
+            font-size: 2.5vw;
+          }
+        }
+      }
+    }
+  }
+
+  // Footer Section
+  #main-footer {
+    height: 16vw;
+
+    #footer-container {
+      p {
+        font-size: 2.5vw;
+      }
+    }
+  }
+}
+
+// Smart Phone
+@media (max-width: 550px) {
+
+  // Projects Section
+  #projects-section {
+
+    // Project Section
+    .project {
+
+      // Project Description
+      .project-description {
+        bottom: -8%;
+      }
+
+      .project-title {
+        top: 4vw;
+      }
+
+      // View Project Button
+      .project-view-button {
+        bottom: -5%;
+      }
+
+      // View Video Button
+      .video-view-button {
+        top: -10%;
+      }
+    }
+  }
+
+  #about {
+    height: 100vh;
   }
 }

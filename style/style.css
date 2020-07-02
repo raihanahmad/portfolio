@@ -1634,7 +1634,7 @@ img {
     right: unset;
     top: unset;
     left: 6%;
-    bottom: -8%;
+    bottom: -2%;
     -webkit-transform: unset;
             transform: unset;
   }
@@ -1645,7 +1645,7 @@ img {
     border-bottom: 0.2px solid #aaaaaa;
   }
   #projects-section .project .project-title {
-    top: 4vw;
+    top: 2.5vw;
     left: 0;
     width: 90%;
   }
@@ -1666,7 +1666,7 @@ img {
     font-size: 25vw;
   }
   #projects-section .project .project-view-button {
-    bottom: -5%;
+    bottom: -2%;
     right: 5%;
   }
   #projects-section .project .project-view-button div {
@@ -1681,7 +1681,7 @@ img {
     font-size: 2vw;
   }
   #projects-section .project .video-view-button {
-    top: -10%;
+    top: -13%;
     right: 5%;
     height: 16vw;
     width: 16vw;
@@ -1707,10 +1707,63 @@ img {
     -webkit-text-stroke: 1px #232323;
   }
   #projects-section #supercar {
-    margin-bottom: 5vw;
+    margin-bottom: 10vw;
   }
   #projects-section #supercar .project-showcase .project-bg {
     background: url("../img/projects/superdon.jpg") no-repeat center center/cover !important;
+  }
+  #about {
+    height: 120vh;
+  }
+  #about #about-container {
+    padding: 1vw 13vw 1vw 10vw;
+  }
+  #about #about-container #about-title {
+    font-size: 11vw;
+    margin-bottom: 7vw;
+  }
+  #about #about-container #about-me-div p {
+    font-size: 4vw;
+  }
+  #about #about-container #about-me-div p:first-child .big-font {
+    font-size: 7vw;
+  }
+  #about #about-container #about-me-div .read-more {
+    margin-top: 1vw;
+    display: none;
+  }
+  #about #about-container #about-me-div .read-more .read-more-item {
+    opacity: 0;
+  }
+  #about #about-container #about-me-div .read-more .icon-line {
+    width: 8vw;
+  }
+  #about #about-container #about-me-div .read-more .read-more-btn {
+    font-size: 2.5vw;
+  }
+  #main-footer {
+    height: 16vw;
+  }
+  #main-footer #footer-container p {
+    font-size: 2.5vw;
+  }
+}
+
+@media (max-width: 550px) {
+  #projects-section .project .project-description {
+    bottom: -8%;
+  }
+  #projects-section .project .project-title {
+    top: 4vw;
+  }
+  #projects-section .project .project-view-button {
+    bottom: -5%;
+  }
+  #projects-section .project .video-view-button {
+    top: -10%;
+  }
+  #about {
+    height: 100vh;
   }
 }
 /*# sourceMappingURL=style.css.map */
