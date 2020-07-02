@@ -371,6 +371,11 @@ img {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
+  50% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
   100% {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -380,6 +385,11 @@ img {
 
 @keyframes scaleOpacityUp {
   0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  50% {
     opacity: 0;
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
@@ -575,8 +585,8 @@ img {
           transform-style: preserve-3d;
   -webkit-transform: perspective(1000px);
           transform: perspective(1000px);
-  -webkit-animation: scaleOpacityUp 1.5s ease 1;
-          animation: scaleOpacityUp 1.5s ease 1;
+  -webkit-animation: scaleOpacityUp 2s ease 1;
+          animation: scaleOpacityUp 2s ease 1;
 }
 
 #home .home-container {
