@@ -130,12 +130,12 @@
 
     // Name and Title
     #name-title {
-      display: flex;
-      flex-direction: column;
-      align-items: left;
-      justify-content: flex-end;
 
       &>div {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
 
         h1 {
           display: inline-block;
@@ -810,6 +810,348 @@
 
     #social-contact {
       opacity: 0.8;
+    }
+  }
+}
+
+
+// Mobile Responsive
+@media (max-width: 1100px) {
+
+  body {
+    letter-spacing: unset;
+  }
+
+  // Home
+  #home {
+
+    // Home main content section
+    .home-container {
+
+      // Navbar
+      #navbar {
+        grid-template-columns: 2fr 5fr;
+
+        // SVG Div
+        #arrow-line {
+          #arrow-svg {
+            width: 20vw;
+          }
+        }
+
+        // Navbar Links
+        #navbar-links {
+          ul {
+            li {
+              margin-left: 4.7vw;
+
+              .nav-link {
+                font-size: 3.2vw;
+              }
+            }
+          }
+        }
+      }
+
+      // Name and Title
+      #name-title {
+
+        &>div {
+          width: 100%;
+
+          h1 {
+            font-size: 11vw;
+            margin-bottom: 1vw;
+          }
+
+          h3 {
+            font-size: 4.5vw;
+          }
+        }
+      }
+
+      // Home Info
+      #home-info {
+
+        // Progresses And Description
+        #progresses-description {
+          font-weight: 300;
+          font-size: 2.2vw;
+        }
+
+        // Contact
+        #contact-content {
+          text-transform: uppercase;
+          line-height: 1;
+
+          p {
+            font-size: 3vw;
+            letter-spacing: 0px;
+            margin-bottom: 1.1vw;
+            font-weight: 300;
+          }
+
+          #contact-box {
+            height: 10vw;
+            border: none;
+            background: $light-color;
+
+            h3 {
+              color: $dark-color;
+              position: relative;
+              font-size: 6vw;
+
+              &:last-child {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //  Social
+  #social-contact {
+    .social-link {
+      width: 8vw;
+      height: 8vw;
+
+      i {
+        font-size: 3.4vw;
+      }
+    }
+  }
+
+  // Contact Section Email & Social
+  #contact-section {
+    #contact-section-wrap {
+      #contact-content-wrap {
+
+        // Close x Mark
+        #close-contact {
+          right: 15%;
+          height: 5vw;
+          width: 5vw;
+
+          #close-x {
+            height: 6vw;
+            width: 0.6vw;
+
+            &::before {
+              content: "";
+              top: 0%;
+              height: 6vw;
+              width: 0.6vw;
+            }
+          }
+        }
+
+        // Email
+        #contact-email-box {
+          top: 42%;
+
+          p {
+            font-size: 4vw;
+            margin-bottom: 3vw;
+            font-weight: 200;
+            letter-spacing: 1px;
+          }
+
+          #email-link {
+            span {
+              font-size: 7vw;
+              font-weight: 400;
+
+              &::before {
+                content: '';
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        // Social
+        #social-contact-section {
+          bottom: 20%;
+          left: 50%;
+
+          p {
+            font-size: 2.5vw;
+            margin-bottom: 2vw;
+          }
+        }
+      }
+    }
+  }
+
+  // Projects Section
+  #projects-section {
+
+    // Section Title
+    #projects-section-title {
+      margin: 25vw auto 30vw;
+
+      h1 {
+        font-size: 12vw;
+      }
+    }
+
+    // Project Section
+    .project {
+      max-height: 85vw;
+      overflow: unset;
+      align-items: flex-start;
+
+      .project-showcase {
+        width: 100vw;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        filter: grayscale(30%) blur(0);
+        transition: unset;
+
+        .project-bg {
+          width: 90vw;
+          position: relative;
+          height: 40vh;
+
+          .img {
+            display: none;
+          }
+        }
+      }
+
+      // Project Description
+      .project-description {
+        right: unset;
+        top: unset;
+        left: 6%;
+        bottom: -8%;
+        transform: unset;
+
+        p {
+          font-size: 2.8vw;
+
+          a {
+            border-bottom: 0.2px solid #aaaaaa;
+          }
+        }
+      }
+
+      .project-title {
+        top: 4vw;
+        left: 0;
+        width: 90%;
+
+        h1 {
+          font-size: 11vw;
+          font-weight: 800;
+        }
+      }
+
+      .project-title-border {
+        -webkit-text-stroke: 1px #fff;
+      }
+
+      // Project Count
+      .project-count {
+        display: none;
+        top: -12%;
+        opacity: 0.05;
+        z-index: -1;
+
+        h1 {
+          font-size: 25vw;
+        }
+      }
+
+      // View Project Button
+      .project-view-button {
+        bottom: -5%;
+        right: 5%;
+
+        div {
+          height: 16vw;
+          width: 16vw;
+          border: 1px solid $light-color;
+
+          p {
+            font-size: 3vw;
+          }
+
+
+          &:hover {
+            p {
+              font-size: 2vw;
+            }
+          }
+        }
+      }
+
+      // View Video Button
+      .video-view-button {
+        top: -10%;
+        right: 5%;
+        height: 16vw;
+        width: 16vw;
+        border: 1px solid #444444;
+
+        div {
+
+          p {
+            font-size: 2.2vw;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    #bogoapps {
+      .project-showcase {
+        .project-bg {
+          background: url('../img/projects/bogo.jpg') no-repeat right center/cover !important;
+        }
+      }
+    }
+
+    #bomcomapps {
+      .project-showcase {
+        .project-bg {
+          background: url('../img/projects/bomcom.jpg') no-repeat right center/cover !important;
+        }
+      }
+    }
+
+    #luckgame {
+      .project-showcase {
+        .project-bg {
+          background: url('../img/projects/luckgame.jpg') no-repeat center center/cover !important;
+        }
+      }
+    }
+
+    #todotoday {
+      .project-showcase {
+        .project-bg {
+          background: url('../img/projects/todotody.jpg') no-repeat center center/cover !important;
+        }
+      }
+
+      .project-title-border {
+        -webkit-text-stroke: 1px $dark-color;
+      }
+    }
+
+    #supercar {
+      .project-showcase {
+        .project-bg {
+          background: url('../img/projects/superdon.jpg') no-repeat center center/cover !important;
+        }
+      }
+
+      margin-bottom: 5vw;
     }
   }
 }

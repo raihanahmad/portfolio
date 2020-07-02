@@ -320,7 +320,7 @@ window.addEventListener('load', function () {
 });
 
 // Smooth Scrolling
-$("#navbar-links a").on("click", function (event) {
+$(".nav-link-home").on("click", function (event) {
   if (this.hash !== "") {
     event.preventDefault();
 
@@ -329,7 +329,41 @@ $("#navbar-links a").on("click", function (event) {
     $("html, body").animate({
         scrollTop: $(hash).offset().top - 0,
       },
-      1500
+      1000
     );
   }
 });
+
+$(".nav-link-projects-section").on("click", function (event) {
+  if (this.hash !== "") {
+    event.preventDefault();
+
+    const hash = this.hash;
+
+    $("html, body").animate({
+        scrollTop: $(hash).offset().top - 0,
+      },
+      1000
+    );
+  }
+});
+
+$(".nav-link-about").on("click", function (event) {
+  if (this.hash !== "") {
+    event.preventDefault();
+
+    const hash = this.hash;
+
+    $("html, body").animate({
+        scrollTop: $(hash).offset().top - 0,
+      },
+      2200
+    );
+  }
+});
+
+
+// Smallar Touch Devices Media Queries
+if (window.matchMedia("(max-width: 1100px)").matches) {
+  mouseCursor.remove();
+}
