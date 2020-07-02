@@ -318,3 +318,18 @@ window.addEventListener('load', function () {
   fullPage.style.visibility = 'visible';
   body.style.overflowY = "unset"
 });
+
+// Smooth Scrolling
+$("#navbar-links a").on("click", function (event) {
+  if (this.hash !== "") {
+    event.preventDefault();
+
+    const hash = this.hash;
+
+    $("html, body").animate({
+        scrollTop: $(hash).offset().top - 0,
+      },
+      1500
+    );
+  }
+});
