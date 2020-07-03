@@ -357,7 +357,7 @@ $(".nav-link-about").on("click", function (event) {
     $("html, body").animate({
         scrollTop: $(hash).offset().top - 0,
       },
-      2200
+      4000
     );
   }
 });
