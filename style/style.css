@@ -675,7 +675,7 @@ img {
 }
 
 #home .home-container #name-title > div {
-  width: 65%;
+  width: 66%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1367,6 +1367,7 @@ img {
 }
 
 #about #about-container #about-title {
+  width: 55%;
   font-size: 7.5vw;
   font-weight: 600;
   margin-bottom: 5.5vw;
