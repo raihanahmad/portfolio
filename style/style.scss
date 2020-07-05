@@ -704,7 +704,7 @@
     overflow: hidden;
 
     #about-title {
-      width: 55%;
+      width: 75%;
       font-size: 7.5vw;
       font-weight: 600;
       margin-bottom: 5.5vw;
@@ -1129,6 +1129,14 @@
       .project-showcase {
         .project-bg {
           background: url('../img/projects/luckgame.jpg') no-repeat center center/cover !important;
+        }
+      }
+    }
+
+    #iss {
+      .project-showcase {
+        .project-bg {
+          background: url('../img/projects/iss.png') no-repeat center center/cover !important;
         }
       }
     }
