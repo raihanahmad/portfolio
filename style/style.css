@@ -1004,11 +1004,11 @@ img {
   top: 12%;
   left: 15%;
   text-align: center;
-  border: 3px solid #ffffff;
+  border: 2px solid #ffffff;
   -webkit-transform: rotate(-20deg);
           transform: rotate(-20deg);
   border-radius: 50%;
-  letter-spacing: 0.5vw;
+  letter-spacing: 0.4vw;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   -webkit-animation: rotatefull 6s linear infinite;
@@ -1612,7 +1612,7 @@ img {
     width: 20vw;
     top: 12%;
     left: 15%;
-    border: 1.5px solid #ffffff;
+    border: 1px solid #ffffff;
     letter-spacing: 0.6vw;
   }
   #contact-section #contact-section-wrap #contact-content-wrap #resume p {

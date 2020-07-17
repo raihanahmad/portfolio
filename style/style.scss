@@ -361,10 +361,10 @@
         top: 12%;
         left: 15%;
         text-align: center;
-        border: 3px solid $light-color;
+        border: 2px solid $light-color;
         transform: rotate(-20deg);
         border-radius: 50%;
-        letter-spacing: 0.5vw;
+        letter-spacing: 0.4vw;
         transition: all 0.3s ease;
         animation: rotatefull 6s linear infinite;
         &:hover {
@@ -958,7 +958,7 @@
           width: 20vw;
           top: 12%;
           left: 15%;
-          border: 1.5px solid $light-color;
+          border: 1px solid $light-color;
           letter-spacing: 0.6vw;
 
           p {
