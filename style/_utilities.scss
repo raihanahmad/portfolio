@@ -19,7 +19,6 @@ $dark-color: #232323;
 ::-webkit-scrollbar {
   width: 2px;
   background: $dark-color;
-
 }
 
 ::-webkit-scrollbar-track {
@@ -34,7 +33,7 @@ $dark-color: #232323;
 
 body {
   background: $dark-color;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   // font-family: 'Roboto', sans-serif;
   color: $light-color;
   font-weight: 500;
@@ -74,7 +73,7 @@ img {
   transform: translate(-50%, -50%);
   border: 1px solid $light-color;
   // transform-origin: 100% 100%;
-  transition: transform .3s ease-in-out, background .4s linear;
+  transition: transform 0.3s ease-in-out, background 0.4s linear;
   mix-blend-mode: difference;
 }
 
@@ -95,12 +94,11 @@ img {
 .cursorScaleZero {
   transform: scale(0.1) translate(-500%, -500%);
   mix-blend-mode: unset;
-  animation: cursordownscale .4s linear forwards;
+  animation: cursordownscale 0.4s linear forwards;
 
   @keyframes cursordownscale {
     0% {
       background: $light-color;
-
     }
 
     95% {
@@ -109,7 +107,6 @@ img {
 
     100% {
       background: $dark-color;
-
     }
   }
 }
@@ -202,7 +199,7 @@ img {
   }
 
   60% {
-    transform: scale(.9);
+    transform: scale(0.9);
   }
 
   85% {
@@ -250,6 +247,16 @@ img {
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes rotatefull {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
 

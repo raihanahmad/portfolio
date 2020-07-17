@@ -33,7 +33,7 @@
 
 body {
   background: #232323;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   color: #ffffff;
   font-weight: 500;
   letter-spacing: -1px;
@@ -71,10 +71,10 @@ img {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border: 1px solid #ffffff;
-  -webkit-transition: background .4s linear, -webkit-transform .3s ease-in-out;
-  transition: background .4s linear, -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out, background .4s linear;
-  transition: transform .3s ease-in-out, background .4s linear, -webkit-transform .3s ease-in-out;
+  -webkit-transition: background 0.4s linear, -webkit-transform 0.3s ease-in-out;
+  transition: background 0.4s linear, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background 0.4s linear;
+  transition: transform 0.3s ease-in-out, background 0.4s linear, -webkit-transform 0.3s ease-in-out;
   mix-blend-mode: difference;
 }
 
@@ -100,8 +100,8 @@ img {
   -webkit-transform: scale(0.1) translate(-500%, -500%);
           transform: scale(0.1) translate(-500%, -500%);
   mix-blend-mode: unset;
-  -webkit-animation: cursordownscale .4s linear forwards;
-          animation: cursordownscale .4s linear forwards;
+  -webkit-animation: cursordownscale 0.4s linear forwards;
+          animation: cursordownscale 0.4s linear forwards;
 }
 
 @-webkit-keyframes cursordownscale {
@@ -401,6 +401,28 @@ img {
   }
 }
 
+@-webkit-keyframes rotatefull {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotatefull {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 #social-contact {
   position: relative;
   display: -webkit-box;
@@ -620,10 +642,10 @@ img {
 #home .home-container #navbar #arrow-line #arrow-svg {
   -webkit-transform-origin: left;
           transform-origin: left;
-  -webkit-transition: -webkit-transform .3s ease;
-  transition: -webkit-transform .3s ease;
-  transition: transform .3s ease;
-  transition: transform .3s ease, -webkit-transform .3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   fill: #ffffff;
   height: 8;
   width: 9vw;
@@ -649,8 +671,8 @@ img {
 
 #home .home-container #navbar #navbar-links ul li {
   margin-left: 4.7vw;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #home .home-container #navbar #navbar-links ul li .nav-link {
@@ -660,10 +682,10 @@ img {
   padding: 1vw;
   font-weight: 700;
   letter-spacing: 0.2px;
-  -webkit-transition: -webkit-transform .2s linear;
-  transition: -webkit-transform .2s linear;
-  transition: transform .2s linear;
-  transition: transform .2s linear, -webkit-transform .2s linear;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 }
 
 #home .home-container #navbar #black-white-toggler {
@@ -728,7 +750,7 @@ img {
 #home .home-container #home-info #progresses-description #progresses-animation {
   display: inline-block !important;
   position: relative;
-  top: .33vw;
+  top: 0.33vw;
   width: 6vw;
   height: 1.5vw;
   -webkit-perspective: 1000px;
@@ -738,8 +760,8 @@ img {
 #home .home-container #home-info #progresses-description #progresses-animation > span {
   bottom: 0;
   position: absolute;
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
   opacity: 0;
 }
 
@@ -859,8 +881,8 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #home .home-container #home-info #contact-content #contact-box h3:last-child {
@@ -934,10 +956,10 @@ img {
   background: #ffffff;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-  transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 #contact-section #contact-section-wrap #contact-content-wrap #close-contact #close-x::before {
@@ -950,10 +972,10 @@ img {
   background: #ffffff;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-  transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 #contact-section #contact-section-wrap #contact-content-wrap #close-contact:hover #close-x {
@@ -966,9 +988,48 @@ img {
           transform: rotate(-90deg) scaleX(1.3);
 }
 
+#contact-section #contact-section-wrap #contact-content-wrap #resume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 10vw;
+  width: 10vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 12%;
+  left: 15%;
+  text-align: center;
+  border: 3px solid #ffffff;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  border-radius: 50%;
+  letter-spacing: 0.5vw;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-animation: rotatefull 6s linear infinite;
+          animation: rotatefull 6s linear infinite;
+}
+
+#contact-section #contact-section-wrap #contact-content-wrap #resume:hover {
+  letter-spacing: 0px;
+  background: #ffffff;
+  color: #232323;
+}
+
+#contact-section #contact-section-wrap #contact-content-wrap #resume p {
+  font-weight: 600;
+  font-size: 1.7vw;
+  text-transform: uppercase;
+}
+
 #contact-section #contact-section-wrap #contact-content-wrap #contact-email-box {
   position: absolute;
-  top: 35%;
+  top: 38%;
   left: 50%;
   text-align: center;
   -webkit-transform: translateX(-50%);
@@ -987,7 +1048,7 @@ img {
 }
 
 #contact-section #contact-section-wrap #contact-content-wrap #contact-email-box #email-link span::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 3px;
   width: 100%;
@@ -997,10 +1058,10 @@ img {
   right: 0;
   -webkit-transform: scale(0, 1);
           transform: scale(0, 1);
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-  transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 #contact-section #contact-section-wrap #contact-content-wrap #contact-email-box #email-link span:hover::before {
@@ -1018,11 +1079,11 @@ img {
 }
 
 #contact-section #contact-section-wrap #contact-content-wrap #social-contact-section p {
-  font-size: .8rem;
+  font-size: 0.8rem;
   letter-spacing: 1px;
   font-weight: 300;
   text-transform: uppercase;
-  margin-bottom: .7vw;
+  margin-bottom: 0.7vw;
 }
 
 #projects-section {
@@ -1077,8 +1138,8 @@ img {
 }
 
 #projects-section #projects-section-title h1:last-child {
-  -webkit-animation: poppop 1s ease forwards .15s;
-          animation: poppop 1s ease forwards .15s;
+  -webkit-animation: poppop 1s ease forwards 0.15s;
+          animation: poppop 1s ease forwards 0.15s;
 }
 
 #projects-section .project {
@@ -1142,8 +1203,8 @@ img {
   width: 75%;
   -webkit-transform: translateZ(130px) translateX(15.5%) translateY(15.5%);
           transform: translateZ(130px) translateX(15.5%) translateY(15.5%);
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 #projects-section .project .hover-project-showcase {
@@ -1170,8 +1231,8 @@ img {
 #projects-section .project .project-description p a {
   color: #aaaaaa;
   border-bottom: 1px solid #aaaaaa;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #projects-section .project .project-description p a:hover {
@@ -1244,8 +1305,8 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   border: 3px solid #ffffff;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #projects-section .project .project-view-button div p {
@@ -1254,33 +1315,11 @@ img {
   position: absolute;
   color: #ffffff;
   font-size: 1.3vw;
-  letter-spacing: .25vw;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  letter-spacing: 0.25vw;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   -webkit-animation: rotatefull 6s linear infinite;
           animation: rotatefull 6s linear infinite;
-}
-
-@-webkit-keyframes rotatefull {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes rotatefull {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
 }
 
 #projects-section .project .project-view-button div:hover {
@@ -1318,8 +1357,8 @@ img {
   -webkit-transform: rotate(-20deg);
           transform: rotate(-20deg);
   border: 3px solid #444444;
-  -webkit-transition: all .8s linear;
-  transition: all .8s linear;
+  -webkit-transition: all 0.8s linear;
+  transition: all 0.8s linear;
 }
 
 #projects-section .project .video-view-button div {
@@ -1344,8 +1383,8 @@ img {
 }
 
 #projects-section .project .video-view-button:hover div:last-child p {
-  -webkit-animation: hoverPopUp 1s ease .2s;
-          animation: hoverPopUp 1s ease .2s;
+  -webkit-animation: hoverPopUp 1s ease 0.2s;
+          animation: hoverPopUp 1s ease 0.2s;
 }
 
 #projects-section #todotoday .project-title-border {
@@ -1393,7 +1432,7 @@ img {
 }
 
 #about #about-container #about-me-div p:first-child .big-font {
-  line-height: .5;
+  line-height: 0.5;
   font-size: 4vw;
   font-weight: normal;
 }
@@ -1422,8 +1461,8 @@ img {
   position: relative;
   padding: 0 6px 0 3px;
   overflow: hidden;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   font-size: 1.2vw;
   font-weight: 300;
 }
@@ -1438,15 +1477,15 @@ img {
 }
 
 #about #about-container #about-me-div .read-more .read-more-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 100%;
   left: 0;
   height: 100%;
   width: 100%;
   background: #ffffff;
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
   z-index: -5;
 }
 
@@ -1568,6 +1607,17 @@ img {
     height: 6vw;
     width: 0.6vw;
   }
+  #contact-section #contact-section-wrap #contact-content-wrap #resume {
+    height: 20vw;
+    width: 20vw;
+    top: 12%;
+    left: 15%;
+    border: 1.5px solid #ffffff;
+    letter-spacing: 0.6vw;
+  }
+  #contact-section #contact-section-wrap #contact-content-wrap #resume p {
+    font-size: 3vw;
+  }
   #contact-section #contact-section-wrap #contact-content-wrap #contact-email-box {
     top: 42%;
   }
@@ -1582,7 +1632,7 @@ img {
     font-weight: 400;
   }
   #contact-section #contact-section-wrap #contact-content-wrap #contact-email-box #email-link span::before {
-    content: '';
+    content: "";
     width: 100%;
   }
   #contact-section #contact-section-wrap #contact-content-wrap #social-contact-section {

@@ -58,7 +58,6 @@
   transform: perspective(1000px);
   animation: scaleOpacityUp 2s ease 1;
 
-
   // Home main content section
   .home-container {
     height: 100%;
@@ -76,10 +75,9 @@
 
       // SVG Div
       #arrow-line {
-
         #arrow-svg {
           transform-origin: left;
-          transition: transform .3s ease;
+          transition: transform 0.3s ease;
 
           &:hover {
             transform: scaleX(1.4);
@@ -100,7 +98,7 @@
 
           li {
             margin-left: 4.7vw;
-            transition: all .3s ease;
+            transition: all 0.3s ease;
 
             .nav-link {
               transform: translate3d(0px, 0px, 0px);
@@ -108,7 +106,7 @@
               padding: 1vw;
               font-weight: 700;
               letter-spacing: 0.2px;
-              transition: transform .2s linear;
+              transition: transform 0.2s linear;
             }
           }
         }
@@ -120,18 +118,15 @@
         // justify-content: flex-end;
         display: none;
 
-
         img {
           width: 4vw;
-
         }
       }
     }
 
     // Name and Title
     #name-title {
-
-      &>div {
+      & > div {
         width: 66%;
         display: flex;
         flex-direction: column;
@@ -166,36 +161,36 @@
         text-transform: capitalize;
         opacity: 0.8;
 
-        &>p:first-child {
+        & > p:first-child {
           display: inline-block;
         }
 
         #progresses-animation {
           display: inline-block !important;
           position: relative;
-          top: .33vw;
+          top: 0.33vw;
           width: 6vw;
           height: 1.5vw;
           perspective: 1000px;
           // padding-left: .15vw;
         }
 
-        #progresses-animation>span {
+        #progresses-animation > span {
           bottom: 0;
           position: absolute;
-          transition: all .4s ease;
+          transition: all 0.4s ease;
           opacity: 0;
         }
 
-        #progresses-animation>span:first-child {
+        #progresses-animation > span:first-child {
           animation: rotateTextOne 12s linear infinite;
         }
 
-        #progresses-animation>span:nth-child(2) {
+        #progresses-animation > span:nth-child(2) {
           animation: rotateTextOne 12s linear infinite 4s;
         }
 
-        #progresses-animation>span:last-child {
+        #progresses-animation > span:last-child {
           animation: rotateTextOne 12s linear infinite 8s;
         }
 
@@ -259,7 +254,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all .3s ease-in-out;
+            transition: all 0.3s ease-in-out;
 
             &:last-child {
               height: 101%;
@@ -274,7 +269,7 @@
               }
             }
 
-            &:first-child:hover~h3:last-child {
+            &:first-child:hover ~ h3:last-child {
               clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             }
           }
@@ -331,7 +326,7 @@
           width: 2.5vw;
           background: $light-color;
           transform: rotate(45deg);
-          transition: transform .3s ease-in-out;
+          transition: transform 0.3s ease-in-out;
 
           &::before {
             content: "";
@@ -342,7 +337,7 @@
             width: 2.5vw;
             background: $light-color;
             transform: rotate(-90deg);
-            transition: transform .3s ease-in-out;
+            transition: transform 0.3s ease-in-out;
           }
         }
 
@@ -355,10 +350,40 @@
         }
       }
 
+      // Resume
+      #resume {
+        display: flex;
+        height: 10vw;
+        width: 10vw;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 12%;
+        left: 15%;
+        text-align: center;
+        border: 3px solid $light-color;
+        transform: rotate(-20deg);
+        border-radius: 50%;
+        letter-spacing: 0.5vw;
+        transition: all 0.3s ease;
+        animation: rotatefull 6s linear infinite;
+        &:hover {
+          letter-spacing: 0px;
+          background: $light-color;
+          color: $dark-color;
+        }
+
+        p {
+          font-weight: 600;
+          font-size: 1.7vw;
+          text-transform: uppercase;
+        }
+      }
+
       // Email
       #contact-email-box {
         position: absolute;
-        top: 35%;
+        top: 38%;
         left: 50%;
         text-align: center;
         transform: translateX(-50%);
@@ -375,7 +400,7 @@
             font-weight: 700;
 
             &::before {
-              content: '';
+              content: "";
               position: absolute;
               height: 3px;
               width: 100%;
@@ -384,12 +409,11 @@
               left: 0;
               right: 0;
               transform: scale(0, 1);
-              transition: transform .3s ease-in-out;
+              transition: transform 0.3s ease-in-out;
             }
 
             &:hover::before {
               transform: scale(1, 1);
-
             }
           }
         }
@@ -404,11 +428,11 @@
         text-align: center;
 
         p {
-          font-size: .8rem;
+          font-size: 0.8rem;
           letter-spacing: 1px;
           font-weight: 300;
           text-transform: uppercase;
-          margin-bottom: .7vw;
+          margin-bottom: 0.7vw;
         }
       }
     }
@@ -451,7 +475,7 @@
       }
 
       &:last-child {
-        animation: poppop 1s ease forwards .15s;
+        animation: poppop 1s ease forwards 0.15s;
       }
     }
   }
@@ -502,7 +526,7 @@
           height: 75%;
           width: 75%;
           transform: translateZ(130px) translateX(15.5%) translateY(15.5%);
-          transition: all .4s ease;
+          transition: all 0.4s ease;
         }
       }
     }
@@ -528,7 +552,7 @@
         a {
           color: #aaaaaa;
           border-bottom: 1px solid #aaaaaa;
-          transition: all .3s ease;
+          transition: all 0.3s ease;
 
           &:hover {
             color: #eeeeee;
@@ -559,7 +583,6 @@
       -webkit-text-stroke: 2px #fff;
       z-index: 2;
       color: transparent;
-
     }
 
     .project-title-color {
@@ -598,7 +621,7 @@
         align-items: center;
         justify-content: center;
         border: 3px solid $light-color;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
 
         p {
           text-transform: uppercase;
@@ -606,21 +629,10 @@
           position: absolute;
           color: $light-color;
           font-size: 1.3vw;
-          letter-spacing: .25vw;
-          transition: all .3s ease;
+          letter-spacing: 0.25vw;
+          transition: all 0.3s ease;
           animation: rotatefull 6s linear infinite;
         }
-
-        @keyframes rotatefull {
-          0% {
-            transform: rotate(0deg);
-          }
-
-          100% {
-            transform: rotate(360deg);
-          }
-        }
-
 
         &:hover {
           background: $light-color;
@@ -650,7 +662,7 @@
       flex-direction: column;
       transform: rotate(-20deg);
       border: 3px solid #444444;
-      transition: all .8s linear;
+      transition: all 0.8s linear;
 
       div {
         overflow: hidden;
@@ -675,7 +687,7 @@
 
         div:last-child {
           p {
-            animation: hoverPopUp 1s ease .2s;
+            animation: hoverPopUp 1s ease 0.2s;
           }
         }
       }
@@ -692,7 +704,6 @@
     margin-bottom: 5vw;
   }
 }
-
 
 // About Section
 #about {
@@ -727,7 +738,7 @@
       }
 
       p:first-child .big-font {
-        line-height: .5;
+        line-height: 0.5;
         font-size: 4vw;
         font-weight: normal;
       }
@@ -755,7 +766,7 @@
           position: relative;
           padding: 0 6px 0 3px;
           overflow: hidden;
-          transition: all .2s ease;
+          transition: all 0.2s ease;
           font-size: 1.2vw;
           font-weight: 300;
 
@@ -769,14 +780,14 @@
           }
 
           &::before {
-            content: '';
+            content: "";
             position: absolute;
             top: 100%;
             left: 0;
             height: 100%;
             width: 100%;
             background: $light-color;
-            transition: all .4s ease;
+            transition: all 0.4s ease;
             z-index: -5;
           }
         }
@@ -815,20 +826,16 @@
   }
 }
 
-
 // Mobile Responsive
 @media (max-width: 1100px) {
-
   body {
     letter-spacing: unset;
   }
 
   // Home
   #home {
-
     // Home main content section
     .home-container {
-
       // Navbar
       #navbar {
         grid-template-columns: 2fr 5fr;
@@ -856,8 +863,7 @@
 
       // Name and Title
       #name-title {
-
-        &>div {
+        & > div {
           width: 100%;
 
           h1 {
@@ -873,7 +879,6 @@
 
       // Home Info
       #home-info {
-
         // Progresses And Description
         #progresses-description {
           font-weight: 300;
@@ -928,7 +933,6 @@
   #contact-section {
     #contact-section-wrap {
       #contact-content-wrap {
-
         // Close x Mark
         #close-contact {
           right: 15%;
@@ -945,6 +949,20 @@
               height: 6vw;
               width: 0.6vw;
             }
+          }
+        }
+
+        // Resume
+        #resume {
+          height: 20vw;
+          width: 20vw;
+          top: 12%;
+          left: 15%;
+          border: 1.5px solid $light-color;
+          letter-spacing: 0.6vw;
+
+          p {
+            font-size: 3vw;
           }
         }
 
@@ -965,7 +983,7 @@
               font-weight: 400;
 
               &::before {
-                content: '';
+                content: "";
                 width: 100%;
               }
             }
@@ -988,7 +1006,6 @@
 
   // Projects Section
   #projects-section {
-
     // Section Title
     #projects-section-title {
       margin: 25vw auto 30vw;
@@ -1082,7 +1099,6 @@
             font-size: 3vw;
           }
 
-
           &:hover {
             p {
               font-size: 2vw;
@@ -1100,7 +1116,6 @@
         border: 1px solid #444444;
 
         div {
-
           p {
             font-size: 2.2vw;
             font-weight: 500;
@@ -1112,7 +1127,8 @@
     #bogoapps {
       .project-showcase {
         .project-bg {
-          background: url('../img/projects/bogo.jpg') no-repeat right center/cover !important;
+          background: url("../img/projects/bogo.jpg") no-repeat right
+            center/cover !important;
         }
       }
     }
@@ -1120,7 +1136,8 @@
     #bomcomapps {
       .project-showcase {
         .project-bg {
-          background: url('../img/projects/bomcom.jpg') no-repeat right center/cover !important;
+          background: url("../img/projects/bomcom.jpg") no-repeat right
+            center/cover !important;
         }
       }
     }
@@ -1128,7 +1145,8 @@
     #luckgame {
       .project-showcase {
         .project-bg {
-          background: url('../img/projects/luckgame.jpg') no-repeat center center/cover !important;
+          background: url("../img/projects/luckgame.jpg") no-repeat center
+            center/cover !important;
         }
       }
     }
@@ -1136,7 +1154,8 @@
     #iss {
       .project-showcase {
         .project-bg {
-          background: url('../img/projects/iss.png') no-repeat center center/cover !important;
+          background: url("../img/projects/iss.png") no-repeat center
+            center/cover !important;
         }
       }
     }
@@ -1144,7 +1163,8 @@
     #todotoday {
       .project-showcase {
         .project-bg {
-          background: url('../img/projects/todotody.jpg') no-repeat center center/cover !important;
+          background: url("../img/projects/todotody.jpg") no-repeat center
+            center/cover !important;
         }
       }
 
@@ -1156,14 +1176,14 @@
     #supercar {
       .project-showcase {
         .project-bg {
-          background: url('../img/projects/superdon.jpg') no-repeat center center/cover !important;
+          background: url("../img/projects/superdon.jpg") no-repeat center
+            center/cover !important;
         }
       }
 
       margin-bottom: 10vw;
     }
   }
-
 
   // About Section
   #about {
@@ -1178,7 +1198,6 @@
       }
 
       #about-me-div {
-
         p {
           font-size: 4vw;
         }
@@ -1221,13 +1240,10 @@
 
 // Smart Phone
 @media (max-width: 550px) {
-
   // Projects Section
   #projects-section {
-
     // Project Section
     .project {
-
       // Project Description
       .project-description {
         bottom: -8%;
