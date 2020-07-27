@@ -538,8 +538,13 @@
     // Project Description
     .project-description {
       position: absolute;
-      right: 14.8%;
+      right: 12.5%;
       top: 40%;
+      height: 4vw;
+      width: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       transform: rotate(90deg);
       text-transform: uppercase;
 
@@ -1047,6 +1052,8 @@
         top: unset;
         left: 6%;
         bottom: -2%;
+        width: 75%;
+        justify-content: flex-start;
         transform: unset;
 
         p {
@@ -1096,6 +1103,7 @@
           border: 1px solid $light-color;
 
           p {
+            letter-spacing: 0px;
             font-size: 3vw;
           }
 
