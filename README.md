@@ -1,4 +1,4 @@
 # portfolio
-This is my portfolio website. I build it from scratch using JavaScript, SASS, CSS3, HTML5, jQuery, Tilt.js. It's is my favorite projects I did lots of funtionality here.
+This is my portfolio website. I build it from scratch using JavaScript, SASS, CSS3, HTML5, jQuery, Tilt.js. It's is my favorite projects I did lots of functionality here.
 
-Here you can find about my work. 
+Here you can find about my work.
