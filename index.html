@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Keywords and Description -->
+  <meta name="description"
+    content="My name is Raihan Ahmad. I am a front-end developer and designer. This is my portfolio website. Here you can know about me!" />
+  <meta name="keywords"
+    content="Raihan Ahmad, frontend engineer, frontend developer, UI designer, raihanahmad, programmer, web developer, coder, raihanahmad01, Raihan Ahmad Portfolio" />
+
+  <!-- Link & Title -->
+  <script src="https://kit.fontawesome.com/9650a62e47.js" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="stylesheet" href="style/style.css" />
+  <title>Raihan Ahmad</title>
+</head>
+
+<body>
+  <!-- Website loding animation -->
+  <section id="website-loading">
+    <div>
+      <img src="/img/loading.gif" alt="loading" />
+    </div>
+  </section>
+
+  <div class="smooth-scroll-wrapper">
+    <!-- Header Section -->
+    <header id="home">
+      <div class="home-container">
+        <!-- Navbar -->
+        <nav id="navbar">
+          <div id="arrow-line">
+            <svg class="cursorNone" id="arrow-svg" viewBox="0 0 42 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M41.3536 4.35355C41.5488 4.15829 41.5488 3.84171 41.3536 3.64645L38.1716 0.464466C37.9763 0.269204 37.6597 0.269204 37.4645 0.464466C37.2692 0.659728 37.2692 0.976311 37.4645 1.17157L40.2929 4L37.4645 6.82843C37.2692 7.02369 37.2692 7.34027 37.4645 7.53553C37.6597 7.7308 37.9763 7.7308 38.1716 7.53553L41.3536 4.35355ZM0 4.5H41V3.5H0V4.5Z" />
+            </svg>
+          </div>
+
+          <div id="navbar-links">
+            <ul>
+              <li><a href="#home" class="nav-link nav-link-home">HOME</a></li>
+              <li>
+                <a href="#projects-section" class="nav-link nav-link-projects-section">WORK</a>
+              </li>
+              <li>
+                <a href="#about" class="nav-link nav-link-about">ABOUT</a>
+              </li>
+              <!-- <li><a href="#" class="nav-link">CONTACT</a></li> -->
+            </ul>
+          </div>
+
+          <div id="black-white-toggler">
+            <img class="cursorNone" src="/img/toggler.png" alt="black and white toggler" />
+          </div>
+        </nav>
+
+        <!-- Name & Title -->
+        <div id="name-title">
+          <div>
+            <h1 class="cursor-Big">Raihan Ahmad</h1>
+            <h3 class="cursor-Big">Frontend Developer & Designer</h3>
+          </div>
+        </div>
+
+        <!-- Home Info -->
+        <div id="home-info">
+          <div id="progresses-description" class="cursorDefault">
+            <p>Here you can find some of my</p>
+            <span id="progresses-animation"><span>progresses</span> <span>works</span>
+              <span>skills</span></span>
+            <p>Just scroll, if you wanna see!</p>
+          </div>
+
+          <div id="contact-content">
+            <p class="cursorDefault">
+              I am looking for a job <br />If you have any please
+            </p>
+            <div id="contact-box" class="cursorTriangle">
+              <h3 id="contact-1">Contact</h3>
+              <h3>Contact</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Contact Section Email & Social -->
+    <section id="contact-section">
+      <div id="contact-section-wrap">
+        <div id="contact-content-wrap">
+          <div id="close-contact" class="cursorTriangle">
+            <div id="close-x"></div>
+          </div>
+
+          <div id="contact-email-box">
+            <p>Contact Me</p>
+            <a id="email-link" class="cursorTriangle" href="mailto:dev.raihanahmad@gmail.com">
+              <span>dev.raihanahmad@gmail.com</span>
+            </a>
+          </div>
+
+          <a id="resume" class="cursorNone" target="_blank" href="resume.pdf">
+            <div>
+              <p>Resume</p>
+            </div>
+          </a>
+
+          <!-- Social -->
+          <div id="social-contact-section">
+            <p>socially</p>
+            <div id="social-contact">
+              <a target="_blank" class="social-link cursorNone" href="https://github.com/raihanahmad"><i
+                  class="fab fa-github"></i></a>
+              <a target="_blank" class="social-link cursorNone" href="https://twitter.com/raihanahmad01"><i
+                  class="fab fa-twitter"></i></a>
+              <a target="_blank" class="social-link cursorNone"
+                href="https://www.youtube.com/channel/UC200ks8sTUgKvocsIxpDAxA/"><i class="fab fa-youtube"></i></a>
+              <a target="_blank" class="social-link cursorNone" href="https://www.linkedin.com/in/devraihanahmad/"><i
+                  class="fab fa-linkedin-in"></i></a>
+              <a target="_blank" class="social-link cursorNone" href="https://www.instagram.com/raihanahmad01/"><i
+                  class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects-section">
+      <div class="hidden" id="projects-section-title">
+        <div class="popo hidden">
+          <h1 class="cursor-Big">Works &</h1>
+          <h1 class="cursor-Big">Projects</h1>
+        </div>
+      </div>
+
+      <!-- CONNEKTSTUDIO -->
+      <div id="connektstudio" class="project">
+        <div class="project-showcase">
+          <div class="project-bg" data-tilt data-tilt-max="3" data-tilt-reverse="true"
+            style="background: url('../img/projects/connektstudio-bg.jpg') no-repeat center center/ cover;">
+            <div class="img"
+              style="background: url('../img/projects/connektstudio.png') no-repeat center center/ cover;">
+            </div>
+          </div>
+        </div>
+
+        <div class="project-title project-title-color">
+          <h1>CONNEKTSTUDIO</h1>
+        </div>
+        <div class="project-title project-title-border">
+          <h1>CONNEKTSTUDIO</h1>
+        </div>
+
+        <div class="project-description cursorDefault">
+          <p>
+            It's a venture studio based in Bangladesh, <br />We Design &
+            Develop, Digital Products</p>
+        </div>
+
+        <div class="project-count">
+          <h1>01</h1>
+        </div>
+
+        <a class="project-view-button cursorNone" target="_blank" href="https://connekt.studio/">
+          <div>
+            <p>&nbsp;Visit&nbsp;Studio</p>
+          </div>
+        </a>
+
+        <a class="video-view-button cursorTriangle" target="_blank" href="https://www.youtube.com/@connektstudio01">
+          <div>
+            <p>Youtube</p>
+          </div>
+          <div>
+            <p>Channel</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- SketchToImage -->
+      <div id="sketchtoimage" class="project">
+        <div class="project-showcase">
+          <div class="project-bg" data-tilt data-tilt-max="3" data-tilt-reverse="true" style="
+                      background: url('../img/projects/sketchtoimage-bg.jpg') no-repeat center center/ cover;">
+            <div class="img"
+              style="background: url('../img/projects/sketchtoimage.png') no-repeat center center/ cover;">
+            </div>
+          </div>
+        </div>
+
+        <div class="project-title project-title-color">
+          <h1>SketchToImage</h1>
+        </div>
+        <div class="project-title project-title-border">
+          <h1>SketchToImage</h1>
+        </div>
+
+        <div class="project-description cursorDefault">
+          <p>
+            Turn your sketch into image with AI magic! <br />
+            Draw or upload a sketch, pick a style.
+          </p>
+        </div>
+
+        <div class="project-count">
+          <h1>02</h1>
+        </div>
+
+        <a class="project-view-button cursorNone" target="_blank" href="https://sketchtoimage.com/">
+          <div>
+            <p>&nbsp;View&nbsp;Project</p>
+          </div>
+        </a>
+
+        <a class="video-view-button cursorTriangle" target="_blank"
+          href="https://web.facebook.com/connektstudio/videos/1558502781302654">
+          <div>
+            <p>Preview</p>
+          </div>
+          <div>
+            <p>Video</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- ConnektCamp -->
+      <div id="connektcamp" class="project">
+        <div class="project-showcase">
+          <div class="project-bg" data-tilt data-tilt-max="3" data-tilt-reverse="true" style="
+                      background: url('../img/projects/connektcamp-bg.jpg') no-repeat center center/ cover; ">
+            <div class="img"
+              style=" background: url('../img/projects/connektcamp.png') no-repeat center center/ cover;">
+            </div>
+          </div>
+        </div>
+
+        <div class="project-title project-title-color">
+          <h1>ConnektCamp</h1>
+        </div>
+        <div class="project-title project-title-border">
+          <h1>ConnektCamp</h1>
+        </div>
+
+        <div class="project-description cursorDefault">
+          <p>
+            he Best Programming Bootcamp In Bangladesh. <br />
+            Learn Code Get High Paid Job.
+          </p>
+        </div>
+
+        <div class="project-count">
+          <h1>03</h1>
+        </div>
+
+        <a class="project-view-button cursorNone" target="_blank" href="https://connekt.camp">
+          <div>
+            <p>&nbsp;View&nbsp;Project</p>
+          </div>
+        </a>
+
+        <a class="video-view-button cursorTriangle" target="_blank"
+          href="https://www.youtube.com/playlist?list=PL_1lo5T7Y0ExlKfV8bUMRUOvQ_U_KZgOK">
+          <div>
+            <p>Free</p>
+          </div>
+          <div>
+            <p>Course</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- BOGOAPPS -->
+      <div id="bogoapps" class="project">
+        <div class="project-showcase">
+          <div class="project-bg" data-tilt data-tilt-max="3" data-tilt-reverse="true"
+            style="background: url('../img/projects/bogo-bg.jpg') no-repeat center center/ cover;">
+            <div class="img" style="background: url('../img/projects/bogo.png') no-repeat center center/ cover;"></div>
+          </div>
+        </div>
+
+        <div class="project-title project-title-color">
+          <h1>BOGO APPS</h1>
+        </div>
+        <div class="project-title project-title-border">
+          <h1>BOGO APPS</h1>
+        </div>
+
+        <div class="project-description cursorDefault">
+          <p>
+            This is my best project. I used advance HTML5, <br />
+            CSS3 and JavaScript. Mockup from
+            <a target="_black" href="https://www.behance.net/creativemints">mike</a>
+          </p>
+        </div>
+
+        <div class="project-count">
+          <h1>04</h1>
+        </div>
+
+        <a class="project-view-button cursorNone" target="_blank" href="https://bogoapps.netlify.app/">
+          <div>
+            <p>&nbsp;View&nbsp;Project</p>
+          </div>
+        </a>
+
+        <a class="video-view-button cursorTriangle" target="_blank" href="https://youtu.be/w9Fq2LQfHfI">
+          <div>
+            <p>Making</p>
+          </div>
+          <div>
+            <p>Video</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- BOMCOMAPPS -->
+      <div id="bomcomapps" class="project">
+        <div class="project-showcase">
+          <div class="project-bg" data-tilt data-tilt-max="3" data-tilt-reverse="true" style="
+                background: url('../img/projects/bomcom-bg.jpg') no-repeat
+                  center center/ cover;
+              ">
+            <div class="img" style="
+                  background: url('../img/projects/bomcom.png') no-repeat center
+                    center/ cover;
+                "></div>
+          </div>
+        </div>
+
+        <div class="project-title project-title-color">
+          <h1>BOMCOM APPS</h1>
+        </div>
+        <div class="project-title project-title-border">
+          <h1>BOMCOM APPS</h1>
+        </div>
+
+        <div class="project-description cursorDefault">
+          <p>
+            I created this website using HTML5, CSS3, <br />JavaScript. And
+            this Mockup created by
+            <a target="_black" href="https://dribbble.com/shots/10722982-Bomcom-Apps-Web-site-design">mike</a>
+          </p>
+        </div>
+
+        <div class="project-count">
+          <h1>05</h1>
+        </div>
+
+        <a class="project-view-button cursorNone" target="_blank" href="https://bomcom.netlify.app/">
+          <div>
+            <p>&nbsp;View&nbsp;Project</p>
+          </div>
+        </a>
+
+        <a class="video-view-button cursorTriangle" target="_blank" href="https://youtu.be/4OkI1VtzUEE">
+          <div>
+            <p>Making</p>
+          </div>
+          <div>
+            <p>Video</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- 100DaysOfCode -->
+      <div id="100daysofcode" class="project">
+        <div class="project-showcase">
+          <div class="project-bg" data-tilt data-tilt-max="3" data-tilt-reverse="true" style="
+                background: url('../img/projects/100daysofcode-bg.jpg') no-repeat center center/ cover;">
+            <div class="img"
+              style="background: url('../img/projects/100daysofcode.png') no-repeat center center/ cover;">
+            </div>
+          </div>
+        </div>
+
+        <div class="project-title project-title-color">
+          <h1>100DaysOfCode</h1>
+        </div>
+        <div class="project-title project-title-border">
+          <h1>100DaysOfCode</h1>
+        </div>
+
+        <div class="project-description cursorDefault">
+          <p>
+            I have completed the #100DaysOfCode challenge <br />I invested
+            700+ hours to learn and work.
+          </p>
+        </div>
+
+        <div class="project-count">
+          <h1>06</h1>
+        </div>
+
+        <a class="project-view-button cursorNone" target="_blank" href="https://raihans100days.netlify.app/">
+          <div>
+            <p>&nbsp;View&nbsp;Project</p>
+          </div>
+        </a>
+
+        <a class="video-view-button cursorTriangle" target="_blank" href="https://github.com/raihanahmad/100DaysOfCode">
+          <div>
+            <p>GitHub</p>
+          </div>
+          <div>
+            <p>Code</p>
+          </div>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div id="about-container">
+        <h1 id="about-title" class="cursor-Big">About Me</h1>
+        <div id="about-me-div">
+          <p class="cursorDefault about-p-one">
+            <span class="big-font">H</span><span>ello</span>
+            <span>there,</span> <span>M</span><span>y</span>
+            <span>name</span> <span>is</span> <span>Raihan</span>
+            <span>Ahmad.</span> <span>I</span> <span>am</span> <span>a</span>
+            <span>frontend</span> <span>developer</span> <span>and</span>
+            <span>designer.</span> <span>I</span> <span>started</span>
+            <span>programming</span> <span>when</span> <span>I</span>
+            <span>was</span> <span>16</span> <span>years</span>
+            <span>old.</span> <span>I</span> <span>initially</span>
+            <span>started</span> <span>with</span> <span>C</span>
+            <span>(programming</span> <span>language).</span>
+            <span>Then</span> <span>I</span> <span>moved</span>
+            <span>to</span> <span>frontend</span> <span>development</span>
+            <span>as</span> <span>it</span> <span>blends</span>
+            <span>my</span> <span>designing</span> <span>and</span>
+            <span>coding</span> <span>skills</span>
+            <span>together.</span>
+          </p>
+          <br />
+          <p class="cursorDefault about-p-two">
+            <span>I</span> <span>have</span> <span>strong</span>
+            <span>experience</span> <span>in</span> <span>HTML5,</span>
+            <span>CSS3,</span> <span>SASS(SCSS),</span>
+            <span>JavaScript.</span> <span>I</span> <span>am</span>
+            <span>also</span> <span>good</span> <span>with</span>
+            <span>React,</span> <span>Vue.js,</span> <span>jQuery,</span>
+            <span>npm,</span> <span>Bootstrap</span> <span>&</span>
+            <span>Github.</span> <span>I</span> <span>have</span>
+            <span>also</span> <span>professional</span>
+            <span>experience</span> <span>with</span> <span>Photoshop,</span>
+            <span>Figma,</span> <span>PowerPoint,</span> <span>and</span>
+            <span>Camtasia.</span>
+          </p>
+          <br />
+          <p class="cursorDefault about-p-three">
+            <span>I</span> <span>have</span> <span>been</span>
+            <span>super</span> <span>excited</span> <span>about</span>
+            <span>technologies</span> <span>and</span> <span>building</span>
+            <span>new</span> <span>things</span> <span>since</span>
+            <span>my</span> <span>childhood.</span> <span>I</span>
+            <span>am</span> <span>a</span> <span>quick</span>
+            <span>learner</span> <span>and</span> <span>hard</span>
+            <span>worker.</span> <span>New</span> <span>technologies</span>
+            <span>and</span> <span>frameworks</span> <span>are</span>
+            <span>not</span> <span>an</span> <span>issue</span>
+            <span>for</span> <span>me.</span> <span>I</span>
+            <span>will</span> <span>learn</span> <span>and</span>
+            <span>start</span> <span>working</span> <span>with</span>
+            <span>that</span> <span>when</span> <span>I</span>
+            <span>need</span> <span>to.</span>
+          </p>
+          <br />
+          <p class="cursorDefault about-p-three">
+            <span>Interested</span> <span>in</span> <span>learning</span>
+            <span>more</span> <span>about</span> <span>me?</span>
+          </p>
+          <div class="read-more">
+            <i class="icon-line read-more-item"></i><a class="read-more-btn read-more-item cursorTriangle"
+              href="https://raihanahmadabout.netlify.app/" target="_blank">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="main-footer">
+      <div id="footer-container">
+        <p class="cursorDefault">
+          &copy; 2020 Raihan Ahmad. <br />All pieces of stuff reserved.
+        </p>
+
+        <!-- Social -->
+        <div id="social-contact">
+          <a target="_blank" class="social-link cursorNone" href="https://github.com/raihanahmad"><i
+              class="fab fa-github"></i></a>
+          <a target="_blank" class="social-link cursorNone" href="https://twitter.com/raihanahmad01"><i
+              class="fab fa-twitter"></i></a>
+          <a target="_blank" class="social-link cursorNone"
+            href="https://www.youtube.com/channel/UC200ks8sTUgKvocsIxpDAxA/"><i class="fab fa-youtube"></i></a>
+          <a target="_blank" class="social-link cursorNone" href="https://www.linkedin.com/in/devraihanahmad/"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a target="_blank" class="social-link cursorNone" href="https://www.instagram.com/raihanahmad01/"><i
+              class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- JQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- INCLUDE JS FILE -->
+
+  <script src="JavaScript/app.js"></script>
+
+  <!-- Include External JS File -->
+  <script src="https://unpkg.com/vanilla-tilt@1.2.2/lib/vanilla-tilt.js"></script>
+</body>
+
+</html>

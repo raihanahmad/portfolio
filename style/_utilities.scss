@@ -1,0 +1,328 @@
+// VARIABLES
+$light-color: #ffffff;
+$dark-color: #232323;
+
+// CORE CSS RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+
+  ::selection {
+    color: $dark-color;
+    background: $light-color;
+  }
+}
+
+// SCROLLBAR
+::-webkit-scrollbar {
+  width: 2px;
+  background: $dark-color;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: $dark-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $light-color;
+  border-radius: 10px;
+}
+
+body {
+  background: $dark-color;
+  font-family: "Raleway", sans-serif;
+  // font-family: 'Roboto', sans-serif;
+  color: $light-color;
+  font-weight: 500;
+  letter-spacing: -1px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  color: $light-color;
+  text-decoration: none;
+  outline: none;
+}
+
+button {
+  outline: none;
+}
+
+img {
+  width: 100%;
+}
+
+// CURSOR
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  z-index: 9999;
+  border-radius: 50%;
+  height: 1.5vw;
+  width: 1.5vw;
+  background: $light-color;
+  transform: translate(-50%, -50%);
+  border: 1px solid $light-color;
+  // transform-origin: 100% 100%;
+  transition: transform 0.3s ease-in-out, background 0.4s linear;
+  mix-blend-mode: difference;
+}
+
+.cursorGrowOnTitle {
+  transform: scale(14);
+}
+
+.navHoverCursor {
+  transform: scale(5) translate(-10%, -10%);
+}
+
+.cursorToTriangle {
+  transform: scale(2.5) translate(-10%, -10%);
+  mix-blend-mode: unset;
+  clip-path: polygon(25% 0%, 25% 100%, 100% 65%);
+}
+
+.cursorScaleZero {
+  transform: scale(0.1) translate(-500%, -500%);
+  mix-blend-mode: unset;
+  animation: cursordownscale 0.4s linear forwards;
+
+  @keyframes cursordownscale {
+    0% {
+      background: $light-color;
+    }
+
+    95% {
+      background: $dark-color;
+    }
+
+    100% {
+      background: $dark-color;
+    }
+  }
+}
+
+.defaultCursor {
+  mix-blend-mode: unset;
+  border-radius: 50%;
+  height: 1.5vw;
+  width: 1.5vw;
+  border: 1px solid $light-color;
+  background-color: unset;
+  transform: scale(3) translate(-20%, -20%);
+  clip-path: unset;
+}
+
+// Animations
+@keyframes hoverPopUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  25% {
+    transform: translateY(-0.3rem);
+    opacity: 0;
+  }
+
+  30% {
+    transform: translateY(0.5rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes opacityIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes opacity-translate-In {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 8vw, 0) skew(0deg, -5deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0vw, 0) skew(0deg, 0deg);
+  }
+}
+
+@keyframes opacity-translate-Out {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0vw, 0) skew(0deg, 0deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 8vw, 0) skew(0deg, -5deg);
+  }
+}
+
+@keyframes poppop {
+  0% {
+    transform: scale(0);
+  }
+
+  30% {
+    transform: scale(1.2);
+  }
+
+  60% {
+    transform: scale(0.9);
+  }
+
+  85% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateup {
+  0% {
+    opacity: 0;
+    transform: translateY(3vw) rotateX(-80deg);
+  }
+
+  100% {
+    transform: translateY(0) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes paragraphType {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleOpacityUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rotatefull {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+//  Social
+#social-contact {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  .social-link {
+    display: inline-block;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 30%;
+    color: $light-color;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    i {
+      font-size: 1.3vw;
+      transition: 0.2s linear;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 120%;
+      height: 120%;
+      background: $light-color;
+      transform: rotate(45deg);
+      left: -110%;
+      top: 90%;
+    }
+
+    &:hover i {
+      transform: scale(1.3);
+      color: $dark-color;
+    }
+
+    &:hover::before {
+      animation: sakarIn 0.7s 1;
+      top: -10%;
+      left: -10%;
+    }
+  }
+
+  @keyframes sakarIn {
+    0% {
+      left: -110%;
+      top: 90%;
+    }
+
+    50% {
+      left: 10%;
+      top: -30%;
+    }
+
+    100% {
+      top: -10%;
+      left: -10%;
+    }
+  }
+}
